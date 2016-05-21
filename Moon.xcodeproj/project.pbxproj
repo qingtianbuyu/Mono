@@ -16,7 +16,9 @@
 		9F1D0DF71CEDE78C00D4E951 /* MNTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1D0DF61CEDE78C00D4E951 /* MNTabBarItem.swift */; };
 		9F1D0DFC1CEDF4B800D4E951 /* MNView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1D0DFB1CEDF4B800D4E951 /* MNView+Extension.swift */; };
 		9F29D65D1CEB6C16009AC42F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F29D65C1CEB6C16009AC42F /* Theme.swift */; };
-		9F336E3C1CF00ECC00779067 /* MNNavgationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E3B1CF00ECC00779067 /* MNNavgationBar.swift */; };
+		9F336E3E1CF0359E00779067 /* MNNavgationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E3D1CF0359E00779067 /* MNNavgationBar.swift */; };
+		9F336E421CF0380D00779067 /* MNTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E411CF0380D00779067 /* MNTitleCell.swift */; };
+		9F336E441CF0747E00779067 /* MNTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E431CF0747E00779067 /* MNTitle.swift */; };
 		9F59347B1CE9ECAD00E69FC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F59347A1CE9ECAD00E69FC8 /* AppDelegate.swift */; };
 		9F5934821CE9ECAD00E69FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F5934811CE9ECAD00E69FC8 /* Assets.xcassets */; };
 		9F5934851CE9ECAD00E69FC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5934831CE9ECAD00E69FC8 /* LaunchScreen.storyboard */; };
@@ -36,7 +38,9 @@
 		9F1D0DF61CEDE78C00D4E951 /* MNTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNTabBarItem.swift; sourceTree = "<group>"; };
 		9F1D0DFB1CEDF4B800D4E951 /* MNView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MNView+Extension.swift"; sourceTree = "<group>"; };
 		9F29D65C1CEB6C16009AC42F /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		9F336E3B1CF00ECC00779067 /* MNNavgationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNNavgationBar.swift; sourceTree = "<group>"; };
+		9F336E3D1CF0359E00779067 /* MNNavgationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNNavgationBar.swift; sourceTree = "<group>"; };
+		9F336E411CF0380D00779067 /* MNTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNTitleCell.swift; sourceTree = "<group>"; };
+		9F336E431CF0747E00779067 /* MNTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNTitle.swift; sourceTree = "<group>"; };
 		9F5934771CE9ECAC00E69FC8 /* Moon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F59347A1CE9ECAD00E69FC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F5934811CE9ECAD00E69FC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 		9F1D0DE21CEDD8EC00D4E951 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F336E431CF0747E00779067 /* MNTitle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,7 +110,8 @@
 		9F1D0DE31CEDD8EC00D4E951 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9F336E3B1CF00ECC00779067 /* MNNavgationBar.swift */,
+				9F336E3D1CF0359E00779067 /* MNNavgationBar.swift */,
+				9F336E411CF0380D00779067 /* MNTitleCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,9 +320,11 @@
 				9F1D0DEE1CEDE1CD00D4E951 /* MNTabBarController.swift in Sources */,
 				9F1D0DF71CEDE78C00D4E951 /* MNTabBarItem.swift in Sources */,
 				9F59347B1CE9ECAD00E69FC8 /* AppDelegate.swift in Sources */,
+				9F336E441CF0747E00779067 /* MNTitle.swift in Sources */,
 				9F1D0DFC1CEDF4B800D4E951 /* MNView+Extension.swift in Sources */,
+				9F336E3E1CF0359E00779067 /* MNNavgationBar.swift in Sources */,
+				9F336E421CF0380D00779067 /* MNTitleCell.swift in Sources */,
 				9F1D0DF01CEDE21400D4E951 /* MNDiscoverViewController.swift in Sources */,
-				9F336E3C1CF00ECC00779067 /* MNNavgationBar.swift in Sources */,
 				9F1D0DF41CEDE27400D4E951 /* MNMineViewContrller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

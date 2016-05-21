@@ -10,18 +10,40 @@ import UIKit
 
 class MNRecommandViewController: UIViewController {
   
+  
+  lazy var titles:[MNTitle] = [ MNTitle.initWithTitle("推荐Explore"),
+                           MNTitle.initWithTitle("关注Following"),
+                           MNTitle.initWithTitle("视频Video"),
+                           MNTitle.initWithTitle("音乐Music"),
+                           MNTitle.initWithTitle("画册Gallery"),
+                           MNTitle.initWithTitle("往期早午茶"),
+                           ]
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    setupView()
+    setupBasicView()
+    setupScrollView()
+    setupChildViewContrllers()
   }
   
-   func setupView() {
-    view.backgroundColor = UIColor.whiteColor()
-    self.edgesForExtendedLayout = UIRectEdge.None
-    self.navigationController?.navigationBar.hidden = true
-    let titleView = MNNavgationBar(frame: CGRect.zero)
-    view.addSubview(titleView)
-    self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
+   func setupBasicView() {
+      self.navigationController?.navigationBar.hidden = true
+      view.backgroundColor        = UIColor.whiteColor()
+      self.edgesForExtendedLayout = UIRectEdge.None
+      let titleView = MNNavgationBar(frame: CGRect.zero)
+      titleView.titles = titles
+      view.addSubview(titleView)
+  }
+  
+  func setupScrollView() {
+    let scrollView = UIScrollView(frame: self.view.bounds)
+    
+    view .addSubview(scrollView)
+  }
+  
+  func setupChildViewContrllers() -> Void {
+    
   }
   
   
