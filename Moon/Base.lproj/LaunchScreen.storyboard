@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,13 +16,44 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-2016 @All Rights Reserved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UA8-Wi-6dj">
+                                <rect key="frame" x="0.0" y="529" width="600" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MONO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7On-Gl-gV8">
+                                <rect key="frame" x="0.0" y="170" width="600" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="www.mmmmono.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qd-7x-6NH">
+                                <rect key="frame" x="0.0" y="503" width="600" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UA8-Wi-6dj" secondAttribute="trailing" id="03q-KG-unW"/>
+                            <constraint firstItem="7On-Gl-gV8" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="2DP-47-keP"/>
+                            <constraint firstItem="8Qd-7x-6NH" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="33l-xJ-NMy"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="UA8-Wi-6dj" secondAttribute="bottom" constant="55" id="8EM-3Q-dMR"/>
+                            <constraint firstItem="UA8-Wi-6dj" firstAttribute="top" secondItem="8Qd-7x-6NH" secondAttribute="bottom" constant="10" id="G2n-pY-14Q"/>
+                            <constraint firstItem="7On-Gl-gV8" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="150" id="JUv-Ar-fHg"/>
+                            <constraint firstAttribute="trailing" secondItem="8Qd-7x-6NH" secondAttribute="trailing" id="NXW-lc-Py6"/>
+                            <constraint firstAttribute="trailing" secondItem="7On-Gl-gV8" secondAttribute="trailing" id="TC3-wd-xYW"/>
+                            <constraint firstItem="UA8-Wi-6dj" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Y4U-lb-cJo"/>
+                            <constraint firstItem="UA8-Wi-6dj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="y1f-t1-jhO"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="419" y="384"/>
         </scene>
     </scenes>
 </document>
