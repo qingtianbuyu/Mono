@@ -19,32 +19,71 @@ class MNRecommandViewController: UIViewController {
                            MNTitle.initWithTitle("往期早午茶"),
                            ]
   
+  var titleView:MNNavgationBar?
+  var scrollView:UIScrollView?
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    setupChildViewContrllers()
     setupBasicView()
     setupScrollView()
-    setupChildViewContrllers()
   }
   
    func setupBasicView() {
       self.navigationController?.navigationBar.hidden = true
       view.backgroundColor        = UIColor.whiteColor()
       self.edgesForExtendedLayout = UIRectEdge.None
-      let titleView = MNNavgationBar(frame: CGRect.zero)
-      titleView.titles = titles
-      view.addSubview(titleView)
+      titleView = MNNavgationBar(frame: CGRect.zero)
+      titleView!.titles = titles
+      view.addSubview(titleView!)
   }
   
   func setupScrollView() {
     let scrollView = UIScrollView(frame: self.view.bounds)
-    
-    view .addSubview(scrollView)
+    scrollView.pagingEnabled  = true
+    scrollView.delegate       = self
+    scrollView.showsVerticalScrollIndicator   = false
+    scrollView.showsHorizontalScrollIndicator = false
+    let width   = CGFloat(self.childViewControllers.count) * scrollView.width
+//    let height  = view.height -  CGRectGetMaxY(titleView!.frame)
+    scrollView.contentSize = CGSizeMake(width, 0)
+    view.insertSubview(scrollView, atIndex: 0)
+    self.scrollView = scrollView
+    scrollViewDidEndScrollingAnimation(scrollView)
   }
   
   func setupChildViewContrllers() -> Void {
-    
+    addChildViewController(MNExploreViewController())
+    addChildViewController(MNFollowingViewController())
+    addChildViewController(MNVideoViewController())
+    addChildViewController(MNMusicViewController())
+    addChildViewController(MNGalleryViewController())
+    addChildViewController(MNTeaViewController())
+  }
+}
+
+extension MNRecommandViewController:UIScrollViewDelegate {
+  
+  func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
+    //获取当前位置的索引
+    let index = Int(scrollView.contentOffset.x / scrollView.width)
+    print(index)
+    let   childVc  =  self.childViewControllers[index]
+    var   frame = childVc.view.frame
+    frame.origin.x = scrollView.contentOffset.x
+    frame.origin.y = 0
+    frame.size.height =  scrollView.height
+    childVc.view.frame = frame
+    scrollView.addSubview(childVc.view)
   }
   
+  func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    scrollViewDidEndScrollingAnimation(scrollView)
+    let index = Int(scrollView.contentOffset.x / scrollView.width)
+    var offset = scrollView.contentOffset
+    offset.x = (CGFloat(index) * scrollView.width)
+    self.scrollView!.setContentOffset(offset, animated: true);
+  }
   
+
 }

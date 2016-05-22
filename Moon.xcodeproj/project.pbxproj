@@ -19,6 +19,12 @@
 		9F336E3E1CF0359E00779067 /* MNNavgationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E3D1CF0359E00779067 /* MNNavgationBar.swift */; };
 		9F336E421CF0380D00779067 /* MNTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E411CF0380D00779067 /* MNTitleCell.swift */; };
 		9F336E441CF0747E00779067 /* MNTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E431CF0747E00779067 /* MNTitle.swift */; };
+		9F336E4A1CF0857200779067 /* MNExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E491CF0857200779067 /* MNExploreViewController.swift */; };
+		9F336E4C1CF085B500779067 /* MNFollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E4B1CF085B500779067 /* MNFollowingViewController.swift */; };
+		9F336E4E1CF085EA00779067 /* MNVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E4D1CF085EA00779067 /* MNVideoViewController.swift */; };
+		9F336E501CF0862500779067 /* MNMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E4F1CF0862500779067 /* MNMusicViewController.swift */; };
+		9F336E521CF0867600779067 /* MNGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E511CF0867600779067 /* MNGalleryViewController.swift */; };
+		9F336E541CF0868400779067 /* MNTeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E531CF0868400779067 /* MNTeaViewController.swift */; };
 		9F59347B1CE9ECAD00E69FC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F59347A1CE9ECAD00E69FC8 /* AppDelegate.swift */; };
 		9F5934821CE9ECAD00E69FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F5934811CE9ECAD00E69FC8 /* Assets.xcassets */; };
 		9F5934851CE9ECAD00E69FC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5934831CE9ECAD00E69FC8 /* LaunchScreen.storyboard */; };
@@ -41,6 +47,12 @@
 		9F336E3D1CF0359E00779067 /* MNNavgationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNNavgationBar.swift; sourceTree = "<group>"; };
 		9F336E411CF0380D00779067 /* MNTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNTitleCell.swift; sourceTree = "<group>"; };
 		9F336E431CF0747E00779067 /* MNTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNTitle.swift; sourceTree = "<group>"; };
+		9F336E491CF0857200779067 /* MNExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNExploreViewController.swift; sourceTree = "<group>"; };
+		9F336E4B1CF085B500779067 /* MNFollowingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNFollowingViewController.swift; sourceTree = "<group>"; };
+		9F336E4D1CF085EA00779067 /* MNVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNVideoViewController.swift; sourceTree = "<group>"; };
+		9F336E4F1CF0862500779067 /* MNMusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMusicViewController.swift; sourceTree = "<group>"; };
+		9F336E511CF0867600779067 /* MNGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNGalleryViewController.swift; sourceTree = "<group>"; };
+		9F336E531CF0868400779067 /* MNTeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNTeaViewController.swift; sourceTree = "<group>"; };
 		9F5934771CE9ECAC00E69FC8 /* Moon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F59347A1CE9ECAD00E69FC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F5934811CE9ECAD00E69FC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
@@ -147,6 +159,7 @@
 		9F29D65A1CEB6BE8009AC42F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9F336E451CF0851D00779067 /* Explore */,
 				9F1D0DE01CEDD8EC00D4E951 /* Main */,
 				9F29D65B1CEB6BE8009AC42F /* Other */,
 			);
@@ -160,6 +173,43 @@
 				9F29D65C1CEB6C16009AC42F /* Theme.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		9F336E451CF0851D00779067 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				9F336E461CF0851D00779067 /* Controller */,
+				9F336E471CF0851D00779067 /* Model */,
+				9F336E481CF0851D00779067 /* View */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		9F336E461CF0851D00779067 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F336E491CF0857200779067 /* MNExploreViewController.swift */,
+				9F336E4B1CF085B500779067 /* MNFollowingViewController.swift */,
+				9F336E4D1CF085EA00779067 /* MNVideoViewController.swift */,
+				9F336E4F1CF0862500779067 /* MNMusicViewController.swift */,
+				9F336E511CF0867600779067 /* MNGalleryViewController.swift */,
+				9F336E531CF0868400779067 /* MNTeaViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9F336E471CF0851D00779067 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9F336E481CF0851D00779067 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9F59346E1CE9ECAC00E69FC8 = {
@@ -316,14 +366,20 @@
 				9F29D65D1CEB6C16009AC42F /* Theme.swift in Sources */,
 				9F1D0DF21CEDE25B00D4E951 /* MNTrendsViewContrller.swift in Sources */,
 				9F1D0DEA1CEDE18B00D4E951 /* MNRecommandViewController.swift in Sources */,
+				9F336E4C1CF085B500779067 /* MNFollowingViewController.swift in Sources */,
+				9F336E4A1CF0857200779067 /* MNExploreViewController.swift in Sources */,
 				9F1D0DED1CEDE1CD00D4E951 /* MNNavgationController.swift in Sources */,
 				9F1D0DEE1CEDE1CD00D4E951 /* MNTabBarController.swift in Sources */,
+				9F336E4E1CF085EA00779067 /* MNVideoViewController.swift in Sources */,
+				9F336E541CF0868400779067 /* MNTeaViewController.swift in Sources */,
 				9F1D0DF71CEDE78C00D4E951 /* MNTabBarItem.swift in Sources */,
 				9F59347B1CE9ECAD00E69FC8 /* AppDelegate.swift in Sources */,
 				9F336E441CF0747E00779067 /* MNTitle.swift in Sources */,
 				9F1D0DFC1CEDF4B800D4E951 /* MNView+Extension.swift in Sources */,
+				9F336E521CF0867600779067 /* MNGalleryViewController.swift in Sources */,
 				9F336E3E1CF0359E00779067 /* MNNavgationBar.swift in Sources */,
 				9F336E421CF0380D00779067 /* MNTitleCell.swift in Sources */,
+				9F336E501CF0862500779067 /* MNMusicViewController.swift in Sources */,
 				9F1D0DF01CEDE21400D4E951 /* MNDiscoverViewController.swift in Sources */,
 				9F1D0DF41CEDE27400D4E951 /* MNMineViewContrller.swift in Sources */,
 			);
