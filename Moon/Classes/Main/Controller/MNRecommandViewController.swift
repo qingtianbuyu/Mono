@@ -30,8 +30,8 @@ class MNRecommandViewController: UIViewController {
   }
   
    func setupBasicView() {
+      view.backgroundColor = commonBgColor
       self.navigationController?.navigationBar.hidden = true
-      view.backgroundColor        = UIColor.whiteColor()
       self.edgesForExtendedLayout = UIRectEdge.None
       titleView = MNNavgationBar(frame: CGRect.zero)
       titleView!.titles = titles
@@ -39,6 +39,7 @@ class MNRecommandViewController: UIViewController {
   }
   
   func setupScrollView() {
+    self.automaticallyAdjustsScrollViewInsets = false
     let scrollView = UIScrollView(frame: self.view.bounds)
     scrollView.pagingEnabled  = true
     scrollView.delegate       = self

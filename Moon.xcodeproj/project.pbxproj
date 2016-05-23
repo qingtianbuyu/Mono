@@ -25,6 +25,16 @@
 		9F336E501CF0862500779067 /* MNMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E4F1CF0862500779067 /* MNMusicViewController.swift */; };
 		9F336E521CF0867600779067 /* MNGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E511CF0867600779067 /* MNGalleryViewController.swift */; };
 		9F336E541CF0868400779067 /* MNTeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E531CF0868400779067 /* MNTeaViewController.swift */; };
+		9F4E6CEA1CF317CD00655CB3 /* MNExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4E6CE91CF317CD00655CB3 /* MNExploreCell.swift */; };
+		9F4E6CEC1CF3180500655CB3 /* MNExploreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F4E6CEB1CF3180500655CB3 /* MNExploreCell.xib */; };
+		9F4E6CF01CF350E300655CB3 /* MNExploreEntityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4E6CEF1CF350E300655CB3 /* MNExploreEntityList.swift */; };
+		9F4E6CF21CF3512A00655CB3 /* MNExploreEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4E6CF11CF3512A00655CB3 /* MNExploreEntity.swift */; };
+		9F4E6CF41CF3523100655CB3 /* MNMeow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4E6CF31CF3523100655CB3 /* MNMeow.swift */; };
+		9F4E6CF61CF3542300655CB3 /* MNGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4E6CF51CF3542300655CB3 /* MNGroup.swift */; };
+		9F4E6CF81CF3558F00655CB3 /* MNThumb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4E6CF71CF3558F00655CB3 /* MNThumb.swift */; };
+		9F4E6CFA1CF356B500655CB3 /* MNMasterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4E6CF91CF356B500655CB3 /* MNMasterInfo.swift */; };
+		9F4E6CFC1CF3577300655CB3 /* MNCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4E6CFB1CF3577300655CB3 /* MNCoordinate.swift */; };
+		9F4E6CFE1CF35A5100655CB3 /* MNCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4E6CFD1CF35A5100655CB3 /* MNCategory.swift */; };
 		9F59347B1CE9ECAD00E69FC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F59347A1CE9ECAD00E69FC8 /* AppDelegate.swift */; };
 		9F5934821CE9ECAD00E69FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F5934811CE9ECAD00E69FC8 /* Assets.xcassets */; };
 		9F5934851CE9ECAD00E69FC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5934831CE9ECAD00E69FC8 /* LaunchScreen.storyboard */; };
@@ -53,6 +63,16 @@
 		9F336E4F1CF0862500779067 /* MNMusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMusicViewController.swift; sourceTree = "<group>"; };
 		9F336E511CF0867600779067 /* MNGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNGalleryViewController.swift; sourceTree = "<group>"; };
 		9F336E531CF0868400779067 /* MNTeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNTeaViewController.swift; sourceTree = "<group>"; };
+		9F4E6CE91CF317CD00655CB3 /* MNExploreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNExploreCell.swift; sourceTree = "<group>"; };
+		9F4E6CEB1CF3180500655CB3 /* MNExploreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNExploreCell.xib; sourceTree = "<group>"; };
+		9F4E6CEF1CF350E300655CB3 /* MNExploreEntityList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNExploreEntityList.swift; sourceTree = "<group>"; };
+		9F4E6CF11CF3512A00655CB3 /* MNExploreEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNExploreEntity.swift; sourceTree = "<group>"; };
+		9F4E6CF31CF3523100655CB3 /* MNMeow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMeow.swift; sourceTree = "<group>"; };
+		9F4E6CF51CF3542300655CB3 /* MNGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNGroup.swift; sourceTree = "<group>"; };
+		9F4E6CF71CF3558F00655CB3 /* MNThumb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNThumb.swift; sourceTree = "<group>"; };
+		9F4E6CF91CF356B500655CB3 /* MNMasterInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMasterInfo.swift; sourceTree = "<group>"; };
+		9F4E6CFB1CF3577300655CB3 /* MNCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNCoordinate.swift; sourceTree = "<group>"; };
+		9F4E6CFD1CF35A5100655CB3 /* MNCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNCategory.swift; sourceTree = "<group>"; };
 		9F5934771CE9ECAC00E69FC8 /* Moon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F59347A1CE9ECAD00E69FC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F5934811CE9ECAD00E69FC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
@@ -201,6 +221,14 @@
 		9F336E471CF0851D00779067 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F4E6CEF1CF350E300655CB3 /* MNExploreEntityList.swift */,
+				9F4E6CF11CF3512A00655CB3 /* MNExploreEntity.swift */,
+				9F4E6CF31CF3523100655CB3 /* MNMeow.swift */,
+				9F4E6CF51CF3542300655CB3 /* MNGroup.swift */,
+				9F4E6CF71CF3558F00655CB3 /* MNThumb.swift */,
+				9F4E6CF91CF356B500655CB3 /* MNMasterInfo.swift */,
+				9F4E6CFB1CF3577300655CB3 /* MNCoordinate.swift */,
+				9F4E6CFD1CF35A5100655CB3 /* MNCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,6 +236,8 @@
 		9F336E481CF0851D00779067 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9F4E6CE91CF317CD00655CB3 /* MNExploreCell.swift */,
+				9F4E6CEB1CF3180500655CB3 /* MNExploreCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -305,6 +335,7 @@
 			files = (
 				9F5934851CE9ECAD00E69FC8 /* LaunchScreen.storyboard in Resources */,
 				9F5934821CE9ECAD00E69FC8 /* Assets.xcassets in Resources */,
+				9F4E6CEC1CF3180500655CB3 /* MNExploreCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,24 +394,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F4E6CEA1CF317CD00655CB3 /* MNExploreCell.swift in Sources */,
+				9F4E6CFC1CF3577300655CB3 /* MNCoordinate.swift in Sources */,
 				9F29D65D1CEB6C16009AC42F /* Theme.swift in Sources */,
+				9F4E6CFA1CF356B500655CB3 /* MNMasterInfo.swift in Sources */,
 				9F1D0DF21CEDE25B00D4E951 /* MNTrendsViewContrller.swift in Sources */,
 				9F1D0DEA1CEDE18B00D4E951 /* MNRecommandViewController.swift in Sources */,
 				9F336E4C1CF085B500779067 /* MNFollowingViewController.swift in Sources */,
 				9F336E4A1CF0857200779067 /* MNExploreViewController.swift in Sources */,
 				9F1D0DED1CEDE1CD00D4E951 /* MNNavgationController.swift in Sources */,
+				9F4E6CF41CF3523100655CB3 /* MNMeow.swift in Sources */,
 				9F1D0DEE1CEDE1CD00D4E951 /* MNTabBarController.swift in Sources */,
 				9F336E4E1CF085EA00779067 /* MNVideoViewController.swift in Sources */,
 				9F336E541CF0868400779067 /* MNTeaViewController.swift in Sources */,
 				9F1D0DF71CEDE78C00D4E951 /* MNTabBarItem.swift in Sources */,
 				9F59347B1CE9ECAD00E69FC8 /* AppDelegate.swift in Sources */,
 				9F336E441CF0747E00779067 /* MNTitle.swift in Sources */,
+				9F4E6CF21CF3512A00655CB3 /* MNExploreEntity.swift in Sources */,
 				9F1D0DFC1CEDF4B800D4E951 /* MNView+Extension.swift in Sources */,
+				9F4E6CF61CF3542300655CB3 /* MNGroup.swift in Sources */,
 				9F336E521CF0867600779067 /* MNGalleryViewController.swift in Sources */,
 				9F336E3E1CF0359E00779067 /* MNNavgationBar.swift in Sources */,
+				9F4E6CF01CF350E300655CB3 /* MNExploreEntityList.swift in Sources */,
 				9F336E421CF0380D00779067 /* MNTitleCell.swift in Sources */,
 				9F336E501CF0862500779067 /* MNMusicViewController.swift in Sources */,
+				9F4E6CFE1CF35A5100655CB3 /* MNCategory.swift in Sources */,
 				9F1D0DF01CEDE21400D4E951 /* MNDiscoverViewController.swift in Sources */,
+				9F4E6CF81CF3558F00655CB3 /* MNThumb.swift in Sources */,
 				9F1D0DF41CEDE27400D4E951 /* MNMineViewContrller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
