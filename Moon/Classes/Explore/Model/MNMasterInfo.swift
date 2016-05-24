@@ -18,4 +18,22 @@ class MNMasterInfo: NSObject {
   var self_description: String?
   var avatar_url: String?
   var coordinate: MNCoordinate?
+  
+  init(dict: [String: AnyObject]) {
+    super.init()
+    setValuesForKeysWithDictionary(dict)
+  }
+  
+  override func setValue(value: AnyObject?, forKey key: String) {
+    if key == "coordinate" {
+      coordinate = MNCoordinate(dict: value as! [String: AnyObject])
+      return
+    }
+    
+    
+    super.setValue(value, forKey: key)
+  }
+  
+  
+  
 }

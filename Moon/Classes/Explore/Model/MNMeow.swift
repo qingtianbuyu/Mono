@@ -31,4 +31,41 @@ class MNMeow: NSObject {
   var thumb: MNThumb?
   
   
+  init(dict: [String: AnyObject]) {
+    super.init()
+    setValuesForKeysWithDictionary(dict)
+  }
+  
+  override func setValue(value: AnyObject?, forKey key: String) {
+    if key == "group" {
+      group = MNGroup(dict: value as! [String: AnyObject])
+      return
+    }
+    
+    if key == "user" {
+      user = MNMasterInfo(dict: value as! [String: AnyObject])
+      return
+    }
+    
+    if key == "category" {
+      category = MNCategory(dict: value as! [String: AnyObject])
+      return
+    }
+    
+    if key == "thumb" {
+      thumb = MNThumb(dict: value as! [String: AnyObject])
+      return
+    }
+    
+    if key == "description" {
+      desc =  value as? String
+      return
+    }
+    
+    
+    super.setValue(value, forKey: key)
+  }
+  
+  
+  
 }

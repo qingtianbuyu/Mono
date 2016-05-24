@@ -14,5 +14,10 @@ class MNCoordinate: NSObject {
   var area_name: String?
   var longitude: Int = 0
   
+  init(dict: [String: AnyObject]) {
+    super.init()
+    setValuesForKeysWithDictionary(dict)
+  }
+  
   
 }

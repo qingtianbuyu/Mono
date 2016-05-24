@@ -12,6 +12,20 @@ class MNExploreEntity: NSObject {
 
   var meow: MNMeow?
   
+  init(dict: [String: AnyObject]) {
+    super.init()
+    setValuesForKeysWithDictionary(dict)
+  }
+  
+  override func setValue(value: AnyObject?, forKey key: String) {
+    if key == "meow" {
+      meow = MNMeow(dict:value as! [String: AnyObject])
+      return
+    }
+    
+    super.setValue(value, forKey: key)
+  }
+  
   
   
 }

@@ -13,6 +13,9 @@ public  let cellId = "explorer"
 
 class MNExploreViewController: UITableViewController {
   
+  var exploreEntity:MNExploreEntityList = MNExploreEntityList()
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setupTableView()
@@ -20,15 +23,7 @@ class MNExploreViewController: UITableViewController {
   }
   
   func initData() {
-    
-    let header = [
-                  "HTTP-AUTHORIZATION":"9da505a1202111e6b4e7525400b42a60"
-                  ]
-    let url = "http://mmmono.com/api/v3/recommendation/?start=1"
-    Alamofire.request(.GET, url,headers:header)
-             .responseJSON { (response) in
-              
-    }
+    exploreEntity.loadExploreEntityList("1")
     
     
   }

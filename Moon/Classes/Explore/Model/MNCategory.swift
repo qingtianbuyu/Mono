@@ -12,5 +12,11 @@ class MNCategory: NSObject {
   
   var id: Int = 0
   var name: String?
+ 
+  init(dict: [String: AnyObject]) {
+    super.init()
+    setValuesForKeysWithDictionary(dict)
+  }
+  
   
 }
