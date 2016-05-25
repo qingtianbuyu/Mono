@@ -13,8 +13,10 @@ public  let cellId = "explorer"
 
 class MNExploreViewController: UITableViewController {
   
-  var exploreEntity:MNExploreEntityList = MNExploreEntityList()
-  
+  var exploreEntityModel:MNExploreEntityList = MNExploreEntityList()
+  var exploreEntityList: [MNExploreEntity]? {
+    return exploreEntityModel.entity_list
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -23,9 +25,7 @@ class MNExploreViewController: UITableViewController {
   }
   
   func initData() {
-    exploreEntity.loadExploreEntityList("1")
-    
-    
+    exploreEntityModel.loadExploreEntityList("1")
   }
   
   
@@ -42,20 +42,15 @@ class MNExploreViewController: UITableViewController {
     tableView.registerNib(cellNib, forCellReuseIdentifier: cellId)
   }
   
-  
-  
-  override  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return 1
-  }
-  
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
+    return exploreEntityList?.count ?? 0
   }
   
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell =  tableView.dequeueReusableCellWithIdentifier(cellId , forIndexPath: indexPath) as! MNExploreCell
-//    cell.
+    let explore = exploreEntityList![indexPath.row]
+    cell.explore =  explore
     return cell
   }
 

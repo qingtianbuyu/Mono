@@ -27,6 +27,7 @@ class MNGroup: NSObject {
   var logo_url: String?
   var id: Int = 0
   var name: String?
+  var cert: MNCert?
   
   
   init(dict: [String:AnyObject]) {
@@ -49,6 +50,15 @@ class MNGroup: NSObject {
       desc =  value as? String
       return
     }
+    if key == "cert" {
+      cert =  MNCert(dict: value as! [String: AnyObject])
+      return
+    }
+    
+    if key == "admin_data" {
+      return
+    }
+    
     
     super.setValue(value, forKey: key)
   }

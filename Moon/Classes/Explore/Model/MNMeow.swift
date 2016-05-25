@@ -29,6 +29,21 @@ class MNMeow: NSObject {
   var intro: String?
   var is_post_by_master: Int = 0
   var thumb: MNThumb?
+  var video_duration: Int = 0
+  var pics: [MNThumb]?
+  var text_align: String?
+  var text_replacement:[String]?
+  var author: String?
+  var font_ename: String?
+  var images: [MNThumb]?
+  var text: String?
+  var image_count: Int = 0
+  var music_duration: Int = 0
+  var artist: Int  = 0
+  var lyrics: String?
+  var song_name: String?
+  var album_cover: [MNThumb]?
+  var music_url: String?
   
   
   init(dict: [String: AnyObject]) {
@@ -59,6 +74,37 @@ class MNMeow: NSObject {
     
     if key == "description" {
       desc =  value as? String
+      return
+    }
+    if key == "pics" {
+      guard let array = (value as? [[String : AnyObject]])  else {
+        return
+      }
+      for dict in array {
+        pics?.append(MNThumb(dict:dict))
+      }
+      
+      return
+    }
+    if key == "text_replacement" {
+      return
+    }
+    if key == "images" {
+      guard let array = (value  as?[[String : AnyObject]])  else {
+        return
+      }
+      for dict in array {
+        images?.append(MNThumb(dict:dict))
+      }
+      return
+    }
+    if key == "album_cover" {
+      guard let array = (value  as?[[String : AnyObject]])  else {
+        return
+      }
+      for dict in array {
+        album_cover?.append(MNThumb(dict:dict))
+      }
       return
     }
     

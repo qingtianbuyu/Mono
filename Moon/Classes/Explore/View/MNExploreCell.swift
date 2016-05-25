@@ -10,6 +10,15 @@ import UIKit
 
 class MNExploreCell: UITableViewCell {
 
+  var explore: MNExploreEntity? {
+    didSet{
+    
+    }
+    
+  }
+  
+  
+  
   override func awakeFromNib() {
     
   }
