@@ -45,6 +45,10 @@ extension UIView {
       return frame.origin
     }
   }
+  
+  class func viewFromXib() -> AnyObject {
+    return NSBundle.mainBundle().loadNibNamed(String(self), owner: nil, options: nil).last!
+  }
 
 }
 

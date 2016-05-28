@@ -18,11 +18,7 @@ class MNExploreEntityList {
     let teaDict =  NSDictionary.init(contentsOfFile: path!) as! [String: AnyObject]
     let tea =  teaDict["tea"] as! [String: AnyObject]
     let teaArray  =  MNTea(dict: tea)
-    
-    for  dict in teaArray.entity_list! {
-      print(dict)
-    }
-  
+    entity_list = teaArray.entity_list
   }
   
   

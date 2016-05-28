@@ -28,13 +28,9 @@ class MNExploreViewController: UITableViewController {
     exploreEntityModel.loadExploreEntityList("1")
   }
   
-  
-  
   func setupTableView() -> Void {
     let top:CGFloat     = 64
     let bottom:CGFloat  = (self.tabBarController?.tabBar.height)!
-    tableView.rowHeight = 60
-    tableView.estimatedRowHeight = 60
     tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0)
     tableView.backgroundColor = UIColor.clearColor()
     
@@ -46,12 +42,20 @@ class MNExploreViewController: UITableViewController {
     return exploreEntityList?.count ?? 0
   }
   
-  
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell =  tableView.dequeueReusableCellWithIdentifier(cellId , forIndexPath: indexPath) as! MNExploreCell
     let explore = exploreEntityList![indexPath.row]
     cell.explore =  explore
     return cell
+  }
+  
+  override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    let explore = exploreEntityList![indexPath.row]
+    return explore.meow!.cellHeight
+  }
+  
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
 
   

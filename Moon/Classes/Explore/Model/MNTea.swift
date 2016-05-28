@@ -32,23 +32,14 @@ class MNTea: NSObject {
   override func setValue(value: AnyObject?, forKey key: String) {
     
     if key ==  "entity_list" {
-//      guard let array = (value as? [[String: AnyObject]]) else {
-//        return
-//      }
-//      for entity in array {
-//        entity_list?.append(MNExploreEntity(dict: entity))
-//      }
-      //
-      
       guard let array = (value  as?[[String : AnyObject]])  else {
         return
       }
+      var tmpArray = [MNExploreEntity]()
       for dict in array {
-        entity_list?.append(MNExploreEntity(dict:dict))
+        tmpArray.append(MNExploreEntity(dict:dict))
       }
-      
-      
-
+      entity_list = tmpArray
       return
     }
     

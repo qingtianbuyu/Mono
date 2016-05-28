@@ -45,6 +45,20 @@ class MNMeow: NSObject {
   var album_cover: [MNThumb]?
   var music_url: String?
   
+  //topF
+  var topF: CGRect = CGRectZero;
+  var thumbF: CGRect = CGRectZero;
+  var meowTypeThreeF: CGRect = CGRectZero;
+  var meowTypeFourF: CGRect = CGRectZero;
+  
+  
+  //计算cell高度
+  var cellHeight:CGFloat {
+    get {
+      return calcHeight()
+    }
+    
+  }
   
   init(dict: [String: AnyObject]) {
     super.init()
@@ -80,9 +94,11 @@ class MNMeow: NSObject {
       guard let array = (value as? [[String : AnyObject]])  else {
         return
       }
+      var picArray = [MNThumb]()
       for dict in array {
-        pics?.append(MNThumb(dict:dict))
+        picArray.append(MNThumb(dict:dict))
       }
+      pics = picArray
       
       return
     }
@@ -108,8 +124,37 @@ class MNMeow: NSObject {
       return
     }
     
-    
     super.setValue(value, forKey: key)
+  }
+  
+  // TODO 计算高度,暂时没有保存机制
+  func calcHeight() -> CGFloat {
+    var height:CGFloat = 0
+    topF = CGRectMake(0, 0, ScreenWidth, exploreTopBarH)
+    let topFMaxY = CGRectGetMaxY(topF)
+    height += topFMaxY
+    
+    //计算cell高度
+    if meow_type == 2 {
+      let thumbH:CGFloat = 375
+      thumbF = CGRectMake(0, topFMaxY, ScreenWidth, thumbH)
+      height += thumbH
+    }
+    else if meow_type == 3 {
+      let thumbH:CGFloat = 375
+      meowTypeThreeF = CGRectMake(0, topFMaxY, ScreenWidth, thumbH)
+      height += (thumbH + exploreToolBarH)
+    }
+    else if meow_type == 4 {
+      let thumbH:CGFloat = 200 + 114
+      meowTypeFourF = CGRectMake(0, 0, ScreenWidth, thumbH)
+      height += thumbH
+    }
+    else {
+      height += exploreToolBarH
+    }
+    
+    return height
   }
   
   
