@@ -16,8 +16,13 @@ class MNExploreCell: UITableViewCell {
   
   @IBOutlet weak var categoryLabel: UILabel!
   
-  
   @IBOutlet weak var lineView: UIView!
+  
+  
+  @IBOutlet weak var buttonShare: UIButton!
+  @IBOutlet weak var buttonLike: UIButton!
+  @IBOutlet weak var buttonZan: UIButton!
+  @IBOutlet weak var buttonComment: UIButton!
   
   
   lazy  var thumbView: MNThumbView = {
@@ -62,6 +67,8 @@ class MNExploreCell: UITableViewCell {
       self.nameLabel.text     = meow?.group?.name
       self.categoryLabel.text = "# " + (meow?.category?.name ?? "")
       self.logoView.m_setImageWithUrl((meow?.group?.logo_url)!, placeHolderName: "icon-place-holder.png")
+      
+      setupToolBarButtons()
       
       hiddleAllViews()
       if meow?.meow_type == 2 {
@@ -131,6 +138,36 @@ class MNExploreCell: UITableViewCell {
     self.meowTypeSevenView.hidden = true
     self.meowTypeEightView.hidden = true
     self.meowTypeNineView.hidden = true
+  }
+  
+  func setupToolBarButtons() -> Void {
+    let type = explore?.meow?.meow_type
+    let bang_count = explore?.meow?.bang_count
+    let comment_count = explore?.meow?.comment_count 
+    if type == 2 || type == 9{
+      setupButton(self.buttonShare, imageName: "item-btn-share-white", title: "")
+      setupButton(self.buttonLike,  imageName: "item-btn-like-white", title: "")
+      setupButton(self.buttonZan,   imageName: "item-btn-thumb-white", title:"\(bang_count)")
+      setupButton(self.buttonComment, imageName: "item-btn-comment-white", title:"\(comment_count)")
+
+      
+    } else {
+      setupButton(self.buttonShare, imageName: "item-btn-share-black", title:"")
+      setupButton(self.buttonLike,  imageName: "item-btn-like-black",  title:"")
+      setupButton(self.buttonZan,   imageName: "item-btn-thumb-black", title:"\(bang_count)")
+      setupButton(self.buttonComment, imageName: "item-btn-comment-black", title:"\(comment_count)")
+    }
+  }
+  
+  // #pragma mark -- 
+  func setupButton(button: UIButton, imageName: String, title: String?) -> Void {
+    
+    let (image, highLightImage) = UIImage.imageName(imageName)
+    button.setImage(image, forState: UIControlState.Normal)
+    button.setImage(highLightImage, forState: UIControlState.Highlighted)
+    
+    
+    
   }
   
 }

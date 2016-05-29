@@ -41,7 +41,6 @@ class MNMeowTypeThreeView: UIView {
 
 extension MNMeowTypeThreeView: UICollectionViewDelegate , UICollectionViewDataSource {
   
-  
   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return meow?.pics?.count ?? 0
   }

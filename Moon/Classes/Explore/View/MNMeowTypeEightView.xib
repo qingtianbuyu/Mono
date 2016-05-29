@@ -17,11 +17,49 @@
                         <constraint firstAttribute="height" constant="280" id="sWQ-nn-ebC"/>
                     </constraints>
                 </imageView>
-                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTv-wY-CIy" userLabel="blurView">
+                <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTv-wY-CIy" userLabel="blurView">
                     <rect key="frame" x="0.0" y="240" width="375" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4i-zs-2SE" userLabel="buttonPlay">
+                            <rect key="frame" x="10" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="GPC-R4-EIc"/>
+                            </constraints>
+                            <state key="normal" image="icon-player-play-button"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBz-Q2-zBW" userLabel="songLabel">
+                            <rect key="frame" x="70" y="0.0" width="38" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-player-logo-blue" translatesAutoresizingMaskIntoConstraints="NO" id="Om9-dU-vIc">
+                            <rect key="frame" x="340" y="13" width="15" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="15" id="fl3-OX-htK"/>
+                                <constraint firstAttribute="width" constant="15" id="tSz-s3-PrC"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:02" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Au8-0O-k0f" userLabel="durationLabel">
+                            <rect key="frame" x="289" y="11" width="41" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="GBz-Q2-zBW" secondAttribute="bottom" id="1ug-de-hKP"/>
+                        <constraint firstAttribute="bottom" secondItem="Z4i-zs-2SE" secondAttribute="bottom" id="3ow-UA-OWA"/>
+                        <constraint firstAttribute="trailing" secondItem="Om9-dU-vIc" secondAttribute="trailing" constant="20" id="9jF-zF-LmU"/>
+                        <constraint firstItem="Om9-dU-vIc" firstAttribute="centerY" secondItem="dTv-wY-CIy" secondAttribute="centerY" id="AwA-O2-UOE"/>
+                        <constraint firstItem="Z4i-zs-2SE" firstAttribute="leading" secondItem="dTv-wY-CIy" secondAttribute="leading" constant="10" id="Qam-Vz-oOK"/>
+                        <constraint firstItem="Om9-dU-vIc" firstAttribute="leading" secondItem="Au8-0O-k0f" secondAttribute="trailing" constant="10" id="Vkd-CH-qnp"/>
+                        <constraint firstItem="Au8-0O-k0f" firstAttribute="centerY" secondItem="dTv-wY-CIy" secondAttribute="centerY" id="Zqd-NS-BAa"/>
+                        <constraint firstItem="GBz-Q2-zBW" firstAttribute="leading" secondItem="Z4i-zs-2SE" secondAttribute="trailing" constant="20" id="dNK-SK-ehL"/>
                         <constraint firstAttribute="height" constant="40" id="eMG-wF-Gss"/>
+                        <constraint firstItem="GBz-Q2-zBW" firstAttribute="top" secondItem="dTv-wY-CIy" secondAttribute="top" id="fIu-57-axb"/>
+                        <constraint firstItem="Z4i-zs-2SE" firstAttribute="top" secondItem="dTv-wY-CIy" secondAttribute="top" id="yoJ-dJ-pqZ"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wv-kh-sZj" userLabel="titleLabelView">
@@ -54,11 +92,18 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="buttonPlay" destination="Z4i-zs-2SE" id="dJc-OF-P5B"/>
                 <outlet property="descriptiomLabel" destination="aTX-cu-fnN" id="tZL-7L-gTB"/>
+                <outlet property="durationLabel" destination="Au8-0O-k0f" id="CsH-Or-eMr"/>
                 <outlet property="imageView" destination="LJG-9J-oao" id="daE-QH-cv3"/>
+                <outlet property="songName" destination="GBz-Q2-zBW" id="DkW-Xv-uQF"/>
                 <outlet property="titleLabelView" destination="2Wv-kh-sZj" id="eLw-If-BY4"/>
             </connections>
             <point key="canvasLocation" x="418.5" y="313.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="icon-player-logo-blue" width="13" height="13"/>
+        <image name="icon-player-play-button" width="15" height="20"/>
+    </resources>
 </document>

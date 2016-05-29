@@ -24,6 +24,13 @@ extension UIImage {
     UIGraphicsEndImageContext();
     return image;
   }
+  
+  class func imageName(name: String) -> (normalImage: UIImage, highLightedImage: UIImage) {
+    let image = UIImage(named: name)!.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+    let imageName  = "\(name)-act"
+    let highLightImage = UIImage(named: imageName)!.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal)
+    return (image, highLightImage)
+  }
 
 
 }

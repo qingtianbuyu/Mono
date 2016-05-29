@@ -52,7 +52,8 @@ class MNMeow: NSObject {
   var text: String?
   var image_count: Int = 0
   var music_duration: Int = 0
-  var artist: Int  = 0
+  var music_duration_str: String?
+  var artist: String?
   var lyrics: String?
   var song_name: String?
   var album_cover: [MNThumb]?
@@ -141,7 +142,16 @@ class MNMeow: NSObject {
       return
     }
     
-  
+    
+    if key == "music_duration" {
+      music_duration  = value as! Int
+      let min = music_duration / 60
+      let sec = music_duration % 60
+      music_duration_str =  "\(min):\(sec)"
+      return
+    }
+    
+    
     super.setValue(value, forKey: key)
   }
   

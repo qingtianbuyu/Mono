@@ -18,7 +18,6 @@ class MNExploreViewController: UITableViewController {
     return exploreEntityModel.entity_list
   }
   
-  
   var rowHeightCache = [Int: CGFloat]()
   
   override func viewDidLoad() {
