@@ -53,6 +53,11 @@
 		9FC05AE91CFA5EEB00F39407 /* MNMeowTypeEightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC05AE81CFA5EEB00F39407 /* MNMeowTypeEightView.xib */; };
 		9FC05AEB1CFA658E00F39407 /* MNMeowTypeSeven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC05AEA1CFA658E00F39407 /* MNMeowTypeSeven.swift */; };
 		9FC05AED1CFA659F00F39407 /* MNMeowTypeSeven.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC05AEC1CFA659F00F39407 /* MNMeowTypeSeven.xib */; };
+		9FC05AEF1CFAB2F700F39407 /* MNMeowTypeThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC05AEE1CFAB2F700F39407 /* MNMeowTypeThreeView.swift */; };
+		9FC05AF11CFAB32500F39407 /* MNMeowTypeThreeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC05AF01CFAB32500F39407 /* MNMeowTypeThreeView.xib */; };
+		9FC05AF31CFAB67100F39407 /* MNPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC05AF21CFAB67100F39407 /* MNPicCell.swift */; };
+		9FC05AF51CFAB68000F39407 /* MNPicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC05AF41CFAB68000F39407 /* MNPicCell.xib */; };
+		9FC05AF71CFAC5E800F39407 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC05AF61CFAC5E800F39407 /* UIImage+Extension.swift */; };
 		9FEE03D21CF5C5C300521663 /* MNCert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE03D11CF5C5C300521663 /* MNCert.swift */; };
 		D365F2300E2CBB9CE75B2318 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5392A0B847D0886FB2CCF8 /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -95,20 +100,25 @@
 		9F5934841CE9ECAD00E69FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F5934861CE9ECAD00E69FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		9F7E7C711CF945A100F9FBEF /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
-		9F7E7C731CF9937400F9FBEF /* MNThumbView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNThumbView.swift; sourceTree = "<group>"; };
-		9F7E7C751CF9992A00F9FBEF /* MNThumbView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNThumbView.xib; sourceTree = "<group>"; };
-		9F7E7C771CF9DE5D00F9FBEF /* MNMeowTypeFourView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMeowTypeFourView.swift; sourceTree = "<group>"; };
-		9F7E7C791CF9DE8800F9FBEF /* MNMeowTypeFourView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNMeowTypeFourView.xib; sourceTree = "<group>"; };
-		9F886E571CF9F45B001CDE13 /* MNMeowTypeNineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMeowTypeNineView.swift; sourceTree = "<group>"; };
-		9F886E591CF9F46A001CDE13 /* MNMeowTypeNineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNMeowTypeNineView.xib; sourceTree = "<group>"; };
+		9F7E7C731CF9937400F9FBEF /* MNThumbView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MNThumbView.swift; path = ../MNThumbView.swift; sourceTree = "<group>"; };
+		9F7E7C751CF9992A00F9FBEF /* MNThumbView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MNThumbView.xib; path = ../MNThumbView.xib; sourceTree = "<group>"; };
+		9F7E7C771CF9DE5D00F9FBEF /* MNMeowTypeFourView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MNMeowTypeFourView.swift; path = ../MNMeowTypeFourView.swift; sourceTree = "<group>"; };
+		9F7E7C791CF9DE8800F9FBEF /* MNMeowTypeFourView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MNMeowTypeFourView.xib; path = ../MNMeowTypeFourView.xib; sourceTree = "<group>"; };
+		9F886E571CF9F45B001CDE13 /* MNMeowTypeNineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MNMeowTypeNineView.swift; path = ../MNMeowTypeNineView.swift; sourceTree = "<group>"; };
+		9F886E591CF9F46A001CDE13 /* MNMeowTypeNineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MNMeowTypeNineView.xib; path = ../MNMeowTypeNineView.xib; sourceTree = "<group>"; };
 		9FA9B7131CF497CE009933A3 /* MNHttpTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNHttpTool.swift; sourceTree = "<group>"; };
 		9FBD5F451CF5F67600F1A936 /* tea.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tea.plist; sourceTree = "<group>"; };
 		9FBD5F461CF5F67600F1A936 /* 0525.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 0525.plist; sourceTree = "<group>"; };
 		9FBD5F491CF5FAE500F1A936 /* MNTea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNTea.swift; sourceTree = "<group>"; };
-		9FC05AE61CFA5EE100F39407 /* MNMeowTypeEightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMeowTypeEightView.swift; sourceTree = "<group>"; };
-		9FC05AE81CFA5EEB00F39407 /* MNMeowTypeEightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNMeowTypeEightView.xib; sourceTree = "<group>"; };
-		9FC05AEA1CFA658E00F39407 /* MNMeowTypeSeven.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMeowTypeSeven.swift; sourceTree = "<group>"; };
-		9FC05AEC1CFA659F00F39407 /* MNMeowTypeSeven.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNMeowTypeSeven.xib; sourceTree = "<group>"; };
+		9FC05AE61CFA5EE100F39407 /* MNMeowTypeEightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MNMeowTypeEightView.swift; path = ../MNMeowTypeEightView.swift; sourceTree = "<group>"; };
+		9FC05AE81CFA5EEB00F39407 /* MNMeowTypeEightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MNMeowTypeEightView.xib; path = ../MNMeowTypeEightView.xib; sourceTree = "<group>"; };
+		9FC05AEA1CFA658E00F39407 /* MNMeowTypeSeven.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MNMeowTypeSeven.swift; path = ../MNMeowTypeSeven.swift; sourceTree = "<group>"; };
+		9FC05AEC1CFA659F00F39407 /* MNMeowTypeSeven.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MNMeowTypeSeven.xib; path = ../MNMeowTypeSeven.xib; sourceTree = "<group>"; };
+		9FC05AEE1CFAB2F700F39407 /* MNMeowTypeThreeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MNMeowTypeThreeView.swift; path = ../MNMeowTypeThreeView.swift; sourceTree = "<group>"; };
+		9FC05AF01CFAB32500F39407 /* MNMeowTypeThreeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MNMeowTypeThreeView.xib; path = ../MNMeowTypeThreeView.xib; sourceTree = "<group>"; };
+		9FC05AF21CFAB67100F39407 /* MNPicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MNPicCell.swift; path = ../MNPicCell.swift; sourceTree = "<group>"; };
+		9FC05AF41CFAB68000F39407 /* MNPicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MNPicCell.xib; path = ../MNPicCell.xib; sourceTree = "<group>"; };
+		9FC05AF61CFAC5E800F39407 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		9FEE03D11CF5C5C300521663 /* MNCert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNCert.swift; sourceTree = "<group>"; };
 		9FF4446D1CF938160080CA17 /* Moon-bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Moon-bridge-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,6 +217,7 @@
 			children = (
 				9F1D0DFB1CEDF4B800D4E951 /* MNView+Extension.swift */,
 				9F7E7C711CF945A100F9FBEF /* UIImageView+Extension.swift */,
+				9FC05AF61CFAC5E800F39407 /* UIImage+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -274,18 +285,9 @@
 		9F336E481CF0851D00779067 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9FC05AF81CFACD5900F39407 /* ExploreCellView */,
 				9F4E6CE91CF317CD00655CB3 /* MNExploreCell.swift */,
 				9F4E6CEB1CF3180500655CB3 /* MNExploreCell.xib */,
-				9F7E7C731CF9937400F9FBEF /* MNThumbView.swift */,
-				9F7E7C751CF9992A00F9FBEF /* MNThumbView.xib */,
-				9F7E7C771CF9DE5D00F9FBEF /* MNMeowTypeFourView.swift */,
-				9F7E7C791CF9DE8800F9FBEF /* MNMeowTypeFourView.xib */,
-				9F886E571CF9F45B001CDE13 /* MNMeowTypeNineView.swift */,
-				9F886E591CF9F46A001CDE13 /* MNMeowTypeNineView.xib */,
-				9FC05AE61CFA5EE100F39407 /* MNMeowTypeEightView.swift */,
-				9FC05AE81CFA5EEB00F39407 /* MNMeowTypeEightView.xib */,
-				9FC05AEA1CFA658E00F39407 /* MNMeowTypeSeven.swift */,
-				9FC05AEC1CFA659F00F39407 /* MNMeowTypeSeven.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -334,6 +336,27 @@
 				9FBD5F461CF5F67600F1A936 /* 0525.plist */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		9FC05AF81CFACD5900F39407 /* ExploreCellView */ = {
+			isa = PBXGroup;
+			children = (
+				9F7E7C731CF9937400F9FBEF /* MNThumbView.swift */,
+				9F7E7C751CF9992A00F9FBEF /* MNThumbView.xib */,
+				9F7E7C771CF9DE5D00F9FBEF /* MNMeowTypeFourView.swift */,
+				9F7E7C791CF9DE8800F9FBEF /* MNMeowTypeFourView.xib */,
+				9F886E571CF9F45B001CDE13 /* MNMeowTypeNineView.swift */,
+				9F886E591CF9F46A001CDE13 /* MNMeowTypeNineView.xib */,
+				9FC05AE61CFA5EE100F39407 /* MNMeowTypeEightView.swift */,
+				9FC05AE81CFA5EEB00F39407 /* MNMeowTypeEightView.xib */,
+				9FC05AEA1CFA658E00F39407 /* MNMeowTypeSeven.swift */,
+				9FC05AEC1CFA659F00F39407 /* MNMeowTypeSeven.xib */,
+				9FC05AEE1CFAB2F700F39407 /* MNMeowTypeThreeView.swift */,
+				9FC05AF01CFAB32500F39407 /* MNMeowTypeThreeView.xib */,
+				9FC05AF21CFAB67100F39407 /* MNPicCell.swift */,
+				9FC05AF41CFAB68000F39407 /* MNPicCell.xib */,
+			);
+			path = ExploreCellView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,11 +427,13 @@
 				9F7E7C7A1CF9DE8800F9FBEF /* MNMeowTypeFourView.xib in Resources */,
 				9FBD5F481CF5F67600F1A936 /* 0525.plist in Resources */,
 				9F7E7C761CF9992A00F9FBEF /* MNThumbView.xib in Resources */,
+				9FC05AF51CFAB68000F39407 /* MNPicCell.xib in Resources */,
 				9FBD5F471CF5F67600F1A936 /* tea.plist in Resources */,
 				9F5934821CE9ECAD00E69FC8 /* Assets.xcassets in Resources */,
 				9F4E6CEC1CF3180500655CB3 /* MNExploreCell.xib in Resources */,
 				9FC05AED1CFA659F00F39407 /* MNMeowTypeSeven.xib in Resources */,
 				9FC05AE91CFA5EEB00F39407 /* MNMeowTypeEightView.xib in Resources */,
+				9FC05AF11CFAB32500F39407 /* MNMeowTypeThreeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,10 +516,13 @@
 				9F4E6CF61CF3542300655CB3 /* MNGroup.swift in Sources */,
 				9F336E521CF0867600779067 /* MNGalleryViewController.swift in Sources */,
 				9F336E3E1CF0359E00779067 /* MNNavgationBar.swift in Sources */,
+				9FC05AEF1CFAB2F700F39407 /* MNMeowTypeThreeView.swift in Sources */,
 				9F4E6CF01CF350E300655CB3 /* MNExploreEntityList.swift in Sources */,
 				9FC05AEB1CFA658E00F39407 /* MNMeowTypeSeven.swift in Sources */,
+				9FC05AF71CFAC5E800F39407 /* UIImage+Extension.swift in Sources */,
 				9F336E421CF0380D00779067 /* MNTitleCell.swift in Sources */,
 				9F336E501CF0862500779067 /* MNMusicViewController.swift in Sources */,
+				9FC05AF31CFAB67100F39407 /* MNPicCell.swift in Sources */,
 				9F4E6CFE1CF35A5100655CB3 /* MNCategory.swift in Sources */,
 				9F7E7C721CF945A100F9FBEF /* UIImageView+Extension.swift in Sources */,
 				9F1D0DF01CEDE21400D4E951 /* MNDiscoverViewController.swift in Sources */,

@@ -182,7 +182,7 @@ class MNMeow: NSObject {
     else if meow_type == 9 {
       let thumbH:CGFloat = 350
       meowTypeNineF = CGRectMake(0, 0, width, thumbH)
-      height += thumbH
+      height += (thumbH - topFMaxY)
     }
     else {
       height += exploreToolBarH

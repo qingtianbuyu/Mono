@@ -18,6 +18,9 @@ class MNExploreViewController: UITableViewController {
     return exploreEntityModel.entity_list
   }
   
+  
+  var rowHeightCache = [Int: CGFloat]()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setupTableView()
@@ -51,7 +54,13 @@ class MNExploreViewController: UITableViewController {
   
   override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     let explore = exploreEntityList![indexPath.row]
-    return explore.meow!.cellHeight
+    
+    if let rowHeight = rowHeightCache[explore.meow?.id ?? 0] {
+        return rowHeight
+    }
+    let  height  = explore.meow!.cellHeight
+    rowHeightCache[explore.meow?.id ?? 0] = height
+    return height ?? 0
   }
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

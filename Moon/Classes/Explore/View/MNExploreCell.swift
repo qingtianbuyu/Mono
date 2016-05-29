@@ -16,6 +16,10 @@ class MNExploreCell: UITableViewCell {
   
   @IBOutlet weak var categoryLabel: UILabel!
   
+  
+  @IBOutlet weak var lineView: UIView!
+  
+  
   lazy  var thumbView: MNThumbView = {
     let  thumbView  = MNThumbView.viewFromXib() as! MNThumbView
     self.contentView.insertSubview(thumbView, atIndex: 0)
@@ -28,8 +32,8 @@ class MNExploreCell: UITableViewCell {
     return typeFourView
   }()
   
-  lazy var meowTypeThreeView: UIImageView = {
-    let imageView = UIImageView()
+  lazy var meowTypeThreeView: MNMeowTypeThreeView = {
+    let imageView = MNMeowTypeThreeView.viewFromXib() as! MNMeowTypeThreeView
     self.contentView.insertSubview(imageView, atIndex: 0)
     return imageView
   }()
@@ -67,15 +71,16 @@ class MNExploreCell: UITableViewCell {
         
         self.nameLabel.textColor = UIColor.blackColor()
         self.categoryLabel.textColor  = UIColor.blackColor()
+        self.lineView.backgroundColor = UIColor.clearColor()
         
       } else if meow?.meow_type == 3 {
         self.meowTypeThreeView.hidden = false
         self.meowTypeThreeView.frame = meow?.meowTypeThreeF ?? CGRectZero
-        self.meowTypeThreeView.m_setImageWithUrl((meow?.pics![0].raw)!, placeHolderName: "icon-place-holder.png")
+        self.meowTypeThreeView.meow  =  meow
         
         self.nameLabel.textColor = UIColor.blackColor()
         self.categoryLabel.textColor  = UIColor.blackColor()
-        
+        self.lineView.backgroundColor = UIColor.clearColor()
       }
       else if meow?.meow_type == 4 {
         self.meowTypeFourView.hidden = false
@@ -85,7 +90,7 @@ class MNExploreCell: UITableViewCell {
         
         self.nameLabel.textColor = UIColor.whiteColor()
         self.categoryLabel.textColor  = UIColor.whiteColor()
-        
+        self.lineView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.2)
         
       } else if meow?.meow_type == 7 {
         self.meowTypeSevenView.hidden = false
@@ -102,7 +107,7 @@ class MNExploreCell: UITableViewCell {
         
         self.nameLabel.textColor = UIColor.whiteColor()
         self.categoryLabel.textColor  = UIColor.whiteColor()
-        
+        self.lineView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.2)
       } else if meow?.meow_type == 9 {
         self.meowTypeNineView.hidden = false
         self.meowTypeNineView.frame = meow?.meowTypeNineF ?? CGRectZero
@@ -110,6 +115,7 @@ class MNExploreCell: UITableViewCell {
         
         self.nameLabel.textColor = UIColor.whiteColor()
         self.categoryLabel.textColor  = UIColor.whiteColor()
+        self.lineView.backgroundColor = UIColor.whiteColor()
       }
     }
   }

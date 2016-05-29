@@ -119,21 +119,32 @@
                             <constraint firstAttribute="height" constant="20" id="XPW-LB-hZ6"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4C7-L8-K6D" userLabel="lineView">
+                        <rect key="frame" x="15" y="280" width="287" height="1"/>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.25098039220000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="sFR-CP-L59"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="vc2-Ex-O7b" secondAttribute="trailing" id="0sT-Ha-ejq"/>
                     <constraint firstItem="vc2-Ex-O7b" firstAttribute="top" secondItem="Hx1-yP-dvo" secondAttribute="top" id="3Bu-Vd-s4g"/>
                     <constraint firstItem="gfD-6o-P2G" firstAttribute="leading" secondItem="Hx1-yP-dvo" secondAttribute="leading" id="FKS-03-TrI"/>
+                    <constraint firstItem="4C7-L8-K6D" firstAttribute="leading" secondItem="Hx1-yP-dvo" secondAttribute="leading" constant="15" id="GbV-WQ-Ya4"/>
+                    <constraint firstItem="dT5-0p-eBT" firstAttribute="top" secondItem="4C7-L8-K6D" secondAttribute="bottom" constant="1" id="Jrn-XV-7uL"/>
                     <constraint firstAttribute="bottom" secondItem="gfD-6o-P2G" secondAttribute="bottom" id="PQ0-F4-E8t"/>
                     <constraint firstAttribute="bottom" secondItem="dT5-0p-eBT" secondAttribute="bottom" constant="20" id="Pxd-yO-eBu"/>
                     <constraint firstItem="dT5-0p-eBT" firstAttribute="leading" secondItem="Hx1-yP-dvo" secondAttribute="leading" id="Rda-Yx-LTy"/>
                     <constraint firstAttribute="trailing" secondItem="gfD-6o-P2G" secondAttribute="trailing" id="T9B-vm-fD3"/>
                     <constraint firstItem="vc2-Ex-O7b" firstAttribute="leading" secondItem="Hx1-yP-dvo" secondAttribute="leading" id="U0a-kB-pxD"/>
                     <constraint firstAttribute="trailing" secondItem="dT5-0p-eBT" secondAttribute="trailing" id="hO7-57-xAQ"/>
+                    <constraint firstAttribute="trailing" secondItem="4C7-L8-K6D" secondAttribute="trailing" constant="15" id="pFi-mF-xub"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="categoryLabel" destination="DK8-Eb-ZwA" id="CrH-Fa-SIq"/>
+                <outlet property="lineView" destination="4C7-L8-K6D" id="k8c-ix-Auh"/>
                 <outlet property="logoView" destination="YPV-Yo-Hrs" id="uRe-cb-2NX"/>
                 <outlet property="nameLabel" destination="YFg-se-63r" id="VvJ-5M-mz7"/>
             </connections>

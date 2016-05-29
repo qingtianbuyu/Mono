@@ -46,7 +46,6 @@ class MNRecommandViewController: UIViewController {
     scrollView.showsVerticalScrollIndicator   = false
     scrollView.showsHorizontalScrollIndicator = false
     let width   = CGFloat(self.childViewControllers.count) * scrollView.width
-//    let height  = view.height -  CGRectGetMaxY(titleView!.frame)
     scrollView.contentSize = CGSizeMake(width, 0)
     view.insertSubview(scrollView, atIndex: 0)
     self.scrollView = scrollView
@@ -68,7 +67,6 @@ extension MNRecommandViewController:UIScrollViewDelegate {
   func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
     //获取当前位置的索引
     let index = Int(scrollView.contentOffset.x / scrollView.width)
-    print(index)
     let   childVc  =  self.childViewControllers[index]
     var   frame = childVc.view.frame
     frame.origin.x = scrollView.contentOffset.x
