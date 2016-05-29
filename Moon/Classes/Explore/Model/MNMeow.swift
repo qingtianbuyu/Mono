@@ -8,6 +8,19 @@
 
 import UIKit
 
+//enum MeowType: Int {
+//  case type_0 = 0
+//  case type_2 = 2
+//  case type_3 = 3
+//  case type_4 = 4
+//  case type_7 = 7
+//  case type_8 = 8
+//  case type_9 = 9
+//  
+//}
+
+
+
 class MNMeow: NSObject {
   
   var bang_count: Int = 0
@@ -46,11 +59,13 @@ class MNMeow: NSObject {
   var music_url: String?
   
   //topF
-  var topF: CGRect = CGRectZero;
+  var topF:   CGRect = CGRectZero
   var thumbF: CGRect = CGRectZero;
-  var meowTypeThreeF: CGRect = CGRectZero;
-  var meowTypeFourF: CGRect = CGRectZero;
-  
+  var meowTypeThreeF: CGRect = CGRectZero
+  var meowTypeFourF:  CGRect = CGRectZero
+  var meowTypeSevenF: CGRect = CGRectZero
+  var meowTypeEightF: CGRect = CGRectZero
+  var meowTypeNineF:  CGRect = CGRectZero
   
   //计算cell高度
   var cellHeight:CGFloat {
@@ -109,9 +124,11 @@ class MNMeow: NSObject {
       guard let array = (value  as?[[String : AnyObject]])  else {
         return
       }
+      var imageArray = [MNThumb]()
       for dict in array {
-        images?.append(MNThumb(dict:dict))
+        imageArray.append(MNThumb(dict:dict))
       }
+      images = imageArray
       return
     }
     if key == "album_cover" {
@@ -124,36 +141,55 @@ class MNMeow: NSObject {
       return
     }
     
+  
     super.setValue(value, forKey: key)
   }
   
   // TODO 计算高度,暂时没有保存机制
   func calcHeight() -> CGFloat {
+    let padding:CGFloat = 20
+    let width = ScreenWidth
+    
     var height:CGFloat = 0
-    topF = CGRectMake(0, 0, ScreenWidth, exploreTopBarH)
+    topF = CGRectMake(0, 0, width, exploreTopBarH)
     let topFMaxY = CGRectGetMaxY(topF)
     height += topFMaxY
     
     //计算cell高度
     if meow_type == 2 {
       let thumbH:CGFloat = 375
-      thumbF = CGRectMake(0, topFMaxY, ScreenWidth, thumbH)
+      thumbF = CGRectMake(0, topFMaxY, width, thumbH)
       height += thumbH
     }
     else if meow_type == 3 {
       let thumbH:CGFloat = 375
-      meowTypeThreeF = CGRectMake(0, topFMaxY, ScreenWidth, thumbH)
+      meowTypeThreeF = CGRectMake(0, topFMaxY, width, thumbH)
       height += (thumbH + exploreToolBarH)
     }
     else if meow_type == 4 {
       let thumbH:CGFloat = 200 + 114
-      meowTypeFourF = CGRectMake(0, 0, ScreenWidth, thumbH)
+      meowTypeFourF = CGRectMake(0, 0, width, thumbH)
+      height += thumbH
+    } else if meow_type == 7 {
+      let thumbH:CGFloat = 415 - topFMaxY
+      meowTypeSevenF = CGRectMake(0, 0, width, thumbH)
+      height += thumbH
+    } else if meow_type == 8 {
+      let thumbH:CGFloat = 445
+      meowTypeEightF = CGRectMake(0, 0, width, thumbH)
+      height += thumbH
+    }
+    else if meow_type == 9 {
+      let thumbH:CGFloat = 350
+      meowTypeNineF = CGRectMake(0, 0, width, thumbH)
       height += thumbH
     }
     else {
       height += exploreToolBarH
     }
     
+    //额外的padding
+    height += padding
     return height
   }
   

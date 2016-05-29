@@ -33,7 +33,7 @@ class MNExploreViewController: UITableViewController {
     let bottom:CGFloat  = (self.tabBarController?.tabBar.height)!
     tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0)
     tableView.backgroundColor = UIColor.clearColor()
-    
+    tableView.sectionFooterHeight = 20
     let cellNib = UINib(nibName: String(MNExploreCell), bundle: nil)
     tableView.registerNib(cellNib, forCellReuseIdentifier: cellId)
   }

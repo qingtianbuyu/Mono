@@ -43,10 +43,16 @@
 		9F7E7C761CF9992A00F9FBEF /* MNThumbView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E7C751CF9992A00F9FBEF /* MNThumbView.xib */; };
 		9F7E7C781CF9DE5D00F9FBEF /* MNMeowTypeFourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E7C771CF9DE5D00F9FBEF /* MNMeowTypeFourView.swift */; };
 		9F7E7C7A1CF9DE8800F9FBEF /* MNMeowTypeFourView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E7C791CF9DE8800F9FBEF /* MNMeowTypeFourView.xib */; };
+		9F886E581CF9F45B001CDE13 /* MNMeowTypeNineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F886E571CF9F45B001CDE13 /* MNMeowTypeNineView.swift */; };
+		9F886E5A1CF9F46A001CDE13 /* MNMeowTypeNineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F886E591CF9F46A001CDE13 /* MNMeowTypeNineView.xib */; };
 		9FA9B7141CF497CE009933A3 /* MNHttpTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA9B7131CF497CE009933A3 /* MNHttpTool.swift */; };
 		9FBD5F471CF5F67600F1A936 /* tea.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD5F451CF5F67600F1A936 /* tea.plist */; };
 		9FBD5F481CF5F67600F1A936 /* 0525.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FBD5F461CF5F67600F1A936 /* 0525.plist */; };
 		9FBD5F4A1CF5FAE500F1A936 /* MNTea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBD5F491CF5FAE500F1A936 /* MNTea.swift */; };
+		9FC05AE71CFA5EE100F39407 /* MNMeowTypeEightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC05AE61CFA5EE100F39407 /* MNMeowTypeEightView.swift */; };
+		9FC05AE91CFA5EEB00F39407 /* MNMeowTypeEightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC05AE81CFA5EEB00F39407 /* MNMeowTypeEightView.xib */; };
+		9FC05AEB1CFA658E00F39407 /* MNMeowTypeSeven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC05AEA1CFA658E00F39407 /* MNMeowTypeSeven.swift */; };
+		9FC05AED1CFA659F00F39407 /* MNMeowTypeSeven.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC05AEC1CFA659F00F39407 /* MNMeowTypeSeven.xib */; };
 		9FEE03D21CF5C5C300521663 /* MNCert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE03D11CF5C5C300521663 /* MNCert.swift */; };
 		D365F2300E2CBB9CE75B2318 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5392A0B847D0886FB2CCF8 /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -93,10 +99,16 @@
 		9F7E7C751CF9992A00F9FBEF /* MNThumbView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNThumbView.xib; sourceTree = "<group>"; };
 		9F7E7C771CF9DE5D00F9FBEF /* MNMeowTypeFourView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMeowTypeFourView.swift; sourceTree = "<group>"; };
 		9F7E7C791CF9DE8800F9FBEF /* MNMeowTypeFourView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNMeowTypeFourView.xib; sourceTree = "<group>"; };
+		9F886E571CF9F45B001CDE13 /* MNMeowTypeNineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMeowTypeNineView.swift; sourceTree = "<group>"; };
+		9F886E591CF9F46A001CDE13 /* MNMeowTypeNineView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNMeowTypeNineView.xib; sourceTree = "<group>"; };
 		9FA9B7131CF497CE009933A3 /* MNHttpTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNHttpTool.swift; sourceTree = "<group>"; };
 		9FBD5F451CF5F67600F1A936 /* tea.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tea.plist; sourceTree = "<group>"; };
 		9FBD5F461CF5F67600F1A936 /* 0525.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 0525.plist; sourceTree = "<group>"; };
 		9FBD5F491CF5FAE500F1A936 /* MNTea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNTea.swift; sourceTree = "<group>"; };
+		9FC05AE61CFA5EE100F39407 /* MNMeowTypeEightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMeowTypeEightView.swift; sourceTree = "<group>"; };
+		9FC05AE81CFA5EEB00F39407 /* MNMeowTypeEightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNMeowTypeEightView.xib; sourceTree = "<group>"; };
+		9FC05AEA1CFA658E00F39407 /* MNMeowTypeSeven.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMeowTypeSeven.swift; sourceTree = "<group>"; };
+		9FC05AEC1CFA659F00F39407 /* MNMeowTypeSeven.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNMeowTypeSeven.xib; sourceTree = "<group>"; };
 		9FEE03D11CF5C5C300521663 /* MNCert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNCert.swift; sourceTree = "<group>"; };
 		9FF4446D1CF938160080CA17 /* Moon-bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Moon-bridge-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -268,6 +280,12 @@
 				9F7E7C751CF9992A00F9FBEF /* MNThumbView.xib */,
 				9F7E7C771CF9DE5D00F9FBEF /* MNMeowTypeFourView.swift */,
 				9F7E7C791CF9DE8800F9FBEF /* MNMeowTypeFourView.xib */,
+				9F886E571CF9F45B001CDE13 /* MNMeowTypeNineView.swift */,
+				9F886E591CF9F46A001CDE13 /* MNMeowTypeNineView.xib */,
+				9FC05AE61CFA5EE100F39407 /* MNMeowTypeEightView.swift */,
+				9FC05AE81CFA5EEB00F39407 /* MNMeowTypeEightView.xib */,
+				9FC05AEA1CFA658E00F39407 /* MNMeowTypeSeven.swift */,
+				9FC05AEC1CFA659F00F39407 /* MNMeowTypeSeven.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -382,12 +400,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F5934851CE9ECAD00E69FC8 /* LaunchScreen.storyboard in Resources */,
+				9F886E5A1CF9F46A001CDE13 /* MNMeowTypeNineView.xib in Resources */,
 				9F7E7C7A1CF9DE8800F9FBEF /* MNMeowTypeFourView.xib in Resources */,
 				9FBD5F481CF5F67600F1A936 /* 0525.plist in Resources */,
 				9F7E7C761CF9992A00F9FBEF /* MNThumbView.xib in Resources */,
 				9FBD5F471CF5F67600F1A936 /* tea.plist in Resources */,
 				9F5934821CE9ECAD00E69FC8 /* Assets.xcassets in Resources */,
 				9F4E6CEC1CF3180500655CB3 /* MNExploreCell.xib in Resources */,
+				9FC05AED1CFA659F00F39407 /* MNMeowTypeSeven.xib in Resources */,
+				9FC05AE91CFA5EEB00F39407 /* MNMeowTypeEightView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,11 +486,13 @@
 				9F59347B1CE9ECAD00E69FC8 /* AppDelegate.swift in Sources */,
 				9F336E441CF0747E00779067 /* MNTitle.swift in Sources */,
 				9F4E6CF21CF3512A00655CB3 /* MNExploreEntity.swift in Sources */,
+				9F886E581CF9F45B001CDE13 /* MNMeowTypeNineView.swift in Sources */,
 				9F1D0DFC1CEDF4B800D4E951 /* MNView+Extension.swift in Sources */,
 				9F4E6CF61CF3542300655CB3 /* MNGroup.swift in Sources */,
 				9F336E521CF0867600779067 /* MNGalleryViewController.swift in Sources */,
 				9F336E3E1CF0359E00779067 /* MNNavgationBar.swift in Sources */,
 				9F4E6CF01CF350E300655CB3 /* MNExploreEntityList.swift in Sources */,
+				9FC05AEB1CFA658E00F39407 /* MNMeowTypeSeven.swift in Sources */,
 				9F336E421CF0380D00779067 /* MNTitleCell.swift in Sources */,
 				9F336E501CF0862500779067 /* MNMusicViewController.swift in Sources */,
 				9F4E6CFE1CF35A5100655CB3 /* MNCategory.swift in Sources */,
@@ -478,6 +501,7 @@
 				9F4E6CF81CF3558F00655CB3 /* MNThumb.swift in Sources */,
 				9F1D0DF41CEDE27400D4E951 /* MNMineViewContrller.swift in Sources */,
 				9FBD5F4A1CF5FAE500F1A936 /* MNTea.swift in Sources */,
+				9FC05AE71CFA5EE100F39407 /* MNMeowTypeEightView.swift in Sources */,
 				9FA9B7141CF497CE009933A3 /* MNHttpTool.swift in Sources */,
 				9F7E7C781CF9DE5D00F9FBEF /* MNMeowTypeFourView.swift in Sources */,
 			);
