@@ -10,6 +10,7 @@ import UIKit
 
 class MNTea: NSObject {
   
+  var start: Int = 0
   var entity_list: [MNExploreEntity]?
   var kind: Int  = 2
   var share_text: String?

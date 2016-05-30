@@ -14,10 +14,11 @@ class MNExploreEntityList {
   var entity_list: [MNExploreEntity]?
   
   func loadExploreEntityList(start:String) {
-      let path = NSBundle.mainBundle().pathForResource("tea.plist", ofType: nil)
+      let path = NSBundle.mainBundle().pathForResource("05-30-0853.plist", ofType: nil)
     let teaDict =  NSDictionary.init(contentsOfFile: path!) as! [String: AnyObject]
-    let tea =  teaDict["tea"] as! [String: AnyObject]
-    let teaArray  =  MNTea(dict: tea)
+//    let tea =  teaDict["tea"] as! [String: AnyObject]
+//    let tea =  teaDict["morning_tea"] as! [String: AnyObject]
+    let teaArray  =  MNTea(dict: teaDict)
     entity_list = teaArray.entity_list
   }
   

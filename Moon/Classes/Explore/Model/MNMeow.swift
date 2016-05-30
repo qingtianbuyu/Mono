@@ -172,17 +172,41 @@ class MNMeow: NSObject {
       height += thumbH
     }
     else if meow_type == 3 {
+      var tmpHeight: CGFloat = 0
+      if title?.characters.count > 0 {
+        let titleSize = CGSizeMake(ScreenWidth - CGFloat(2 * 20), CGFloat(MAXFLOAT))
+        let  titleH = title?.height(titleSize, systemFontOfSize: 20) ?? 0
+        tmpHeight += (titleH + 10)
+      }
+      
+      if text?.characters.count > 0 {
+        let descriptionSize = CGSizeMake(ScreenWidth - CGFloat(2 * 20), CGFloat(30))
+        let  textH = text?.height(descriptionSize, systemFontOfSize: 12) ?? 0
+        tmpHeight += (textH + 15) + 20
+        
+      }
+      
+      let fromtop2collectionViewH =  tmpHeight
+      
       let thumbH:CGFloat = 375
-      meowTypeThreeF = CGRectMake(0, topFMaxY, width, thumbH)
-      height += (thumbH + exploreToolBarH)
+      meowTypeThreeF = CGRectMake(0, topFMaxY, width, fromtop2collectionViewH + thumbH)
+      height += (thumbH + exploreToolBarH + fromtop2collectionViewH)
     }
     else if meow_type == 4 {
-      let thumbH:CGFloat = 200 + 114
+
+      let titleSize = CGSizeMake(ScreenWidth - CGFloat(2 * 20), CGFloat(MAXFLOAT))
+      let  titleH = title?.height(titleSize, systemFontOfSize: 20) ?? 0
+      let descriptionSize = CGSizeMake(ScreenWidth - CGFloat(2 * 20), CGFloat(30))
+      let  descriptionH = desc?.height(descriptionSize, systemFontOfSize: 12) ?? 0
+      
+      //计算行高
+      let thumbH:CGFloat = 200 + 20 + 20 + 20 + exploreTopBarH + titleH + descriptionH - topFMaxY
+      
       meowTypeFourF = CGRectMake(0, 0, width, thumbH)
       height += thumbH
     } else if meow_type == 7 {
       let thumbH:CGFloat = 415 - topFMaxY
-      meowTypeSevenF = CGRectMake(0, 0, width, thumbH)
+      meowTypeSevenF = CGRectMake(0, 0, width, thumbH + topFMaxY)
       height += thumbH
     } else if meow_type == 8 {
       let thumbH:CGFloat = 445

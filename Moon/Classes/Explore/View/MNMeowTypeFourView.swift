@@ -17,11 +17,13 @@ class MNMeowTypeFourView: UIView {
   
   @IBOutlet weak var descriptionView: UILabel!
   
+  @IBOutlet weak var introLabel: UILabel!
   var meow: MNMeow? {
     didSet {
-      imageView.m_setImageWithUrl(meow?.thumb?.raw, placeHolderName: "icon-place-holder.png")
+      imageView.m_setImageWithUrl(meow?.thumb?.raw, placeHolderName: "place_holder.png")
       titleLabelView.text = meow?.title
-      descriptionView.text = meow?.desc
+      introLabel.text = meow?.intro
+      descriptionView.text = meow?.desc ?? ""
     }
   }
   

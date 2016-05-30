@@ -13,6 +13,8 @@ class MNMeowTypeThreeView: UIView {
   @IBOutlet weak var imageView: UIImageView!
   
   @IBOutlet weak var collectionView: UICollectionView!
+  @IBOutlet weak var titleLabel: UILabel!
+  @IBOutlet weak var textLabel: UILabel!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -29,10 +31,13 @@ class MNMeowTypeThreeView: UIView {
 
   var  meow: MNMeow?{
     didSet{
+      titleLabel.text = meow?.title
+      textLabel.text = meow?.text
+      
       if meow?.pics?.count > 1{
         collectionView.reloadData()
       } else {
-        self.imageView.m_setImageWithUrl(meow?.pics![0].raw, placeHolderName: "place_holder")
+        self.imageView.m_setImageWithUrl(meow?.pics![0].raw, placeHolderName: "place_holder.png")
       }
     }
   }

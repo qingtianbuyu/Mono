@@ -28,8 +28,8 @@
                             <state key="normal" image="icon-player-play-button"/>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBz-Q2-zBW" userLabel="songLabel">
-                            <rect key="frame" x="70" y="0.0" width="38" height="40"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <rect key="frame" x="50" y="0.0" width="36" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -56,7 +56,7 @@
                         <constraint firstItem="Z4i-zs-2SE" firstAttribute="leading" secondItem="dTv-wY-CIy" secondAttribute="leading" constant="10" id="Qam-Vz-oOK"/>
                         <constraint firstItem="Om9-dU-vIc" firstAttribute="leading" secondItem="Au8-0O-k0f" secondAttribute="trailing" constant="10" id="Vkd-CH-qnp"/>
                         <constraint firstItem="Au8-0O-k0f" firstAttribute="centerY" secondItem="dTv-wY-CIy" secondAttribute="centerY" id="Zqd-NS-BAa"/>
-                        <constraint firstItem="GBz-Q2-zBW" firstAttribute="leading" secondItem="Z4i-zs-2SE" secondAttribute="trailing" constant="20" id="dNK-SK-ehL"/>
+                        <constraint firstItem="GBz-Q2-zBW" firstAttribute="leading" secondItem="Z4i-zs-2SE" secondAttribute="trailing" id="dNK-SK-ehL"/>
                         <constraint firstAttribute="height" constant="40" id="eMG-wF-Gss"/>
                         <constraint firstItem="GBz-Q2-zBW" firstAttribute="top" secondItem="dTv-wY-CIy" secondAttribute="top" id="fIu-57-axb"/>
                         <constraint firstItem="Z4i-zs-2SE" firstAttribute="top" secondItem="dTv-wY-CIy" secondAttribute="top" id="yoJ-dJ-pqZ"/>

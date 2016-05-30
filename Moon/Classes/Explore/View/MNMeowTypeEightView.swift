@@ -21,7 +21,7 @@ class MNMeowTypeEightView: UIView {
   
   var meow: MNMeow? {
     didSet {
-      imageView.m_setImageWithUrl(meow?.thumb?.raw, placeHolderName:  "icon-place-holder.png")
+      imageView.m_setImageWithUrl(meow?.thumb?.raw, placeHolderName:  "place_holder.png")
       titleLabelView.text = meow?.title
       descriptiomLabel.text = meow?.desc
       songName.text = (meow?.song_name ?? "") + " - " + (meow?.artist ?? "")

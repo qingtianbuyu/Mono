@@ -14,7 +14,7 @@ class MNMeowTypeNineView: UIImageView {
   
   var meow: MNMeow? {
     didSet {
-      m_setImageWithUrl(meow?.images![0].raw, placeHolderName: "icon-place-holder.png")
+      m_setImageWithUrl(meow?.images![0].raw, placeHolderName: "place_holder.png")
       titleLabelView.text = meow?.title
     }
   }

@@ -14,6 +14,17 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e4x-i1-OrC">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="415"/>
                 </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUf-AG-fu4">
+                    <rect key="frame" x="0.0" y="190" width="375" height="225"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CAM-DA-jSy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="225" id="aXb-wL-Sm3"/>
+                    </constraints>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Y5-C4-E3I" userLabel="playButton">
                     <rect key="frame" x="152" y="63" width="72" height="72"/>
                     <constraints>
@@ -42,8 +53,11 @@
                 <constraint firstAttribute="trailing" secondItem="ZbR-Cv-LSL" secondAttribute="trailing" constant="20" id="DwT-eO-ixb"/>
                 <constraint firstItem="e4x-i1-OrC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Idx-ct-ZSX"/>
                 <constraint firstItem="ZbR-Cv-LSL" firstAttribute="top" secondItem="PDM-kq-l67" secondAttribute="bottom" constant="24" id="K8c-ew-kK3"/>
+                <constraint firstItem="ZUf-AG-fu4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Kbm-Xg-iHv"/>
                 <constraint firstItem="PDM-kq-l67" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MgT-qH-BcY"/>
+                <constraint firstAttribute="trailing" secondItem="ZUf-AG-fu4" secondAttribute="trailing" id="WvT-lf-hsf"/>
                 <constraint firstAttribute="trailing" secondItem="PDM-kq-l67" secondAttribute="trailing" id="YWc-yp-K9c"/>
+                <constraint firstAttribute="bottom" secondItem="ZUf-AG-fu4" secondAttribute="bottom" id="fXx-CP-mxQ"/>
                 <constraint firstAttribute="bottom" secondItem="e4x-i1-OrC" secondAttribute="bottom" id="fv9-Bk-P2D"/>
                 <constraint firstItem="ZbR-Cv-LSL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="g5e-pJ-5Rp"/>
                 <constraint firstItem="2Y5-C4-E3I" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ltg-9b-IjQ"/>
@@ -57,7 +71,7 @@
                 <outlet property="playButton" destination="2Y5-C4-E3I" id="gBj-jv-5gc"/>
                 <outlet property="titleLabel" destination="PDM-kq-l67" id="z4A-dV-RRt"/>
             </connections>
-            <point key="canvasLocation" x="302.5" y="274.5"/>
+            <point key="canvasLocation" x="89.5" y="137.5"/>
         </view>
     </objects>
     <resources>

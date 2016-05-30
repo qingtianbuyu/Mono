@@ -8,12 +8,15 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MNMeowTypeThreeView" customModule="Moon" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="384" height="352"/>
+            <rect key="frame" x="0.0" y="0.0" width="384" height="499"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="WDf-NO-gja">
-                    <rect key="frame" x="0.0" y="0.0" width="384" height="352"/>
+                    <rect key="frame" x="0.0" y="124" width="384" height="375"/>
                     <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="375" id="5Eb-t6-3oP"/>
+                    </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MLp-tL-ebq">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -22,17 +25,34 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dLj-SB-GCZ" userLabel="imageView">
-                    <rect key="frame" x="0.0" y="0.0" width="384" height="352"/>
+                    <rect key="frame" x="0.0" y="0.0" width="384" height="499"/>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxm-5a-YL0" userLabel="titleLabel">
+                    <rect key="frame" x="15" y="10" width="354" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="highlightedColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBM-i0-aue" userLabel="textLabel">
+                    <rect key="frame" x="15" y="49" width="354" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="WDf-NO-gja" secondAttribute="bottom" id="AOt-09-Y6a"/>
-                <constraint firstItem="WDf-NO-gja" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BlE-HD-gzm"/>
-                <constraint firstAttribute="trailing" secondItem="WDf-NO-gja" secondAttribute="trailing" id="FnP-Tv-jWa"/>
+                <constraint firstItem="Cxm-5a-YL0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="1Ki-SP-BBJ"/>
+                <constraint firstItem="cBM-i0-aue" firstAttribute="top" secondItem="Cxm-5a-YL0" secondAttribute="bottom" constant="15" id="5A4-6o-UNv"/>
+                <constraint firstItem="cBM-i0-aue" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="FeE-Ev-SOu"/>
                 <constraint firstAttribute="trailing" secondItem="dLj-SB-GCZ" secondAttribute="trailing" id="MNe-OK-hmr"/>
-                <constraint firstItem="WDf-NO-gja" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NmC-W7-mXi"/>
+                <constraint firstAttribute="trailing" secondItem="Cxm-5a-YL0" secondAttribute="trailing" constant="15" id="SZS-aQ-Drt"/>
+                <constraint firstItem="Cxm-5a-YL0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="U6w-eh-qyh"/>
                 <constraint firstItem="dLj-SB-GCZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="X8g-Yv-8gy"/>
+                <constraint firstAttribute="trailing" secondItem="WDf-NO-gja" secondAttribute="trailing" id="isb-AK-edz"/>
+                <constraint firstAttribute="trailing" secondItem="cBM-i0-aue" secondAttribute="trailing" constant="15" id="mz4-oa-Isb"/>
+                <constraint firstAttribute="bottom" secondItem="WDf-NO-gja" secondAttribute="bottom" id="qHx-64-6Y9"/>
+                <constraint firstItem="WDf-NO-gja" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tV9-4E-VQV"/>
                 <constraint firstAttribute="bottom" secondItem="dLj-SB-GCZ" secondAttribute="bottom" id="uVx-b6-784"/>
                 <constraint firstItem="dLj-SB-GCZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xTl-2G-g1R"/>
             </constraints>
@@ -40,8 +60,10 @@
             <connections>
                 <outlet property="collectionView" destination="WDf-NO-gja" id="PNI-OH-Ppc"/>
                 <outlet property="imageView" destination="dLj-SB-GCZ" id="cQa-Ey-rQh"/>
+                <outlet property="textLabel" destination="cBM-i0-aue" id="iFI-PZ-vYY"/>
+                <outlet property="titleLabel" destination="Cxm-5a-YL0" id="gV2-d5-FP0"/>
             </connections>
-            <point key="canvasLocation" x="319" y="180"/>
+            <point key="canvasLocation" x="143" y="92.5"/>
         </view>
     </objects>
 </document>

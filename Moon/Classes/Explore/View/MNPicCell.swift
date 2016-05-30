@@ -14,7 +14,7 @@ class MNPicCell: UICollectionViewCell {
   
   var pic: MNThumb? {
     didSet {
-        imageView.m_setImageWithUrl(pic?.raw, placeHolderName: "place_holder")
+        imageView.m_setImageWithUrl(pic?.raw, placeHolderName: "place_holder.png")
     }
   }
   

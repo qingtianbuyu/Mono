@@ -17,7 +17,7 @@ class MNMeowTypeSeven: UIView {
   
   var meow: MNMeow? {
     didSet {
-      self.bgView.m_setImageWithUrl(meow?.thumb?.raw, placeHolderName:  "icon-place-holder.png")
+      self.bgView.m_setImageWithUrl(meow?.thumb?.raw, placeHolderName:  "place_holder.png")
       self.titleLabel.text = meow?.title
       self.descriptionLabel.text = meow?.desc
     }

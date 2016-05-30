@@ -106,7 +106,7 @@ class MNExploreCell: UITableViewCell {
         
         self.nameLabel.textColor = UIColor.whiteColor()
         self.categoryLabel.textColor  = UIColor.whiteColor()
-        
+        self.lineView.backgroundColor = UIColor.whiteColor()
       } else if meow?.meow_type == 8 {
         self.meowTypeEightView.hidden = false
         self.meowTypeEightView.frame = meow?.meowTypeEightF ?? CGRectZero
@@ -142,30 +142,36 @@ class MNExploreCell: UITableViewCell {
   
   func setupToolBarButtons() -> Void {
     let type = explore?.meow?.meow_type
-    let bang_count = explore?.meow?.bang_count
-    let comment_count = explore?.meow?.comment_count 
+    let bang_count  = explore?.meow?.bang_count ?? 0
+    let comment_count = explore?.meow?.comment_count ?? 0
     if type == 2 || type == 9{
       setupButton(self.buttonShare, imageName: "item-btn-share-white", title: "")
       setupButton(self.buttonLike,  imageName: "item-btn-like-white", title: "")
       setupButton(self.buttonZan,   imageName: "item-btn-thumb-white", title:"\(bang_count)")
       setupButton(self.buttonComment, imageName: "item-btn-comment-white", title:"\(comment_count)")
-
+      self.buttonZan.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+      self.buttonComment.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
       
     } else {
       setupButton(self.buttonShare, imageName: "item-btn-share-black", title:"")
       setupButton(self.buttonLike,  imageName: "item-btn-like-black",  title:"")
       setupButton(self.buttonZan,   imageName: "item-btn-thumb-black", title:"\(bang_count)")
       setupButton(self.buttonComment, imageName: "item-btn-comment-black", title:"\(comment_count)")
+      self.buttonZan.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+      self.buttonComment.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+      
     }
   }
   
   // #pragma mark -- 
-  func setupButton(button: UIButton, imageName: String, title: String?) -> Void {
+  func setupButton(button: UIButton, imageName: String, title: String) -> Void {
     
     let (image, highLightImage) = UIImage.imageName(imageName)
     button.setImage(image, forState: UIControlState.Normal)
     button.setImage(highLightImage, forState: UIControlState.Highlighted)
-    
+    if title.characters.count > 0 {
+      button.setTitle(title, forState: UIControlState.Normal)
+    }
     
     
   }
