@@ -9,7 +9,6 @@
 import UIKit
 import Alamofire
 
-public  let cellId = "explorer"
 
 class MNExploreViewController: UITableViewController {
   
@@ -38,7 +37,7 @@ class MNExploreViewController: UITableViewController {
     tableView.sectionFooterHeight = 20
     tableView.separatorStyle = UITableViewCellSeparatorStyle.None
     let cellNib = UINib(nibName: String(MNExploreCell), bundle: nil)
-    tableView.registerNib(cellNib, forCellReuseIdentifier: cellId)
+    tableView.registerNib(cellNib, forCellReuseIdentifier: MNExploreCell.identifier)
   }
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,7 +45,7 @@ class MNExploreViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell =  tableView.dequeueReusableCellWithIdentifier(cellId , forIndexPath: indexPath) as! MNExploreCell
+    let cell =  tableView.dequeueReusableCellWithIdentifier(MNExploreCell.identifier , forIndexPath: indexPath) as! MNExploreCell
     let explore = exploreEntityList![indexPath.row]
     cell.explore =  explore
     return cell

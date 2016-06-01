@@ -62,6 +62,9 @@
 		9FC05AF31CFAB67100F39407 /* MNPicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC05AF21CFAB67100F39407 /* MNPicCell.swift */; };
 		9FC05AF51CFAB68000F39407 /* MNPicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FC05AF41CFAB68000F39407 /* MNPicCell.xib */; };
 		9FC05AF71CFAC5E800F39407 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC05AF61CFAC5E800F39407 /* UIImage+Extension.swift */; };
+		9FECDEBF1CFF1EEE0041E14B /* 0601-following.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FECDEBE1CFF1EEE0041E14B /* 0601-following.plist */; };
+		9FECDEC11CFF21AC0041E14B /* MNFollwoingEntityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FECDEC01CFF21AC0041E14B /* MNFollwoingEntityList.swift */; };
+		9FECDEC31CFF22770041E14B /* MNFollowingEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FECDEC21CFF22770041E14B /* MNFollowingEntity.swift */; };
 		9FEE03D21CF5C5C300521663 /* MNCert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE03D11CF5C5C300521663 /* MNCert.swift */; };
 		D365F2300E2CBB9CE75B2318 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5392A0B847D0886FB2CCF8 /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -127,6 +130,9 @@
 		9FC05AF21CFAB67100F39407 /* MNPicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MNPicCell.swift; path = ../MNPicCell.swift; sourceTree = "<group>"; };
 		9FC05AF41CFAB68000F39407 /* MNPicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MNPicCell.xib; path = ../MNPicCell.xib; sourceTree = "<group>"; };
 		9FC05AF61CFAC5E800F39407 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		9FECDEBE1CFF1EEE0041E14B /* 0601-following.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "0601-following.plist"; sourceTree = "<group>"; };
+		9FECDEC01CFF21AC0041E14B /* MNFollwoingEntityList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNFollwoingEntityList.swift; sourceTree = "<group>"; };
+		9FECDEC21CFF22770041E14B /* MNFollowingEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNFollowingEntity.swift; sourceTree = "<group>"; };
 		9FEE03D11CF5C5C300521663 /* MNCert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNCert.swift; sourceTree = "<group>"; };
 		9FF4446D1CF938160080CA17 /* Moon-bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Moon-bridge-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -287,6 +293,8 @@
 				9F4E6CFD1CF35A5100655CB3 /* MNCategory.swift */,
 				9FEE03D11CF5C5C300521663 /* MNCert.swift */,
 				9FBD5F491CF5FAE500F1A936 /* MNTea.swift */,
+				9FECDEC01CFF21AC0041E14B /* MNFollwoingEntityList.swift */,
+				9FECDEC21CFF22770041E14B /* MNFollowingEntity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -341,6 +349,7 @@
 		9FBD5F441CF5F67600F1A936 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9FECDEBE1CFF1EEE0041E14B /* 0601-following.plist */,
 				9F47B9271CFC6F4D00E6D8A3 /* 05-30-0853.plist */,
 				9F47B9251CFC593D00E6D8A3 /* 05-30.plist */,
 				9F47B9231CFC533300E6D8A3 /* 2015-05-30.plist */,
@@ -437,6 +446,7 @@
 				9F5934851CE9ECAD00E69FC8 /* LaunchScreen.storyboard in Resources */,
 				9F886E5A1CF9F46A001CDE13 /* MNMeowTypeNineView.xib in Resources */,
 				9F47B9261CFC593D00E6D8A3 /* 05-30.plist in Resources */,
+				9FECDEBF1CFF1EEE0041E14B /* 0601-following.plist in Resources */,
 				9F7E7C7A1CF9DE8800F9FBEF /* MNMeowTypeFourView.xib in Resources */,
 				9FBD5F481CF5F67600F1A936 /* 0525.plist in Resources */,
 				9F7E7C761CF9992A00F9FBEF /* MNThumbView.xib in Resources */,
@@ -535,7 +545,9 @@
 				9F4E6CF01CF350E300655CB3 /* MNExploreEntityList.swift in Sources */,
 				9FC05AEB1CFA658E00F39407 /* MNMeowTypeSeven.swift in Sources */,
 				9FC05AF71CFAC5E800F39407 /* UIImage+Extension.swift in Sources */,
+				9FECDEC31CFF22770041E14B /* MNFollowingEntity.swift in Sources */,
 				9F336E421CF0380D00779067 /* MNTitleCell.swift in Sources */,
+				9FECDEC11CFF21AC0041E14B /* MNFollwoingEntityList.swift in Sources */,
 				9F336E501CF0862500779067 /* MNMusicViewController.swift in Sources */,
 				9FC05AF31CFAB67100F39407 /* MNPicCell.swift in Sources */,
 				9F4E6CFE1CF35A5100655CB3 /* MNCategory.swift in Sources */,

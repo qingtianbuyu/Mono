@@ -9,6 +9,8 @@
 import UIKit
 
 class MNExploreCell: UITableViewCell {
+  
+  static let identifier = String(MNExploreCell)
 
   @IBOutlet weak var logoView: UIImageView!
   

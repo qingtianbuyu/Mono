@@ -10,9 +10,10 @@ import UIKit
 
 class MNThumb: NSObject {
   
-  var raw: String!
+  var raw: String?
   var width: Int = 0
   var height: Int = 0
+  var format: String?
   
   init(dict: [String: AnyObject]) {
     super.init()

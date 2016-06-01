@@ -15,7 +15,7 @@ class MNExploreEntityList {
   
   func loadExploreEntityList(start:String) {
       let path = NSBundle.mainBundle().pathForResource("05-30-0853.plist", ofType: nil)
-    let teaDict =  NSDictionary.init(contentsOfFile: path!) as! [String: AnyObject]
+    let teaDict =  NSDictionary(contentsOfFile: path!) as! [String: AnyObject]
 //    let tea =  teaDict["tea"] as! [String: AnyObject]
 //    let tea =  teaDict["morning_tea"] as! [String: AnyObject]
     let teaArray  =  MNTea(dict: teaDict)
