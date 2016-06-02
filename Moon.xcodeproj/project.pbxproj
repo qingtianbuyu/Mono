@@ -42,6 +42,8 @@
 		9F59347B1CE9ECAD00E69FC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F59347A1CE9ECAD00E69FC8 /* AppDelegate.swift */; };
 		9F5934821CE9ECAD00E69FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F5934811CE9ECAD00E69FC8 /* Assets.xcassets */; };
 		9F5934851CE9ECAD00E69FC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5934831CE9ECAD00E69FC8 /* LaunchScreen.storyboard */; };
+		9F67E6351D005EA5004E230F /* explorer-video.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F67E6341D005EA5004E230F /* explorer-video.plist */; };
+		9F67E6371D005F22004E230F /* MNVideoEntityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67E6361D005F22004E230F /* MNVideoEntityList.swift */; };
 		9F7E7C721CF945A100F9FBEF /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E7C711CF945A100F9FBEF /* UIImageView+Extension.swift */; };
 		9F7E7C741CF9937400F9FBEF /* MNThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E7C731CF9937400F9FBEF /* MNThumbView.swift */; };
 		9F7E7C761CF9992A00F9FBEF /* MNThumbView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E7C751CF9992A00F9FBEF /* MNThumbView.xib */; };
@@ -110,6 +112,8 @@
 		9F5934811CE9ECAD00E69FC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		9F5934841CE9ECAD00E69FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F5934861CE9ECAD00E69FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		9F67E6341D005EA5004E230F /* explorer-video.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "explorer-video.plist"; sourceTree = "<group>"; };
+		9F67E6361D005F22004E230F /* MNVideoEntityList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNVideoEntityList.swift; sourceTree = "<group>"; };
 		9F7E7C711CF945A100F9FBEF /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		9F7E7C731CF9937400F9FBEF /* MNThumbView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MNThumbView.swift; path = ../MNThumbView.swift; sourceTree = "<group>"; };
 		9F7E7C751CF9992A00F9FBEF /* MNThumbView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MNThumbView.xib; path = ../MNThumbView.xib; sourceTree = "<group>"; };
@@ -295,6 +299,7 @@
 				9FBD5F491CF5FAE500F1A936 /* MNTea.swift */,
 				9FECDEC01CFF21AC0041E14B /* MNFollwoingEntityList.swift */,
 				9FECDEC21CFF22770041E14B /* MNFollowingEntity.swift */,
+				9F67E6361D005F22004E230F /* MNVideoEntityList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -349,6 +354,7 @@
 		9FBD5F441CF5F67600F1A936 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9F67E6341D005EA5004E230F /* explorer-video.plist */,
 				9FECDEBE1CFF1EEE0041E14B /* 0601-following.plist */,
 				9F47B9271CFC6F4D00E6D8A3 /* 05-30-0853.plist */,
 				9F47B9251CFC593D00E6D8A3 /* 05-30.plist */,
@@ -456,6 +462,7 @@
 				9F4E6CEC1CF3180500655CB3 /* MNExploreCell.xib in Resources */,
 				9FC05AED1CFA659F00F39407 /* MNMeowTypeSeven.xib in Resources */,
 				9FC05AE91CFA5EEB00F39407 /* MNMeowTypeEightView.xib in Resources */,
+				9F67E6351D005EA5004E230F /* explorer-video.plist in Resources */,
 				9F47B9281CFC6F4D00E6D8A3 /* 05-30-0853.plist in Resources */,
 				9FC05AF11CFAB32500F39407 /* MNMeowTypeThreeView.xib in Resources */,
 				9F47B9241CFC533300E6D8A3 /* 2015-05-30.plist in Resources */,
@@ -526,6 +533,7 @@
 				9F336E4C1CF085B500779067 /* MNFollowingViewController.swift in Sources */,
 				9F336E4A1CF0857200779067 /* MNExploreViewController.swift in Sources */,
 				9F1D0DED1CEDE1CD00D4E951 /* MNNavgationController.swift in Sources */,
+				9F67E6371D005F22004E230F /* MNVideoEntityList.swift in Sources */,
 				9F4E6CF41CF3523100655CB3 /* MNMeow.swift in Sources */,
 				9FEE03D21CF5C5C300521663 /* MNCert.swift in Sources */,
 				9F1D0DEE1CEDE1CD00D4E951 /* MNTabBarController.swift in Sources */,

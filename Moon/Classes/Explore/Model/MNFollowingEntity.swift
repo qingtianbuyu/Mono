@@ -19,7 +19,8 @@ class MNFollowingEntity: MNExploreEntity {
   var created_at: Int  = 0
   var comment_num: Int = 0
   
-  override init(dict: [String : AnyObject]) {
+  
+  override  init(dict: [String : AnyObject]) {
     super.init(dict: dict)
     setValuesForKeysWithDictionary(dict)
   }
