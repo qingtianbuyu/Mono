@@ -55,8 +55,4 @@ class MNVideoViewController: UITableViewController {
     return height ?? 0
   }
   
-  
-  
-  
-  
 }

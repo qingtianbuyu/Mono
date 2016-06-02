@@ -44,6 +44,10 @@
 		9F5934851CE9ECAD00E69FC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5934831CE9ECAD00E69FC8 /* LaunchScreen.storyboard */; };
 		9F67E6351D005EA5004E230F /* explorer-video.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F67E6341D005EA5004E230F /* explorer-video.plist */; };
 		9F67E6371D005F22004E230F /* MNVideoEntityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67E6361D005F22004E230F /* MNVideoEntityList.swift */; };
+		9F67E6391D008791004E230F /* explore-music.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F67E6381D008791004E230F /* explore-music.plist */; };
+		9F67E63B1D0087E4004E230F /* MNMusicEntityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67E63A1D0087E4004E230F /* MNMusicEntityList.swift */; };
+		9F67E63D1D008876004E230F /* MNGalleryEntityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F67E63C1D008876004E230F /* MNGalleryEntityList.swift */; };
+		9F67E63F1D0088D5004E230F /* explore-gallery.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F67E63E1D0088D5004E230F /* explore-gallery.plist */; };
 		9F7E7C721CF945A100F9FBEF /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E7C711CF945A100F9FBEF /* UIImageView+Extension.swift */; };
 		9F7E7C741CF9937400F9FBEF /* MNThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E7C731CF9937400F9FBEF /* MNThumbView.swift */; };
 		9F7E7C761CF9992A00F9FBEF /* MNThumbView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F7E7C751CF9992A00F9FBEF /* MNThumbView.xib */; };
@@ -114,6 +118,10 @@
 		9F5934861CE9ECAD00E69FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		9F67E6341D005EA5004E230F /* explorer-video.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "explorer-video.plist"; sourceTree = "<group>"; };
 		9F67E6361D005F22004E230F /* MNVideoEntityList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNVideoEntityList.swift; sourceTree = "<group>"; };
+		9F67E6381D008791004E230F /* explore-music.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "explore-music.plist"; sourceTree = "<group>"; };
+		9F67E63A1D0087E4004E230F /* MNMusicEntityList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMusicEntityList.swift; sourceTree = "<group>"; };
+		9F67E63C1D008876004E230F /* MNGalleryEntityList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNGalleryEntityList.swift; sourceTree = "<group>"; };
+		9F67E63E1D0088D5004E230F /* explore-gallery.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "explore-gallery.plist"; sourceTree = "<group>"; };
 		9F7E7C711CF945A100F9FBEF /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		9F7E7C731CF9937400F9FBEF /* MNThumbView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MNThumbView.swift; path = ../MNThumbView.swift; sourceTree = "<group>"; };
 		9F7E7C751CF9992A00F9FBEF /* MNThumbView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MNThumbView.xib; path = ../MNThumbView.xib; sourceTree = "<group>"; };
@@ -300,6 +308,8 @@
 				9FECDEC01CFF21AC0041E14B /* MNFollwoingEntityList.swift */,
 				9FECDEC21CFF22770041E14B /* MNFollowingEntity.swift */,
 				9F67E6361D005F22004E230F /* MNVideoEntityList.swift */,
+				9F67E63A1D0087E4004E230F /* MNMusicEntityList.swift */,
+				9F67E63C1D008876004E230F /* MNGalleryEntityList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -354,6 +364,8 @@
 		9FBD5F441CF5F67600F1A936 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9F67E63E1D0088D5004E230F /* explore-gallery.plist */,
+				9F67E6381D008791004E230F /* explore-music.plist */,
 				9F67E6341D005EA5004E230F /* explorer-video.plist */,
 				9FECDEBE1CFF1EEE0041E14B /* 0601-following.plist */,
 				9F47B9271CFC6F4D00E6D8A3 /* 05-30-0853.plist */,
@@ -451,10 +463,12 @@
 			files = (
 				9F5934851CE9ECAD00E69FC8 /* LaunchScreen.storyboard in Resources */,
 				9F886E5A1CF9F46A001CDE13 /* MNMeowTypeNineView.xib in Resources */,
+				9F67E63F1D0088D5004E230F /* explore-gallery.plist in Resources */,
 				9F47B9261CFC593D00E6D8A3 /* 05-30.plist in Resources */,
 				9FECDEBF1CFF1EEE0041E14B /* 0601-following.plist in Resources */,
 				9F7E7C7A1CF9DE8800F9FBEF /* MNMeowTypeFourView.xib in Resources */,
 				9FBD5F481CF5F67600F1A936 /* 0525.plist in Resources */,
+				9F67E6391D008791004E230F /* explore-music.plist in Resources */,
 				9F7E7C761CF9992A00F9FBEF /* MNThumbView.xib in Resources */,
 				9FC05AF51CFAB68000F39407 /* MNPicCell.xib in Resources */,
 				9FBD5F471CF5F67600F1A936 /* tea.plist in Resources */,
@@ -541,6 +555,7 @@
 				9F336E4E1CF085EA00779067 /* MNVideoViewController.swift in Sources */,
 				9F336E541CF0868400779067 /* MNTeaViewController.swift in Sources */,
 				9F1D0DF71CEDE78C00D4E951 /* MNTabBarItem.swift in Sources */,
+				9F67E63B1D0087E4004E230F /* MNMusicEntityList.swift in Sources */,
 				9F59347B1CE9ECAD00E69FC8 /* AppDelegate.swift in Sources */,
 				9F336E441CF0747E00779067 /* MNTitle.swift in Sources */,
 				9F4E6CF21CF3512A00655CB3 /* MNExploreEntity.swift in Sources */,
@@ -559,6 +574,7 @@
 				9F336E501CF0862500779067 /* MNMusicViewController.swift in Sources */,
 				9FC05AF31CFAB67100F39407 /* MNPicCell.swift in Sources */,
 				9F4E6CFE1CF35A5100655CB3 /* MNCategory.swift in Sources */,
+				9F67E63D1D008876004E230F /* MNGalleryEntityList.swift in Sources */,
 				9F7E7C721CF945A100F9FBEF /* UIImageView+Extension.swift in Sources */,
 				9F1D0DF01CEDE21400D4E951 /* MNDiscoverViewController.swift in Sources */,
 				9F4E6CF81CF3558F00655CB3 /* MNThumb.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  MNVideoEntityList.swift
+//  MNGalleryEntityList.swift
 //  Moon
 //
 //  Created by YKing on 16/6/2.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class MNVideoEntityList: NSObject {
+class MNGalleryEntityList: NSObject {
   var start: Int = 0
   var meows: [MNMeow]?
   
-  func loadVideoData() {
-    let path = NSBundle.mainBundle().pathForResource("explorer-video.plist", ofType: nil)
+  func loadGalleryData() {
+    let path = NSBundle.mainBundle().pathForResource("explore-gallery.plist", ofType: nil)
     let   videoEntityDict =  NSDictionary(contentsOfFile: path!) as! [String: AnyObject]
     let  videoDictArray =   videoEntityDict["meows"] as! NSArray
     var videoArray = [MNMeow]()
@@ -21,8 +21,6 @@ class MNVideoEntityList: NSObject {
       let tmp = videoDict as! [String: AnyObject]
       videoArray.append(MNMeow(dict: tmp))
     }
-      self.meows = videoArray
+    self.meows = videoArray
   }
-  
-  
 }
