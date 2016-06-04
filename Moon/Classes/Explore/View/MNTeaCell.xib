@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MNTeaCell" id="6uF-QK-czP" customClass="MNTeaCell" customModule="Moon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-afternoon-tea-unread" translatesAutoresizingMaskIntoConstraints="NO" id="LBL-Cn-NZk">
+                        <rect key="frame" x="88" y="116" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="0uR-vn-AEr"/>
+                            <constraint firstAttribute="height" constant="25" id="7sC-85-BAc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016 Jun 星期五" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLM-B5-zhh">
+                        <rect key="frame" x="0.0" y="25" width="200" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mx0-k5-uOn">
+                        <rect key="frame" x="0.0" y="40" width="200" height="72"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="早茶" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t68-we-XGb">
+                        <rect key="frame" x="0.0" y="146" width="200" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="t68-we-XGb" secondAttribute="trailing" id="6z3-Uo-Qpc"/>
+                <constraint firstItem="Mx0-k5-uOn" firstAttribute="leading" secondItem="6uF-QK-czP" secondAttribute="leading" id="8zY-Z7-pFz"/>
+                <constraint firstAttribute="trailing" secondItem="fLM-B5-zhh" secondAttribute="trailing" id="9VS-fc-pxP"/>
+                <constraint firstItem="fLM-B5-zhh" firstAttribute="leading" secondItem="6uF-QK-czP" secondAttribute="leading" id="HGf-hr-I4w"/>
+                <constraint firstItem="fLM-B5-zhh" firstAttribute="top" secondItem="6uF-QK-czP" secondAttribute="top" constant="25" id="JEp-1m-2X6"/>
+                <constraint firstItem="t68-we-XGb" firstAttribute="leading" secondItem="6uF-QK-czP" secondAttribute="leading" id="Sfw-hu-bdz"/>
+                <constraint firstItem="Mx0-k5-uOn" firstAttribute="top" secondItem="fLM-B5-zhh" secondAttribute="bottom" id="U87-he-lYQ"/>
+                <constraint firstItem="LBL-Cn-NZk" firstAttribute="top" secondItem="Mx0-k5-uOn" secondAttribute="bottom" constant="4" id="V7P-mg-aB6"/>
+                <constraint firstAttribute="trailing" secondItem="Mx0-k5-uOn" secondAttribute="trailing" id="d40-u1-xJD"/>
+                <constraint firstItem="LBL-Cn-NZk" firstAttribute="centerX" secondItem="6uF-QK-czP" secondAttribute="centerX" id="dYc-67-O3G"/>
+                <constraint firstItem="t68-we-XGb" firstAttribute="top" secondItem="LBL-Cn-NZk" secondAttribute="bottom" constant="5" id="fFJ-Z8-hGF"/>
+            </constraints>
+            <size key="customSize" width="200" height="200"/>
+            <connections>
+                <outlet property="datelabel" destination="Mx0-k5-uOn" id="yQv-Lv-UtS"/>
+                <outlet property="teaImageView" destination="LBL-Cn-NZk" id="pS4-fY-Ymt"/>
+                <outlet property="tealabel" destination="t68-we-XGb" id="c1o-gS-kdb"/>
+                <outlet property="timeLabel" destination="fLM-B5-zhh" id="ErG-pT-vxs"/>
+            </connections>
+            <point key="canvasLocation" x="248" y="216"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon-afternoon-tea-unread" width="14" height="22"/>
+    </resources>
+</document>

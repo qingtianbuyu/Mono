@@ -10,37 +10,37 @@ import UIKit
 
 extension UIView {
 
-  var x:CGFloat {
+  var x: CGFloat {
     get {
       return frame.origin.x
     }
   }
   
-  var y:CGFloat {
+  var y: CGFloat {
     get {
       return frame.origin.y
     }
   }
   
-  var width:CGFloat {
+  var width: CGFloat {
     get {
       return frame.size.width
     }
   }
   
-  var height:CGFloat {
+  var height: CGFloat {
     get {
       return frame.size.height
     }
   }
   
-  var size:CGSize {
+  var size: CGSize {
     get {
       return frame.size
     }
   }
   
-  var point:CGPoint {
+  var point: CGPoint {
     get {
       return frame.origin
     }
@@ -49,6 +49,14 @@ extension UIView {
   class func viewFromXib() -> AnyObject {
     return NSBundle.mainBundle().loadNibNamed(String(self), owner: nil, options: nil).last!
   }
+  
+  
+  class var viewIdentify:String {
+    get {
+      return String(self)
+    }
+  }
+  
 
 }
 

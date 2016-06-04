@@ -30,13 +30,13 @@ class MNExploreViewController: UITableViewController {
   }
   
   func setupTableView() -> Void {
-    let top:CGFloat     = 64
-    let bottom:CGFloat  = (self.tabBarController?.tabBar.height)!
-    tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0)
-    tableView.backgroundColor = UIColor.clearColor()
+    let top:CGFloat               = 64
+    let bottom:CGFloat            = (self.tabBarController?.tabBar.height)!
+    tableView.contentInset        = UIEdgeInsetsMake(top, 0, bottom, 0)
+    tableView.backgroundColor     = UIColor.clearColor()
     tableView.sectionFooterHeight = 20
-    tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-    let cellNib = UINib(nibName: String(MNExploreCell), bundle: nil)
+    tableView.separatorStyle      = UITableViewCellSeparatorStyle.None
+    let cellNib                   = UINib(nibName: String(MNExploreCell), bundle: nil)
     tableView.registerNib(cellNib, forCellReuseIdentifier: MNExploreCell.identifier)
   }
   
@@ -45,15 +45,14 @@ class MNExploreViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell =  tableView.dequeueReusableCellWithIdentifier(MNExploreCell.identifier , forIndexPath: indexPath) as! MNExploreCell
-    let explore = exploreEntityList![indexPath.row]
-    cell.explore =  explore
+    let cell     = tableView.dequeueReusableCellWithIdentifier(MNExploreCell.identifier , forIndexPath: indexPath) as! MNExploreCell
+    let explore  = exploreEntityList![indexPath.row]
+    cell.explore = explore
     return cell
   }
   
   override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     let explore = exploreEntityList![indexPath.row]
-    
     if let rowHeight = rowHeightCache[explore.meow?.id ?? 0] {
         return rowHeight
     }

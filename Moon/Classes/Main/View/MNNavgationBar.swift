@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol titleViewDelegate{
+  func didSelectTitleViewAtIndex(let index:Int)
+}
+
 class MNNavgationBar: UIView {
 
-  var collection:UICollectionView?;
+  var collection:UICollectionView?
+  var delegate:titleViewDelegate?
+  
   
   var titles:[MNTitle]?{
     didSet{
@@ -33,17 +39,17 @@ class MNNavgationBar: UIView {
   }
   
   func setupCollectionView() -> Void {
-    let flowLayout = UICollectionViewFlowLayout()
-    flowLayout.scrollDirection = UICollectionViewScrollDirection.Horizontal
-    flowLayout.itemSize = CGSizeMake(100, 44)
-    flowLayout.minimumInteritemSpacing = 1
-    flowLayout.minimumLineSpacing      = 1
-    collection = UICollectionView(frame: CGRectZero, collectionViewLayout: flowLayout)
+    let flowLayout                             = UICollectionViewFlowLayout()
+    flowLayout.scrollDirection                 = UICollectionViewScrollDirection.Horizontal
+    flowLayout.itemSize                        = CGSizeMake(100, 44)
+    flowLayout.minimumInteritemSpacing         = 1
+    flowLayout.minimumLineSpacing              = 1
+    collection                                 = UICollectionView(frame: CGRectZero, collectionViewLayout: flowLayout)
     collection!.showsHorizontalScrollIndicator = false
     collection!.showsVerticalScrollIndicator   = false
     collection!.registerClass(MNTitleCell.self, forCellWithReuseIdentifier: "MNTitleCell")
-    collection?.delegate   = self
-    collection?.dataSource = self
+    collection?.delegate                       = self
+    collection?.dataSource                     = self
     addSubview(collection!)
   }
   
@@ -72,7 +78,10 @@ class MNNavgationBar: UIView {
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
       collectionView.deselectItemAtIndexPath(indexPath, animated: true)
+      collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.CenteredHorizontally, animated: true)
+      delegate?.didSelectTitleViewAtIndex(indexPath.row)
       curPosition = indexPath.row
+      
       collectionView.reloadData()
     }
   

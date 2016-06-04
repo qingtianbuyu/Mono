@@ -23,11 +23,11 @@ class MNMusicViewController: UITableViewController {
   }
   
   func setupTableView() {
-    let top:CGFloat = 64
-    let bottom = (self.tabBarController?.tabBar.height) ?? 0
+    let top:CGFloat               = 64
+    let bottom                    = (self.tabBarController?.tabBar.height) ?? 0
     self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-    self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0)
-    let nib = UINib(nibName: String(MNExploreCell), bundle: nil)
+    self.tableView.contentInset   = UIEdgeInsetsMake(top, 0, bottom, 0)
+    let nib                       = UINib(nibName: String(MNExploreCell), bundle: nil)
     self.tableView.registerNib(nib, forCellReuseIdentifier: MNExploreCell.identifier)
   }
   
@@ -36,9 +36,9 @@ class MNMusicViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier(MNExploreCell.identifier) as! MNExploreCell
-    let meow = videoEntityList.meows![indexPath.row]
-    let explore = MNExploreEntity(meow: meow)
+    let cell     = tableView.dequeueReusableCellWithIdentifier(MNExploreCell.identifier) as! MNExploreCell
+    let meow     = videoEntityList.meows![indexPath.row]
+    let explore  = MNExploreEntity(meow: meow)
     cell.explore = explore
     return cell
   }

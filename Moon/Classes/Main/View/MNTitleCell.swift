@@ -35,7 +35,7 @@ class MNTitleCell: UICollectionViewCell {
   }
   
   func setupSubViews() -> Void {
-    titleButton   = UIButton(type: UIButtonType.Custom)
+    titleButton                   = UIButton(type: UIButtonType.Custom)
     titleButton?.titleLabel?.font = UIFont.systemFontOfSize(13)
     titleButton!.setTitleColor(UIColor.whiteColor(),forState: UIControlState.Disabled)
     titleButton!.setTitleColor(commonLightColor,  forState: UIControlState.Normal)
