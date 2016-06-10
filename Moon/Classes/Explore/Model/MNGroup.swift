@@ -28,6 +28,8 @@ class MNGroup: NSObject {
   var id: Int = 0
   var name: String?
   var cert: MNCert?
+  var category_id: Int = 0
+  var logo_url_thumb: MNThumb?
   
   
   init(dict: [String:AnyObject]) {

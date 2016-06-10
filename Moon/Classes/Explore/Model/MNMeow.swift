@@ -8,19 +8,6 @@
 
 import UIKit
 
-//enum MeowType: Int {
-//  case type_0 = 0
-//  case type_2 = 2
-//  case type_3 = 3
-//  case type_4 = 4
-//  case type_7 = 7
-//  case type_8 = 8
-//  case type_9 = 9
-//  
-//}
-
-
-
 class MNMeow: NSObject {
   
   var bang_count: Int = 0

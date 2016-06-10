@@ -18,6 +18,7 @@ class MNMasterInfo: NSObject {
   var self_description: String?
   var avatar_url: String?
   var coordinate: MNCoordinate?
+  var avatar_url_thumb: MNThumb?
   
   init(dict: [String: AnyObject]) {
     super.init()
@@ -27,6 +28,11 @@ class MNMasterInfo: NSObject {
   override func setValue(value: AnyObject?, forKey key: String) {
     if key == "coordinate" {
       coordinate = MNCoordinate(dict: value as! [String: AnyObject])
+      return
+    }
+    
+    if key == "avatar_url_thumb" {
+      avatar_url_thumb = MNThumb(dict: value as! [String: AnyObject])
       return
     }
     

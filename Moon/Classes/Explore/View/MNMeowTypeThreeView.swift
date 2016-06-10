@@ -18,14 +18,14 @@ class MNMeowTypeThreeView: UIView {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSizeMake(122, 122)
-        layout.minimumInteritemSpacing = 2
-        layout.minimumLineSpacing = 2
-        collectionView.collectionViewLayout = layout
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        let nib  = UINib(nibName: String(MNPicCell), bundle: nil)
+    let layout                          = UICollectionViewFlowLayout()
+    layout.itemSize                     = CGSizeMake(122, 122)
+    layout.minimumInteritemSpacing      = 2
+    layout.minimumLineSpacing           = 2
+    collectionView.collectionViewLayout = layout
+    collectionView.delegate             = self
+    collectionView.dataSource           = self
+    let nib                             = UINib(nibName: String(MNPicCell), bundle: nil)
         collectionView.registerNib(nib, forCellWithReuseIdentifier: "pic")
   }
 

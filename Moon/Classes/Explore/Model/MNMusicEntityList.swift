@@ -16,6 +16,7 @@ class MNMusicEntityList: NSObject {
     let path = NSBundle.mainBundle().pathForResource("explore-music.plist", ofType: nil)
     let   videoEntityDict =  NSDictionary(contentsOfFile: path!) as! [String: AnyObject]
     let  videoDictArray =   videoEntityDict["meows"] as! NSArray
+    
     var videoArray = [MNMeow]()
     for videoDict in  videoDictArray {
       let tmp = videoDict as! [String: AnyObject]

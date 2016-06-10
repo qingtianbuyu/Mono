@@ -14,6 +14,7 @@ class MNThumb: NSObject {
   var width: Int = 0
   var height: Int = 0
   var format: String?
+  var error_code: Int = 0
   
   init(dict: [String: AnyObject]) {
     super.init()
