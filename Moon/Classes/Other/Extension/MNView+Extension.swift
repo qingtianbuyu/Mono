@@ -50,6 +50,10 @@ extension UIView {
     return NSBundle.mainBundle().loadNibNamed(String(self), owner: nil, options: nil).last!
   }
   
+  class func nib() -> AnyObject {
+    return UINib(nibName: String(self), bundle: nil)
+  }
+  
   
   class var viewIdentify:String {
     get {

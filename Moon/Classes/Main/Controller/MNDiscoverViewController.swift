@@ -32,6 +32,8 @@ class MNDiscoverViewController: UITableViewController {
     self.navigationController?.navigationBar.barTintColor        = UIColor.blackColor()
     self.navigationItem.leftBarButtonItem                        = UIBarButtonItem.buttonWithImage("icon-search-white", heightedImageName: "", target: self, action: #selector(MNDiscoverViewController.leftClick))
     self.tableView.separatorStyle                                = UITableViewCellSeparatorStyle.None
+    let nib = UINib(nibName: String(MNDiscoverCell), bundle: nil)
+    self.tableView.registerNib(nib, forCellReuseIdentifier: MNDiscoverCell.viewIdentify)
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -49,17 +51,23 @@ class MNDiscoverViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 20
+    return modEntityList.mod_list?.count ?? 0
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let id  = "cell"
-    var cell = tableView.dequeueReusableCellWithIdentifier(id)
-    if cell == nil {
-        cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: id)
+    let  cell = tableView.dequeueReusableCellWithIdentifier(MNDiscoverCell.viewIdentify) as! MNDiscoverCell
+    let mod   = modEntityList.mod_list![indexPath.row]
+    cell.mod = mod
+    return cell
+  }
+  
+  override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    let mod   = modEntityList.mod_list![indexPath.row]
+    if mod.type == "mashup_square" {
+      return 455
     }
-    cell?.textLabel?.text = "\(indexPath.row)";
-    return cell!
+    
+    return 100
   }
   
   

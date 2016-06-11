@@ -23,11 +23,12 @@ class MNModEntity: NSObject {
   
   override func setValue(value: AnyObject?, forKey key: String) {
     if key == "entity_list" {
-      guard let dictArray =  value!["entity_list"] as? [[String: AnyObject]] else {
+      guard let array = (value as? [[String : AnyObject]])  else {
         return
       }
+      
       var entityTmp_list = [MNMode]()
-      for dict in dictArray {
+      for dict in array {
         let mod = MNMode(dict: dict)
         entityTmp_list.append(mod)
       }
