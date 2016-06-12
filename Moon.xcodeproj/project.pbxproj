@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9F00DEA41D09A4A1008FC4F0 /* MNBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00DEA31D09A4A1008FC4F0 /* MNBarButtonItem+Extension.swift */; };
-		9F00DEA61D0A381B008FC4F0 /* new_explore.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F00DEA51D0A381B008FC4F0 /* new_explore.plist */; };
 		9F00DEA81D0A39BF008FC4F0 /* MNExploreMeow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00DEA71D0A39BF008FC4F0 /* MNExploreMeow.swift */; };
 		9F00DEAA1D0A3A3B008FC4F0 /* MNRefCampaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00DEA91D0A3A3B008FC4F0 /* MNRefCampaign.swift */; };
 		9F1D0DEA1CEDE18B00D4E951 /* MNRecommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1D0DE91CEDE18B00D4E951 /* MNRecommandViewController.swift */; };
@@ -29,6 +28,9 @@
 		9F336E501CF0862500779067 /* MNMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E4F1CF0862500779067 /* MNMusicViewController.swift */; };
 		9F336E521CF0867600779067 /* MNGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E511CF0867600779067 /* MNGalleryViewController.swift */; };
 		9F336E541CF0868400779067 /* MNTeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E531CF0868400779067 /* MNTeaViewController.swift */; };
+		9F3BBBDE1D0D93510030C6F0 /* MNDiscoverBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3BBBDD1D0D93510030C6F0 /* MNDiscoverBarView.swift */; };
+		9F3BBBE01D0D93600030C6F0 /* MNDiscoverBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3BBBDF1D0D93600030C6F0 /* MNDiscoverBarView.xib */; };
+		9F3BBBE21D0DA24D0030C6F0 /* new_explore.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F3BBBE11D0DA24D0030C6F0 /* new_explore.plist */; };
 		9F47B9241CFC533300E6D8A3 /* 2015-05-30.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F47B9231CFC533300E6D8A3 /* 2015-05-30.plist */; };
 		9F47B9261CFC593D00E6D8A3 /* 05-30.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F47B9251CFC593D00E6D8A3 /* 05-30.plist */; };
 		9F47B9281CFC6F4D00E6D8A3 /* 05-30-0853.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F47B9271CFC6F4D00E6D8A3 /* 05-30-0853.plist */; };
@@ -108,7 +110,6 @@
 		48E166E41FD849AB9AA7D671 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8EBD8F68473D64CE968A6E5A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9F00DEA31D09A4A1008FC4F0 /* MNBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MNBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
-		9F00DEA51D0A381B008FC4F0 /* new_explore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = new_explore.plist; sourceTree = "<group>"; };
 		9F00DEA71D0A39BF008FC4F0 /* MNExploreMeow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNExploreMeow.swift; sourceTree = "<group>"; };
 		9F00DEA91D0A3A3B008FC4F0 /* MNRefCampaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNRefCampaign.swift; sourceTree = "<group>"; };
 		9F1D0DE91CEDE18B00D4E951 /* MNRecommandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNRecommandViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +130,9 @@
 		9F336E4F1CF0862500779067 /* MNMusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMusicViewController.swift; sourceTree = "<group>"; };
 		9F336E511CF0867600779067 /* MNGalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNGalleryViewController.swift; sourceTree = "<group>"; };
 		9F336E531CF0868400779067 /* MNTeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNTeaViewController.swift; sourceTree = "<group>"; };
+		9F3BBBDD1D0D93510030C6F0 /* MNDiscoverBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNDiscoverBarView.swift; sourceTree = "<group>"; };
+		9F3BBBDF1D0D93600030C6F0 /* MNDiscoverBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNDiscoverBarView.xib; sourceTree = "<group>"; };
+		9F3BBBE11D0DA24D0030C6F0 /* new_explore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = new_explore.plist; sourceTree = "<group>"; };
 		9F47B9231CFC533300E6D8A3 /* 2015-05-30.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "2015-05-30.plist"; sourceTree = "<group>"; };
 		9F47B9251CFC593D00E6D8A3 /* 05-30.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "05-30.plist"; sourceTree = "<group>"; };
 		9F47B9271CFC6F4D00E6D8A3 /* 05-30-0853.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "05-30-0853.plist"; sourceTree = "<group>"; };
@@ -440,6 +444,8 @@
 				9FABC5E91D0C53260071F2DA /* MNDiscoverSquareView.xib */,
 				9FABC5EB1D0C53850071F2DA /* MNDiscoverSquareCell.swift */,
 				9FABC5EC1D0C53850071F2DA /* MNDiscoverSquareCell.xib */,
+				9F3BBBDD1D0D93510030C6F0 /* MNDiscoverBarView.swift */,
+				9F3BBBDF1D0D93600030C6F0 /* MNDiscoverBarView.xib */,
 			);
 			path = DiscoverView;
 			sourceTree = "<group>";
@@ -455,7 +461,7 @@
 		9FBD5F441CF5F67600F1A936 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				9F00DEA51D0A381B008FC4F0 /* new_explore.plist */,
+				9F3BBBE11D0DA24D0030C6F0 /* new_explore.plist */,
 				9F8E3F691D02624400ACE1BB /* explore-recenttea.plist */,
 				9F67E63E1D0088D5004E230F /* explore-gallery.plist */,
 				9F67E6381D008791004E230F /* explore-music.plist */,
@@ -586,6 +592,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F5934851CE9ECAD00E69FC8 /* LaunchScreen.storyboard in Resources */,
+				9F3BBBE21D0DA24D0030C6F0 /* new_explore.plist in Resources */,
 				9F886E5A1CF9F46A001CDE13 /* MNMeowTypeNineView.xib in Resources */,
 				9F67E63F1D0088D5004E230F /* explore-gallery.plist in Resources */,
 				9F47B9261CFC593D00E6D8A3 /* 05-30.plist in Resources */,
@@ -601,9 +608,9 @@
 				9F7682D21D0C50B200B3E721 /* MNDiscoverCell.xib in Resources */,
 				9FB438D41D0A984300E6603A /* MNBannerView.xib in Resources */,
 				9F5934821CE9ECAD00E69FC8 /* Assets.xcassets in Resources */,
+				9F3BBBE01D0D93600030C6F0 /* MNDiscoverBarView.xib in Resources */,
 				9FABC5EA1D0C53260071F2DA /* MNDiscoverSquareView.xib in Resources */,
 				9FB438D81D0B0BDD00E6603A /* MNBannerViewCell.xib in Resources */,
-				9F00DEA61D0A381B008FC4F0 /* new_explore.plist in Resources */,
 				9FC804681D0269D500E8F2FC /* MNTeaCell.xib in Resources */,
 				9FABC5EE1D0C53850071F2DA /* MNDiscoverSquareCell.xib in Resources */,
 				9F4E6CEC1CF3180500655CB3 /* MNExploreCell.xib in Resources */,
@@ -731,6 +738,7 @@
 				9F1D0DF41CEDE27400D4E951 /* MNMineViewContrller.swift in Sources */,
 				9FBD5F4A1CF5FAE500F1A936 /* MNTea.swift in Sources */,
 				9F7682D11D0C50B200B3E721 /* MNDiscoverCell.swift in Sources */,
+				9F3BBBDE1D0D93510030C6F0 /* MNDiscoverBarView.swift in Sources */,
 				9FC804661D0269B500E8F2FC /* MNTeaCell.swift in Sources */,
 				9FC05AE71CFA5EE100F39407 /* MNMeowTypeEightView.swift in Sources */,
 				9FA9B7141CF497CE009933A3 /* MNHttpTool.swift in Sources */,

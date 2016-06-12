@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MNDiscoverBarView" customModule="Moon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="188"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VIj-y4-FtH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="188"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="VIj-y4-FtH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CxP-Tk-lbS"/>
+                <constraint firstAttribute="bottom" secondItem="VIj-y4-FtH" secondAttribute="bottom" id="QjO-Df-i27"/>
+                <constraint firstAttribute="trailing" secondItem="VIj-y4-FtH" secondAttribute="trailing" id="gUN-MM-rwi"/>
+                <constraint firstItem="VIj-y4-FtH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="s2H-56-TIY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="barView" destination="VIj-y4-FtH" id="g7Z-hv-nAM"/>
+            </connections>
+        </view>
+    </objects>
+</document>

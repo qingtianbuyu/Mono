@@ -32,6 +32,17 @@ class MNCollection: NSObject {
       thumb = MNThumb(dict: value as! [String: AnyObject])
       return
     }
+    
+    if key == "logo_url_thumb" {
+      logo_url_thumb = MNThumb(dict: value as! [String: AnyObject])
+      return
+    }
+    
+    if key == "banner_img_url_thumb" {
+      banner_img_url_thumb = MNThumb(dict: value as! [String: AnyObject])
+      return
+    }
+    
     super.setValue(value, forKey: key)
   }
   

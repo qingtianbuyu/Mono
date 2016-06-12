@@ -17,13 +17,23 @@ class MNDiscoverCell: UITableViewCell {
   }()
   
   
+  lazy var barView: MNDiscoverBarView = {
+    let baView = MNDiscoverBarView.viewFromXib() as! MNDiscoverBarView
+    self.contentView.addSubview(baView)
+    return baView
+  }()
   
   var mod: MNModEntity? {
     didSet {
+      self.squareView.hidden = true
+      self.barView.hidden = true
+      
       if mod?.type == "mashup_square" {
-        self.squareView.hidden = false
-        self.squareView.frame = CGRectMake(0, 0, self.width, 405)
         self.squareView.mod = mod
+        self.squareView.hidden = false
+      } else if mod?.type == "mashup_bar" {
+        self.barView.mod = mod
+        self.barView.hidden = false
       }
     }
   }
@@ -33,5 +43,11 @@ class MNDiscoverCell: UITableViewCell {
       self.backgroundColor = commonBgColor
     }
 
+  
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    self.barView.frame = self.bounds
+    self.squareView.frame = CGRectMake(0, 0, self.width, 455)
+  }
     
 }

@@ -62,9 +62,12 @@ class MNDiscoverViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    
     let mod   = modEntityList.mod_list![indexPath.row]
     if mod.type == "mashup_square" {
       return 455
+    } else if mod.type == "mashup_bar" {
+      return 187.5
     }
     
     return 100

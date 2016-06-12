@@ -10,4 +10,19 @@ import UIKit
 
 class MNExploreMeow: MNMeow {
   var ref_campaign: MNRefCampaign?
+  
+  override init(dict: [String : AnyObject]) {
+    super.init(dict: dict)
+    setValuesForKeysWithDictionary(dict)
+  }
+  
+  override func setValue(value: AnyObject?, forKey key: String) {
+    if key == "ref_campaign" {
+      ref_campaign  = MNRefCampaign(dict:(value as! [String: AnyObject]))
+      return
+    }
+    super.setValue(value, forKey: key)
+  }
+  
+  
 }

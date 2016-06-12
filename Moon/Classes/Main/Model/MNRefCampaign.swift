@@ -22,5 +22,50 @@ class MNRefCampaign: NSObject {
   var content_num: Int = 0
   var logo_url_thumb: MNThumb?
   var recent_participant_info: [MNMasterInfo]?
+  var thumb: MNThumb?
+  var logo_url: String?
+  var id: Int = 0
+  
+  init(dict: [String: AnyObject]) {
+    super.init()
+    setValuesForKeysWithDictionary(dict)
+  }
+  
+  override func setValue(value: AnyObject?, forKey key: String) {
+    if key == "group_info" {
+      group_info = MNGroup(dict: (value as! [String: AnyObject]))
+      return
+    }
+    
+    if key == "logo_url_thumb" {
+      logo_url_thumb = MNThumb(dict: (value as! [String: AnyObject]))
+      return
+    }
+    
+    if key == "thumb" {
+      thumb = MNThumb(dict: (value as! [String: AnyObject]))
+      return
+    }
+    
+    if key == "recent_participant_info" {
+      let participantDictArray =  value as! NSArray
+      var participantArray = [MNMasterInfo]()
+      for participantDict in   participantDictArray {
+          let recent_participant = MNMasterInfo(dict: (participantDict as! [String: AnyObject]))
+        participantArray.append(recent_participant)
+      }
+      recent_participant_info = participantArray
+      return
+    }
+    
+    if key == "description" {
+        desc = value as? String
+      return
+    }
+    
+    
+    super.setValue(value, forKey: key)
+  }
+  
   
 }

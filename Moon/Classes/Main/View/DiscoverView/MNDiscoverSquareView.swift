@@ -22,13 +22,14 @@ class MNDiscoverSquareView: UIView {
   override func awakeFromNib() {
     super.awakeFromNib()
     let layout = UICollectionViewFlowLayout()
-    layout.itemSize = CGSizeMake((ScreenWidth - 1) * 0.5, 275)
+    layout.itemSize = CGSizeMake((ScreenWidth - 1) * 0.5, 227)
     layout.minimumLineSpacing = 1
     layout.minimumInteritemSpacing = 1
     self.squareView.collectionViewLayout = layout
     self.squareView.backgroundColor = commonBgColor
     self.squareView.delegate = self
     self.squareView.dataSource = self
+    self.squareView.bounces = false
     let nib = UINib(nibName: String(MNDiscoverSquareCell), bundle: nil)
     self.squareView.registerNib(nib, forCellWithReuseIdentifier: MNDiscoverSquareCell.viewIdentify)
   }
