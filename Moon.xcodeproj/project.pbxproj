@@ -30,11 +30,15 @@
 		9F336E541CF0868400779067 /* MNTeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E531CF0868400779067 /* MNTeaViewController.swift */; };
 		9F3BBBDE1D0D93510030C6F0 /* MNDiscoverBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3BBBDD1D0D93510030C6F0 /* MNDiscoverBarView.swift */; };
 		9F3BBBE01D0D93600030C6F0 /* MNDiscoverBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3BBBDF1D0D93600030C6F0 /* MNDiscoverBarView.xib */; };
-		9F3BBBE21D0DA24D0030C6F0 /* new_explore.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F3BBBE11D0DA24D0030C6F0 /* new_explore.plist */; };
 		9F47B9241CFC533300E6D8A3 /* 2015-05-30.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F47B9231CFC533300E6D8A3 /* 2015-05-30.plist */; };
 		9F47B9261CFC593D00E6D8A3 /* 05-30.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F47B9251CFC593D00E6D8A3 /* 05-30.plist */; };
 		9F47B9281CFC6F4D00E6D8A3 /* 05-30-0853.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F47B9271CFC6F4D00E6D8A3 /* 05-30-0853.plist */; };
 		9F47B92A1CFC7B2A00E6D8A3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F47B9291CFC7B2A00E6D8A3 /* String+Extension.swift */; };
+		9F4B2B701D0EFF0D00BD3BFF /* new-explore5.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F4B2B6B1D0EFF0D00BD3BFF /* new-explore5.plist */; };
+		9F4B2B711D0EFF0D00BD3BFF /* new-explore4.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F4B2B6C1D0EFF0D00BD3BFF /* new-explore4.plist */; };
+		9F4B2B721D0EFF0D00BD3BFF /* new-explore3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F4B2B6D1D0EFF0D00BD3BFF /* new-explore3.plist */; };
+		9F4B2B731D0EFF0D00BD3BFF /* new-explore1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F4B2B6E1D0EFF0D00BD3BFF /* new-explore1.plist */; };
+		9F4B2B741D0EFF0D00BD3BFF /* new-explore2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F4B2B6F1D0EFF0D00BD3BFF /* new-explore2.plist */; };
 		9F4E6CEA1CF317CD00655CB3 /* MNExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4E6CE91CF317CD00655CB3 /* MNExploreCell.swift */; };
 		9F4E6CEC1CF3180500655CB3 /* MNExploreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F4E6CEB1CF3180500655CB3 /* MNExploreCell.xib */; };
 		9F4E6CF01CF350E300655CB3 /* MNExploreEntityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4E6CEF1CF350E300655CB3 /* MNExploreEntityList.swift */; };
@@ -132,11 +136,15 @@
 		9F336E531CF0868400779067 /* MNTeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNTeaViewController.swift; sourceTree = "<group>"; };
 		9F3BBBDD1D0D93510030C6F0 /* MNDiscoverBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNDiscoverBarView.swift; sourceTree = "<group>"; };
 		9F3BBBDF1D0D93600030C6F0 /* MNDiscoverBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNDiscoverBarView.xib; sourceTree = "<group>"; };
-		9F3BBBE11D0DA24D0030C6F0 /* new_explore.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = new_explore.plist; sourceTree = "<group>"; };
 		9F47B9231CFC533300E6D8A3 /* 2015-05-30.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "2015-05-30.plist"; sourceTree = "<group>"; };
 		9F47B9251CFC593D00E6D8A3 /* 05-30.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "05-30.plist"; sourceTree = "<group>"; };
 		9F47B9271CFC6F4D00E6D8A3 /* 05-30-0853.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "05-30-0853.plist"; sourceTree = "<group>"; };
 		9F47B9291CFC7B2A00E6D8A3 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		9F4B2B6B1D0EFF0D00BD3BFF /* new-explore5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "new-explore5.plist"; sourceTree = "<group>"; };
+		9F4B2B6C1D0EFF0D00BD3BFF /* new-explore4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "new-explore4.plist"; sourceTree = "<group>"; };
+		9F4B2B6D1D0EFF0D00BD3BFF /* new-explore3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "new-explore3.plist"; sourceTree = "<group>"; };
+		9F4B2B6E1D0EFF0D00BD3BFF /* new-explore1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "new-explore1.plist"; sourceTree = "<group>"; };
+		9F4B2B6F1D0EFF0D00BD3BFF /* new-explore2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "new-explore2.plist"; sourceTree = "<group>"; };
 		9F4E6CE91CF317CD00655CB3 /* MNExploreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNExploreCell.swift; sourceTree = "<group>"; };
 		9F4E6CEB1CF3180500655CB3 /* MNExploreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNExploreCell.xib; sourceTree = "<group>"; };
 		9F4E6CEF1CF350E300655CB3 /* MNExploreEntityList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNExploreEntityList.swift; sourceTree = "<group>"; };
@@ -461,7 +469,11 @@
 		9FBD5F441CF5F67600F1A936 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				9F3BBBE11D0DA24D0030C6F0 /* new_explore.plist */,
+				9F4B2B6B1D0EFF0D00BD3BFF /* new-explore5.plist */,
+				9F4B2B6C1D0EFF0D00BD3BFF /* new-explore4.plist */,
+				9F4B2B6D1D0EFF0D00BD3BFF /* new-explore3.plist */,
+				9F4B2B6E1D0EFF0D00BD3BFF /* new-explore1.plist */,
+				9F4B2B6F1D0EFF0D00BD3BFF /* new-explore2.plist */,
 				9F8E3F691D02624400ACE1BB /* explore-recenttea.plist */,
 				9F67E63E1D0088D5004E230F /* explore-gallery.plist */,
 				9F67E6381D008791004E230F /* explore-music.plist */,
@@ -592,10 +604,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F5934851CE9ECAD00E69FC8 /* LaunchScreen.storyboard in Resources */,
-				9F3BBBE21D0DA24D0030C6F0 /* new_explore.plist in Resources */,
+				9F4B2B721D0EFF0D00BD3BFF /* new-explore3.plist in Resources */,
 				9F886E5A1CF9F46A001CDE13 /* MNMeowTypeNineView.xib in Resources */,
 				9F67E63F1D0088D5004E230F /* explore-gallery.plist in Resources */,
 				9F47B9261CFC593D00E6D8A3 /* 05-30.plist in Resources */,
+				9F4B2B701D0EFF0D00BD3BFF /* new-explore5.plist in Resources */,
 				9FECDEBF1CFF1EEE0041E14B /* 0601-following.plist in Resources */,
 				9F7E7C7A1CF9DE8800F9FBEF /* MNMeowTypeFourView.xib in Resources */,
 				9FBD5F481CF5F67600F1A936 /* 0525.plist in Resources */,
@@ -609,6 +622,8 @@
 				9FB438D41D0A984300E6603A /* MNBannerView.xib in Resources */,
 				9F5934821CE9ECAD00E69FC8 /* Assets.xcassets in Resources */,
 				9F3BBBE01D0D93600030C6F0 /* MNDiscoverBarView.xib in Resources */,
+				9F4B2B731D0EFF0D00BD3BFF /* new-explore1.plist in Resources */,
+				9F4B2B711D0EFF0D00BD3BFF /* new-explore4.plist in Resources */,
 				9FABC5EA1D0C53260071F2DA /* MNDiscoverSquareView.xib in Resources */,
 				9FB438D81D0B0BDD00E6603A /* MNBannerViewCell.xib in Resources */,
 				9FC804681D0269D500E8F2FC /* MNTeaCell.xib in Resources */,
@@ -618,6 +633,7 @@
 				9FC05AE91CFA5EEB00F39407 /* MNMeowTypeEightView.xib in Resources */,
 				9F67E6351D005EA5004E230F /* explorer-video.plist in Resources */,
 				9F47B9281CFC6F4D00E6D8A3 /* 05-30-0853.plist in Resources */,
+				9F4B2B741D0EFF0D00BD3BFF /* new-explore2.plist in Resources */,
 				9FC05AF11CFAB32500F39407 /* MNMeowTypeThreeView.xib in Resources */,
 				9F47B9241CFC533300E6D8A3 /* 2015-05-30.plist in Resources */,
 			);

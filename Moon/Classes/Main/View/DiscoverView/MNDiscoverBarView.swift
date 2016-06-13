@@ -24,10 +24,21 @@ class MNDiscoverBarView: UIView {
       let mode = mod?.entity_list?.last
       if mode?.collection != nil{
         self.barView.m_setImageWithUrl(mode?.collection?.thumb?.raw)
-        self.centerImageView.hidden = false
-        self.centerImageView.m_setImageWithUrl(mode?.collection?.logo_url_thumb?.raw)
+        let centerUrl = mode?.collection?.logo_url_thumb?.raw
+        guard centerUrl?.characters.count > 0  else {
+          self.centerImageView.hidden = true
+          self.centerImageView.m_setImageWithUrl(mode?.collection?.logo_url_thumb?.raw)
+          return
+        }
         
-      } else {
+        self.centerImageView.hidden = false
+        self.centerImageView.m_setImageWithUrl(centerUrl)
+        
+      } else if mode?.campaign != nil {
+        self.barView.m_setImageWithUrl(mode?.campaign?.thumb?.raw)
+        self.centerImageView.hidden = true
+      }
+      else {
         self.barView.m_setImageWithUrl(mode?.meow?.ref_campaign?.thumb?.raw)
         self.centerImageView.hidden = true
       }

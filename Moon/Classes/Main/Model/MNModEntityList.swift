@@ -14,17 +14,32 @@ class MNModEntityList {
   var mod_list: [MNModEntity]?
 
   func loadModData() {
-    let path              = NSBundle.mainBundle().pathForResource("new_explore.plist", ofType: nil)
+    mod_list       = [MNModEntity]()
+    loadWithPlist("new-explore1.plist")
+    loadWithPlist("new-explore2.plist")
+    loadWithPlist("new-explore3.plist")
+    loadWithPlist("new-explore4.plist")
+    loadWithPlist("new-explore5.plist")
+    
+  }
+  
+  func loadWithPlist(let path: String) {
+    var modArray = [MNModEntity]()
+    let path              = NSBundle.mainBundle().pathForResource(path, ofType: nil)
     let modEntityListDict = NSDictionary(contentsOfFile:path!) as! [String: AnyObject]
     let modDictArray      = modEntityListDict["mod_list"] as! NSArray
-    let bannerDict        = modEntityListDict["top_banner"] as! [String: AnyObject]
-    top_banner            = MNBannerEntity(dict: bannerDict)
-    var modTmpArray       = [MNModEntity]()
+    
     for modEntityDict in modDictArray {
-    let mod               = (modEntityDict as! [String: AnyObject])
-      modTmpArray.append(MNModEntity(dict:mod))
+      let mod               = (modEntityDict as! [String: AnyObject])
+      modArray.append(MNModEntity(dict:mod))
     }
-    mod_list              = modTmpArray
+    mod_list?.appendContentsOf(modArray)
+    guard   let bannerDict  = (modEntityListDict["top_banner"] as? [String: AnyObject]) else {
+      return
+    }
+      top_banner            = MNBannerEntity(dict: bannerDict)
   }
+  
+  
   
 }

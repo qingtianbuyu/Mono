@@ -23,6 +23,10 @@ class MNBannerView: UIView {
   
   
   func scrollToNext() -> Void {
+    guard (self.banners?.count) != nil else {
+      return
+    }
+    
     //计算当前展示cell的索引值
     let indexPath =   self.bannerView.indexPathsForVisibleItems().last
     //计算下一个要展示的位置

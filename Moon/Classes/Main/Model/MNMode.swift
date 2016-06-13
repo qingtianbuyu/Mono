@@ -11,6 +11,7 @@ import UIKit
 class MNMode: MNBanner {
   
   var group: MNGroup?
+  var campaign: MNRefCampaign?
   
   override init(dict: [String: AnyObject]) {
     super.init(dict: dict)
@@ -22,6 +23,12 @@ class MNMode: MNBanner {
       group = MNGroup(dict: (value as! [String: AnyObject]))
       return
     }
+    
+    if key == "campaign" {
+      campaign = MNRefCampaign(dict: (value as! [String: AnyObject]))
+      return
+    }
+    
     
     super.setValue(value, forKey: key)
   }
