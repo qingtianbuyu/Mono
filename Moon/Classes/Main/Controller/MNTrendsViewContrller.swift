@@ -34,12 +34,22 @@ class MNTrendsViewContrller: UITableViewController {
   }
   
   func setupTableView() {
+    let mtableView  = UITableView(frame: self.tableView.frame, style: UITableViewStyle.Grouped)
+    self.tableView = mtableView
     self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
     let nib = MNTrendCell.nib() as! UINib
     self.tableView.registerNib(nib , forCellReuseIdentifier: MNTrendCell.viewIdentify)
     let headerNib = MNTrendHeaderView.nib() as! UINib
     self.tableView.registerNib(headerNib, forHeaderFooterViewReuseIdentifier: MNTrendHeaderView.viewIdentify)
+    self.tableView.registerClass(MNTrendFooterView.self, forHeaderFooterViewReuseIdentifier: MNTrendFooterView.viewIdentify)
     
+    let headerF = CGRectMake(0, 0, self.view.width, 45)
+    let headerView = UIView(frame: headerF)
+    let searchF = headerView.bounds
+    let searchView = UISearchBar(frame: searchF)
+    searchView.text = "搜索造物主、主题站、小组和活动"
+    headerView.addSubview(searchView)
+    self.tableView.tableHeaderView = headerView
   }
   
   func plusClick() {
@@ -56,16 +66,15 @@ class MNTrendsViewContrller: UITableViewController {
     if section == 1 {
       return statusEntity.group_list?.count ?? 0
     }
-    return 3
+    return statusEntity.group_list?.count ?? 0
   }
   
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier(MNTrendCell.viewIdentify) as! MNTrendCell
-    if indexPath.section == 1 {
+//    if indexPath.section == 1 {
         cell.group  = statusEntity.group_list![indexPath.row]
-    }
-    
+//    }
       return cell
   }
   
@@ -84,9 +93,33 @@ class MNTrendsViewContrller: UITableViewController {
     } else {
     headerView.title = "我关注的站"
     }
-
-
     return headerView
   }
+  
+  override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    if section == 0 {
+      return 190
+    }
+    return 0.1
+  }
+  
+  
+  override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    if section == 1 {
+      return nil
+    }
+     let  footer =  tableView.dequeueReusableHeaderFooterViewWithIdentifier(MNTrendFooterView.viewIdentify) as! MNTrendFooterView
+      footer.banner =  statusEntity.banner
+    return footer
+  }
+  
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+  }
+  
+  override func scrollViewDidScroll(scrollView: UIScrollView) {
+    self.view.endEditing(true)
+  }
+  
   
 }

@@ -30,6 +30,12 @@
 		9F336E541CF0868400779067 /* MNTeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F336E531CF0868400779067 /* MNTeaViewController.swift */; };
 		9F3BBBDE1D0D93510030C6F0 /* MNDiscoverBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3BBBDD1D0D93510030C6F0 /* MNDiscoverBarView.swift */; };
 		9F3BBBE01D0D93600030C6F0 /* MNDiscoverBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3BBBDF1D0D93600030C6F0 /* MNDiscoverBarView.xib */; };
+		9F3CD3CC1D12D9A2000A6C01 /* MNTrendFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3CD3CB1D12D9A2000A6C01 /* MNTrendFooterView.swift */; };
+		9F3CD3D41D12DE9C000A6C01 /* MNTrendBannerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3CD3D31D12DE9C000A6C01 /* MNTrendBannerEntity.swift */; };
+		9F3CD3D61D12E635000A6C01 /* MNTrendBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3CD3D51D12E635000A6C01 /* MNTrendBannerView.swift */; };
+		9F3CD3D81D12E673000A6C01 /* MNTrendBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3CD3D71D12E673000A6C01 /* MNTrendBannerView.xib */; };
+		9F3CD3DB1D12E8AB000A6C01 /* MNTrendBannerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3CD3D91D12E8AB000A6C01 /* MNTrendBannerViewCell.swift */; };
+		9F3CD3DC1D12E8AB000A6C01 /* MNTrendBannerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F3CD3DA1D12E8AB000A6C01 /* MNTrendBannerViewCell.xib */; };
 		9F47B9241CFC533300E6D8A3 /* 2015-05-30.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F47B9231CFC533300E6D8A3 /* 2015-05-30.plist */; };
 		9F47B9261CFC593D00E6D8A3 /* 05-30.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F47B9251CFC593D00E6D8A3 /* 05-30.plist */; };
 		9F47B9281CFC6F4D00E6D8A3 /* 05-30-0853.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F47B9271CFC6F4D00E6D8A3 /* 05-30-0853.plist */; };
@@ -143,6 +149,12 @@
 		9F336E531CF0868400779067 /* MNTeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNTeaViewController.swift; sourceTree = "<group>"; };
 		9F3BBBDD1D0D93510030C6F0 /* MNDiscoverBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNDiscoverBarView.swift; sourceTree = "<group>"; };
 		9F3BBBDF1D0D93600030C6F0 /* MNDiscoverBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNDiscoverBarView.xib; sourceTree = "<group>"; };
+		9F3CD3CB1D12D9A2000A6C01 /* MNTrendFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNTrendFooterView.swift; sourceTree = "<group>"; };
+		9F3CD3D31D12DE9C000A6C01 /* MNTrendBannerEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNTrendBannerEntity.swift; sourceTree = "<group>"; };
+		9F3CD3D51D12E635000A6C01 /* MNTrendBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNTrendBannerView.swift; sourceTree = "<group>"; };
+		9F3CD3D71D12E673000A6C01 /* MNTrendBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNTrendBannerView.xib; sourceTree = "<group>"; };
+		9F3CD3D91D12E8AB000A6C01 /* MNTrendBannerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNTrendBannerViewCell.swift; sourceTree = "<group>"; };
+		9F3CD3DA1D12E8AB000A6C01 /* MNTrendBannerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNTrendBannerViewCell.xib; sourceTree = "<group>"; };
 		9F47B9231CFC533300E6D8A3 /* 2015-05-30.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "2015-05-30.plist"; sourceTree = "<group>"; };
 		9F47B9251CFC593D00E6D8A3 /* 05-30.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "05-30.plist"; sourceTree = "<group>"; };
 		9F47B9271CFC6F4D00E6D8A3 /* 05-30-0853.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "05-30-0853.plist"; sourceTree = "<group>"; };
@@ -194,8 +206,8 @@
 		9FABC5E91D0C53260071F2DA /* MNDiscoverSquareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNDiscoverSquareView.xib; sourceTree = "<group>"; };
 		9FABC5EB1D0C53850071F2DA /* MNDiscoverSquareCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNDiscoverSquareCell.swift; sourceTree = "<group>"; };
 		9FABC5EC1D0C53850071F2DA /* MNDiscoverSquareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNDiscoverSquareCell.xib; sourceTree = "<group>"; };
-		9FB438C91D0A544900E6603A /* MNDiscoverHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNDiscoverHeaderView.swift; sourceTree = "<group>"; };
-		9FB438CB1D0A552C00E6603A /* MNDiscoverHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNDiscoverHeaderView.xib; sourceTree = "<group>"; };
+		9FB438C91D0A544900E6603A /* MNDiscoverHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MNDiscoverHeaderView.swift; path = ../MNDiscoverHeaderView.swift; sourceTree = "<group>"; };
+		9FB438CB1D0A552C00E6603A /* MNDiscoverHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MNDiscoverHeaderView.xib; path = ../MNDiscoverHeaderView.xib; sourceTree = "<group>"; };
 		9FB438CF1D0A717C00E6603A /* MNToolButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNToolButton.swift; sourceTree = "<group>"; };
 		9FB438D11D0A973400E6603A /* MNBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNBannerView.swift; sourceTree = "<group>"; };
 		9FB438D31D0A984300E6603A /* MNBannerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNBannerView.xib; sourceTree = "<group>"; };
@@ -296,6 +308,7 @@
 				9F00DEA91D0A3A3B008FC4F0 /* MNRefCampaign.swift */,
 				9F7AA6AF1D119DF90074CCA0 /* MNStatusEntity.swift */,
 				9F7AA6B11D11A2510074CCA0 /* MNStatusGroup.swift */,
+				9F3CD3D31D12DE9C000A6C01 /* MNTrendBannerEntity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,8 +322,6 @@
 				9FBC613E1D105395009C0813 /* MNTrendCell.xib */,
 				9F336E3D1CF0359E00779067 /* MNNavgationBar.swift */,
 				9F336E411CF0380D00779067 /* MNTitleCell.swift */,
-				9FB438C91D0A544900E6603A /* MNDiscoverHeaderView.swift */,
-				9FB438CB1D0A552C00E6603A /* MNDiscoverHeaderView.xib */,
 				9FB438CF1D0A717C00E6603A /* MNToolButton.swift */,
 				9FB438D11D0A973400E6603A /* MNBannerView.swift */,
 				9FB438D31D0A984300E6603A /* MNBannerView.xib */,
@@ -467,6 +478,8 @@
 		9F7682D31D0C512800B3E721 /* DiscoverView */ = {
 			isa = PBXGroup;
 			children = (
+				9FB438C91D0A544900E6603A /* MNDiscoverHeaderView.swift */,
+				9FB438CB1D0A552C00E6603A /* MNDiscoverHeaderView.xib */,
 				9FABC5E71D0C53050071F2DA /* MNDiscoverSquareView.swift */,
 				9FABC5E91D0C53260071F2DA /* MNDiscoverSquareView.xib */,
 				9FABC5EB1D0C53850071F2DA /* MNDiscoverSquareCell.swift */,
@@ -490,6 +503,11 @@
 			children = (
 				9F7AA6A91D1194F80074CCA0 /* MNTrendHeaderView.swift */,
 				9F7AA6AD1D1199E50074CCA0 /* MNTrendHeaderView.xib */,
+				9F3CD3CB1D12D9A2000A6C01 /* MNTrendFooterView.swift */,
+				9F3CD3D51D12E635000A6C01 /* MNTrendBannerView.swift */,
+				9F3CD3D71D12E673000A6C01 /* MNTrendBannerView.xib */,
+				9F3CD3D91D12E8AB000A6C01 /* MNTrendBannerViewCell.swift */,
+				9F3CD3DA1D12E8AB000A6C01 /* MNTrendBannerViewCell.xib */,
 			);
 			path = Trends;
 			sourceTree = "<group>";
@@ -657,6 +675,7 @@
 				9F4B2B711D0EFF0D00BD3BFF /* new-explore4.plist in Resources */,
 				9FABC5EA1D0C53260071F2DA /* MNDiscoverSquareView.xib in Resources */,
 				9FB438D81D0B0BDD00E6603A /* MNBannerViewCell.xib in Resources */,
+				9F3CD3DC1D12E8AB000A6C01 /* MNTrendBannerViewCell.xib in Resources */,
 				9FC804681D0269D500E8F2FC /* MNTeaCell.xib in Resources */,
 				9FABC5EE1D0C53850071F2DA /* MNDiscoverSquareCell.xib in Resources */,
 				9F4E6CEC1CF3180500655CB3 /* MNExploreCell.xib in Resources */,
@@ -666,6 +685,7 @@
 				9F47B9281CFC6F4D00E6D8A3 /* 05-30-0853.plist in Resources */,
 				9F4B2B741D0EFF0D00BD3BFF /* new-explore2.plist in Resources */,
 				9FBC61401D105395009C0813 /* MNTrendCell.xib in Resources */,
+				9F3CD3D81D12E673000A6C01 /* MNTrendBannerView.xib in Resources */,
 				9FC05AF11CFAB32500F39407 /* MNMeowTypeThreeView.xib in Resources */,
 				9F47B9241CFC533300E6D8A3 /* 2015-05-30.plist in Resources */,
 			);
@@ -728,6 +748,7 @@
 			files = (
 				9F4E6CEA1CF317CD00655CB3 /* MNExploreCell.swift in Sources */,
 				9F7AA6B01D119DF90074CCA0 /* MNStatusEntity.swift in Sources */,
+				9F3CD3D61D12E635000A6C01 /* MNTrendBannerView.swift in Sources */,
 				9F4E6CFC1CF3577300655CB3 /* MNCoordinate.swift in Sources */,
 				9FB438D21D0A973400E6603A /* MNBannerView.swift in Sources */,
 				9F29D65D1CEB6C16009AC42F /* Theme.swift in Sources */,
@@ -765,6 +786,7 @@
 				9F336E521CF0867600779067 /* MNGalleryViewController.swift in Sources */,
 				9F336E3E1CF0359E00779067 /* MNNavgationBar.swift in Sources */,
 				9FC05AEF1CFAB2F700F39407 /* MNMeowTypeThreeView.swift in Sources */,
+				9F3CD3D41D12DE9C000A6C01 /* MNTrendBannerEntity.swift in Sources */,
 				9F4E6CF01CF350E300655CB3 /* MNExploreEntityList.swift in Sources */,
 				9FB438D71D0B0BDD00E6603A /* MNBannerViewCell.swift in Sources */,
 				9FC05AEB1CFA658E00F39407 /* MNMeowTypeSeven.swift in Sources */,
@@ -787,8 +809,10 @@
 				9F7E7C721CF945A100F9FBEF /* UIImageView+Extension.swift in Sources */,
 				9F1D0DF01CEDE21400D4E951 /* MNDiscoverViewController.swift in Sources */,
 				9F4E6CF81CF3558F00655CB3 /* MNThumb.swift in Sources */,
+				9F3CD3DB1D12E8AB000A6C01 /* MNTrendBannerViewCell.swift in Sources */,
 				9F1D0DF41CEDE27400D4E951 /* MNMineViewContrller.swift in Sources */,
 				9FBD5F4A1CF5FAE500F1A936 /* MNTea.swift in Sources */,
+				9F3CD3CC1D12D9A2000A6C01 /* MNTrendFooterView.swift in Sources */,
 				9F7682D11D0C50B200B3E721 /* MNDiscoverCell.swift in Sources */,
 				9F3BBBDE1D0D93510030C6F0 /* MNDiscoverBarView.swift in Sources */,
 				9FC804661D0269B500E8F2FC /* MNTeaCell.swift in Sources */,

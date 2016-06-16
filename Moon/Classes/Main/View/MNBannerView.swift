@@ -43,7 +43,7 @@ class MNBannerView: UIView {
   override func awakeFromNib() {
    super.awakeFromNib()
     let flow                   = UICollectionViewFlowLayout()
-    flow.itemSize = CGSizeMake(self.width, 190)
+    flow.itemSize = CGSizeMake(ScreenWidth, 190)
     flow.minimumInteritemSpacing      = 0
     flow.minimumLineSpacing           = 0
     flow.scrollDirection       = UICollectionViewScrollDirection.Horizontal

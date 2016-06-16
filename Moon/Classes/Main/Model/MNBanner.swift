@@ -15,6 +15,7 @@ class MNBanner: NSObject {
   var collection: MNCollection?
   var meow: MNExploreMeow?
   
+  
   init(dict: [String: AnyObject]) {
     super.init()
     setValuesForKeysWithDictionary(dict)

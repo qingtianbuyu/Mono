@@ -10,7 +10,7 @@ import UIKit
 
 class MNStatusEntity: NSObject {
 
-  var banner: MNBanner?
+  var banner: MNTrendBannerEntity?
   var fav_group_list: [MNStatusGroup]?
   var group_list: [MNStatusGroup]?
   
@@ -24,6 +24,9 @@ class MNStatusEntity: NSObject {
       tmpgroupArray.append(MNStatusGroup(dict: group))
     }
     group_list = tmpgroupArray
+    
+    let bannerDict  =  statusDict!["banner"] as! [String: AnyObject]
+    banner = MNTrendBannerEntity(dict: bannerDict)
   }
   
   
