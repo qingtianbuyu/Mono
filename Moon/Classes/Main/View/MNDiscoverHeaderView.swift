@@ -36,10 +36,6 @@ class MNDiscoverHeaderView: UIView {
     }
   }
   
-  
-  
-  
-  
   override func awakeFromNib() {
     super.awakeFromNib()
     setupSubView()

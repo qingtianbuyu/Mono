@@ -11,10 +11,7 @@ import UIKit
 class MNStatusGroup: MNGroup {
   
   var updated_discuss_content_num: Int = 0
-  
   var updated_topic_content_num: Int = 0
-  
-  
   
   override init(dict: [String : AnyObject]) {
     super.init(dict: dict)

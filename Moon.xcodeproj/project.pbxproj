@@ -55,6 +55,19 @@
 		9F4E6CFA1CF356B500655CB3 /* MNMasterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4E6CF91CF356B500655CB3 /* MNMasterInfo.swift */; };
 		9F4E6CFC1CF3577300655CB3 /* MNCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4E6CFB1CF3577300655CB3 /* MNCoordinate.swift */; };
 		9F4E6CFE1CF35A5100655CB3 /* MNCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4E6CFD1CF35A5100655CB3 /* MNCategory.swift */; };
+		9F58AD901D14F9D50019586E /* MNMineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58AD8F1D14F9D50019586E /* MNMineHeaderView.swift */; };
+		9F58AD941D14FE9C0019586E /* mine.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F58AD931D14FE9C0019586E /* mine.plist */; };
+		9F58AD961D15006B0019586E /* MNFollowFeedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58AD951D15006B0019586E /* MNFollowFeedEntity.swift */; };
+		9F58AD981D1500820019586E /* MNFollowFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58AD971D1500820019586E /* MNFollowFeed.swift */; };
+		9F58AD9A1D1501350019586E /* NSBundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58AD991D1501350019586E /* NSBundle+Extension.swift */; };
+		9F58AD9C1D1507C30019586E /* MNGroupMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58AD9B1D1507C30019586E /* MNGroupMember.swift */; };
+		9F58AD9E1D150F2D0019586E /* MNFollowFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58AD9D1D150F2D0019586E /* MNFollowFeedCell.swift */; };
+		9F58ADA01D150F4A0019586E /* MNFollowFeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F58AD9F1D150F4A0019586E /* MNFollowFeedCell.xib */; };
+		9F58ADA21D151C8B0019586E /* MNMineMusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58ADA11D151C8B0019586E /* MNMineMusicView.swift */; };
+		9F58ADA41D151CA10019586E /* MNMineMusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F58ADA31D151CA10019586E /* MNMineMusicView.xib */; };
+		9F58ADA81D1526B10019586E /* MNMineSevenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58ADA71D1526B10019586E /* MNMineSevenView.swift */; };
+		9F58ADAA1D1535590019586E /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F58ADA91D1535590019586E /* UIColor+Extension.swift */; };
+		9F58ADAC1D155AE60019586E /* MNMineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F58ADAB1D155AE60019586E /* MNMineHeaderView.xib */; };
 		9F59347B1CE9ECAD00E69FC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F59347A1CE9ECAD00E69FC8 /* AppDelegate.swift */; };
 		9F5934821CE9ECAD00E69FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F5934811CE9ECAD00E69FC8 /* Assets.xcassets */; };
 		9F5934851CE9ECAD00E69FC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5934831CE9ECAD00E69FC8 /* LaunchScreen.storyboard */; };
@@ -174,6 +187,19 @@
 		9F4E6CF91CF356B500655CB3 /* MNMasterInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMasterInfo.swift; sourceTree = "<group>"; };
 		9F4E6CFB1CF3577300655CB3 /* MNCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNCoordinate.swift; sourceTree = "<group>"; };
 		9F4E6CFD1CF35A5100655CB3 /* MNCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNCategory.swift; sourceTree = "<group>"; };
+		9F58AD8F1D14F9D50019586E /* MNMineHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMineHeaderView.swift; sourceTree = "<group>"; };
+		9F58AD931D14FE9C0019586E /* mine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mine.plist; sourceTree = "<group>"; };
+		9F58AD951D15006B0019586E /* MNFollowFeedEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNFollowFeedEntity.swift; sourceTree = "<group>"; };
+		9F58AD971D1500820019586E /* MNFollowFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNFollowFeed.swift; sourceTree = "<group>"; };
+		9F58AD991D1501350019586E /* NSBundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBundle+Extension.swift"; sourceTree = "<group>"; };
+		9F58AD9B1D1507C30019586E /* MNGroupMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNGroupMember.swift; sourceTree = "<group>"; };
+		9F58AD9D1D150F2D0019586E /* MNFollowFeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNFollowFeedCell.swift; sourceTree = "<group>"; };
+		9F58AD9F1D150F4A0019586E /* MNFollowFeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNFollowFeedCell.xib; sourceTree = "<group>"; };
+		9F58ADA11D151C8B0019586E /* MNMineMusicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMineMusicView.swift; sourceTree = "<group>"; };
+		9F58ADA31D151CA10019586E /* MNMineMusicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNMineMusicView.xib; sourceTree = "<group>"; };
+		9F58ADA71D1526B10019586E /* MNMineSevenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNMineSevenView.swift; sourceTree = "<group>"; };
+		9F58ADA91D1535590019586E /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		9F58ADAB1D155AE60019586E /* MNMineHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNMineHeaderView.xib; sourceTree = "<group>"; };
 		9F5934771CE9ECAC00E69FC8 /* Moon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F59347A1CE9ECAD00E69FC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F5934811CE9ECAD00E69FC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
@@ -309,6 +335,9 @@
 				9F7AA6AF1D119DF90074CCA0 /* MNStatusEntity.swift */,
 				9F7AA6B11D11A2510074CCA0 /* MNStatusGroup.swift */,
 				9F3CD3D31D12DE9C000A6C01 /* MNTrendBannerEntity.swift */,
+				9F58AD951D15006B0019586E /* MNFollowFeedEntity.swift */,
+				9F58AD971D1500820019586E /* MNFollowFeed.swift */,
+				9F58AD9B1D1507C30019586E /* MNGroupMember.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,6 +345,7 @@
 		9F1D0DE31CEDD8EC00D4E951 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9F58AD8E1D14F9B60019586E /* Mine */,
 				9FBC613C1D105362009C0813 /* Trends */,
 				9F7682D31D0C512800B3E721 /* DiscoverView */,
 				9FBC613D1D105395009C0813 /* MNTrendCell.swift */,
@@ -362,6 +392,8 @@
 				9FC05AF61CFAC5E800F39407 /* UIImage+Extension.swift */,
 				9F47B9291CFC7B2A00E6D8A3 /* String+Extension.swift */,
 				9F00DEA31D09A4A1008FC4F0 /* MNBarButtonItem+Extension.swift */,
+				9F58AD991D1501350019586E /* NSBundle+Extension.swift */,
+				9F58ADA91D1535590019586E /* UIColor+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -446,6 +478,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		9F58AD8E1D14F9B60019586E /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				9F58ADAB1D155AE60019586E /* MNMineHeaderView.xib */,
+				9F58AD8F1D14F9D50019586E /* MNMineHeaderView.swift */,
+				9F58AD9D1D150F2D0019586E /* MNFollowFeedCell.swift */,
+				9F58AD9F1D150F4A0019586E /* MNFollowFeedCell.xib */,
+				9F58ADA11D151C8B0019586E /* MNMineMusicView.swift */,
+				9F58ADA31D151CA10019586E /* MNMineMusicView.xib */,
+				9F58ADA71D1526B10019586E /* MNMineSevenView.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
 		9F59346E1CE9ECAC00E69FC8 = {
 			isa = PBXGroup;
 			children = (
@@ -515,6 +561,7 @@
 		9FBD5F441CF5F67600F1A936 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				9F58AD931D14FE9C0019586E /* mine.plist */,
 				9FBC613A1D102F9B009C0813 /* status.plist */,
 				9F4B2B6B1D0EFF0D00BD3BFF /* new-explore5.plist */,
 				9F4B2B6C1D0EFF0D00BD3BFF /* new-explore4.plist */,
@@ -651,14 +698,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FBC613B1D102F9B009C0813 /* status.plist in Resources */,
+				9F58ADAC1D155AE60019586E /* MNMineHeaderView.xib in Resources */,
 				9F5934851CE9ECAD00E69FC8 /* LaunchScreen.storyboard in Resources */,
 				9F4B2B721D0EFF0D00BD3BFF /* new-explore3.plist in Resources */,
 				9F886E5A1CF9F46A001CDE13 /* MNMeowTypeNineView.xib in Resources */,
 				9F67E63F1D0088D5004E230F /* explore-gallery.plist in Resources */,
+				9F58AD941D14FE9C0019586E /* mine.plist in Resources */,
 				9F47B9261CFC593D00E6D8A3 /* 05-30.plist in Resources */,
 				9F4B2B701D0EFF0D00BD3BFF /* new-explore5.plist in Resources */,
+				9F58ADA41D151CA10019586E /* MNMineMusicView.xib in Resources */,
 				9FECDEBF1CFF1EEE0041E14B /* 0601-following.plist in Resources */,
 				9F7E7C7A1CF9DE8800F9FBEF /* MNMeowTypeFourView.xib in Resources */,
+				9F58ADA01D150F4A0019586E /* MNFollowFeedCell.xib in Resources */,
 				9FBD5F481CF5F67600F1A936 /* 0525.plist in Resources */,
 				9FB438CC1D0A552C00E6603A /* MNDiscoverHeaderView.xib in Resources */,
 				9F67E6391D008791004E230F /* explore-music.plist in Resources */,
@@ -748,6 +799,7 @@
 			files = (
 				9F4E6CEA1CF317CD00655CB3 /* MNExploreCell.swift in Sources */,
 				9F7AA6B01D119DF90074CCA0 /* MNStatusEntity.swift in Sources */,
+				9F58ADA81D1526B10019586E /* MNMineSevenView.swift in Sources */,
 				9F3CD3D61D12E635000A6C01 /* MNTrendBannerView.swift in Sources */,
 				9F4E6CFC1CF3577300655CB3 /* MNCoordinate.swift in Sources */,
 				9FB438D21D0A973400E6603A /* MNBannerView.swift in Sources */,
@@ -757,6 +809,7 @@
 				9F4E6CFA1CF356B500655CB3 /* MNMasterInfo.swift in Sources */,
 				9F00DEA41D09A4A1008FC4F0 /* MNBarButtonItem+Extension.swift in Sources */,
 				9F1D0DF21CEDE25B00D4E951 /* MNTrendsViewContrller.swift in Sources */,
+				9F58AD981D1500820019586E /* MNFollowFeed.swift in Sources */,
 				9FC804721D02C0B300E8F2FC /* MNBanner.swift in Sources */,
 				9F1D0DEA1CEDE18B00D4E951 /* MNRecommandViewController.swift in Sources */,
 				9F336E4C1CF085B500779067 /* MNFollowingViewController.swift in Sources */,
@@ -772,6 +825,7 @@
 				9FEE03D21CF5C5C300521663 /* MNCert.swift in Sources */,
 				9F1D0DEE1CEDE1CD00D4E951 /* MNTabBarController.swift in Sources */,
 				9F7E7C741CF9937400F9FBEF /* MNThumbView.swift in Sources */,
+				9F58AD9C1D1507C30019586E /* MNGroupMember.swift in Sources */,
 				9F336E4E1CF085EA00779067 /* MNVideoViewController.swift in Sources */,
 				9F336E541CF0868400779067 /* MNTeaViewController.swift in Sources */,
 				9F1D0DF71CEDE78C00D4E951 /* MNTabBarItem.swift in Sources */,
@@ -779,6 +833,7 @@
 				9F59347B1CE9ECAD00E69FC8 /* AppDelegate.swift in Sources */,
 				9F336E441CF0747E00779067 /* MNTitle.swift in Sources */,
 				9FABC5E81D0C53050071F2DA /* MNDiscoverSquareView.swift in Sources */,
+				9F58AD9A1D1501350019586E /* NSBundle+Extension.swift in Sources */,
 				9F4E6CF21CF3512A00655CB3 /* MNExploreEntity.swift in Sources */,
 				9F886E581CF9F45B001CDE13 /* MNMeowTypeNineView.swift in Sources */,
 				9F1D0DFC1CEDF4B800D4E951 /* MNView+Extension.swift in Sources */,
@@ -787,14 +842,18 @@
 				9F336E3E1CF0359E00779067 /* MNNavgationBar.swift in Sources */,
 				9FC05AEF1CFAB2F700F39407 /* MNMeowTypeThreeView.swift in Sources */,
 				9F3CD3D41D12DE9C000A6C01 /* MNTrendBannerEntity.swift in Sources */,
+				9F58ADA21D151C8B0019586E /* MNMineMusicView.swift in Sources */,
 				9F4E6CF01CF350E300655CB3 /* MNExploreEntityList.swift in Sources */,
 				9FB438D71D0B0BDD00E6603A /* MNBannerViewCell.swift in Sources */,
+				9F58AD901D14F9D50019586E /* MNMineHeaderView.swift in Sources */,
 				9FC05AEB1CFA658E00F39407 /* MNMeowTypeSeven.swift in Sources */,
 				9FABC5ED1D0C53850071F2DA /* MNDiscoverSquareCell.swift in Sources */,
 				9FC05AF71CFAC5E800F39407 /* UIImage+Extension.swift in Sources */,
 				9FECDEC31CFF22770041E14B /* MNFollowingEntity.swift in Sources */,
+				9F58AD9E1D150F2D0019586E /* MNFollowFeedCell.swift in Sources */,
 				9F336E421CF0380D00779067 /* MNTitleCell.swift in Sources */,
 				9FECDEC11CFF21AC0041E14B /* MNFollwoingEntityList.swift in Sources */,
+				9F58AD961D15006B0019586E /* MNFollowFeedEntity.swift in Sources */,
 				9F336E501CF0862500779067 /* MNMusicViewController.swift in Sources */,
 				9FC05AF31CFAB67100F39407 /* MNPicCell.swift in Sources */,
 				9F8E3F6C1D02629B00ACE1BB /* MNRecentTeaEntityList.swift in Sources */,
@@ -817,6 +876,7 @@
 				9F3BBBDE1D0D93510030C6F0 /* MNDiscoverBarView.swift in Sources */,
 				9FC804661D0269B500E8F2FC /* MNTeaCell.swift in Sources */,
 				9FC05AE71CFA5EE100F39407 /* MNMeowTypeEightView.swift in Sources */,
+				9F58ADAA1D1535590019586E /* UIColor+Extension.swift in Sources */,
 				9FA9B7141CF497CE009933A3 /* MNHttpTool.swift in Sources */,
 				9F7E7C781CF9DE5D00F9FBEF /* MNMeowTypeFourView.swift in Sources */,
 				9F47B92A1CFC7B2A00E6D8A3 /* String+Extension.swift in Sources */,
