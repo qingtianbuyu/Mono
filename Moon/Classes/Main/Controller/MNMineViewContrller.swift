@@ -12,6 +12,20 @@ class MNMineViewContrller: UITableViewController {
   
   var followFeedEntity = MNFollowFeedEntity()
   
+  lazy var iconView: UIImageView? = {
+    let iconWH:CGFloat = 192 * 0.5
+    let iconF = CGRectMake(15, 32, iconWH, iconWH)
+    let iconView = UIImageView(frame:iconF)
+    self.navigationController?.view.addSubview(iconView)
+    iconView.layer.borderColor = UIColor.whiteColor().CGColor
+    iconView.layer.borderWidth = 1
+    iconView.clipsToBounds = true
+    iconView.layer.cornerRadius = iconView.width * 0.5
+    iconView.m_setImageWithUrl("http://mmmono.qiniudn.com/FuwgYPymesuyh2_eGlwqUg_hsykF")
+    return iconView
+  }()
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = UIColor.purpleColor()
@@ -22,6 +36,7 @@ class MNMineViewContrller: UITableViewController {
   func setupView() {
     setupNav()
     setupTableView()
+//    setupIconView()
   }
   
   func setupNav() {
@@ -35,8 +50,20 @@ class MNMineViewContrller: UITableViewController {
     self.tableView.separatorStyle  = UITableViewCellSeparatorStyle.None
     let nib                        = MNFollowFeedCell.nib() as! UINib
     self.tableView.registerNib(nib, forCellReuseIdentifier: MNFollowFeedCell.viewIdentify)
-    
   }
+  
+  func setupIconView() {
+    let iconWH:CGFloat = 192 * 0.5
+    let iconF = CGRectMake(15, 32, iconWH, iconWH)
+    let iconView = UIImageView(frame:iconF)
+    self.navigationController?.view.addSubview(iconView)
+    iconView.layer.borderColor = UIColor.whiteColor().CGColor
+    iconView.layer.borderWidth = 1
+    iconView.clipsToBounds = true
+    iconView.layer.cornerRadius = iconView.width * 0.5
+    iconView.m_setImageWithUrl("http://mmmono.qiniudn.com/FuwgYPymesuyh2_eGlwqUg_hsykF")
+  }
+  
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
@@ -44,16 +71,6 @@ class MNMineViewContrller: UITableViewController {
     let headerHeight = headerView.calcHeight()
     headerView.bounds = CGRectMake(0, 0, ScreenWidth, headerHeight)
     self.tableView.tableHeaderView = headerView
-    //setup iconView
-    let iconWH:CGFloat = 150 * 0.5
-    let iconF = CGRectMake(15, 0, iconWH, iconWH)
-    let iconView = UIImageView(frame:iconF)
-    self.tableView.addSubview(iconView)
-    iconView.layer.borderColor = UIColor.whiteColor().CGColor
-    iconView.clipsToBounds = true
-    iconView.layer.cornerRadius = iconView.width * 0.5
-    iconView.m_setImageWithUrl("http://mmmono.qiniudn.com/FuwgYPymesuyh2_eGlwqUg_hsykF")
-
   }
   
   func initData() {
@@ -94,8 +111,23 @@ class MNMineViewContrller: UITableViewController {
   
   override func scrollViewDidScroll(scrollView: UIScrollView) {
     let offsetY = scrollView.contentOffset.y
-    let percent = (offsetY + 64) / 75
-    print(percent)
+    let realOffset: CGFloat = (offsetY + 64)
+//    let percent = realOffset / 75
+    
+    if realOffset < 0 {
+      self.iconView?.frame.origin.y = 32 +  realOffset * ( -1 )
+      //同时执行放大动画
+      
+    } else if realOffset == 0 {
+      let iconWH:CGFloat = 192 * 0.5
+      let iconF = CGRectMake(15, 32, iconWH, iconWH)
+      self.iconView?.frame = iconF
+    } else {
+      self.iconView?.frame.origin.y = 32 - realOffset
+      // 同时执行缩放动画
+    }
+    
+    print(self.iconView?.frame.origin.y)
     
   }
   
