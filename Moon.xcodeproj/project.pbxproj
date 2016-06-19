@@ -481,8 +481,8 @@
 		9F58AD8E1D14F9B60019586E /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				9F58ADAB1D155AE60019586E /* MNMineHeaderView.xib */,
 				9F58AD8F1D14F9D50019586E /* MNMineHeaderView.swift */,
+				9F58ADAB1D155AE60019586E /* MNMineHeaderView.xib */,
 				9F58AD9D1D150F2D0019586E /* MNFollowFeedCell.swift */,
 				9F58AD9F1D150F4A0019586E /* MNFollowFeedCell.xib */,
 				9F58ADA11D151C8B0019586E /* MNMineMusicView.swift */,

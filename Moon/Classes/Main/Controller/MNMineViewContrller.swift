@@ -36,11 +36,24 @@ class MNMineViewContrller: UITableViewController {
     let nib                        = MNFollowFeedCell.nib() as! UINib
     self.tableView.registerNib(nib, forCellReuseIdentifier: MNFollowFeedCell.viewIdentify)
     
-    
-    let headerView                 = MNMineHeaderView.viewFromXib() as! MNMineHeaderView 
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    let headerView                 = MNMineHeaderView.viewFromXib() as! MNMineHeaderView
+    let headerHeight = headerView.calcHeight()
+    headerView.bounds = CGRectMake(0, 0, ScreenWidth, headerHeight)
     self.tableView.tableHeaderView = headerView
-    
-    
+    //setup iconView
+    let iconWH:CGFloat = 150 * 0.5
+    let iconF = CGRectMake(15, 0, iconWH, iconWH)
+    let iconView = UIImageView(frame:iconF)
+    self.tableView.addSubview(iconView)
+    iconView.layer.borderColor = UIColor.whiteColor().CGColor
+    iconView.clipsToBounds = true
+    iconView.layer.cornerRadius = iconView.width * 0.5
+    iconView.m_setImageWithUrl("http://mmmono.qiniudn.com/FuwgYPymesuyh2_eGlwqUg_hsykF")
+
   }
   
   func initData() {
@@ -78,6 +91,14 @@ class MNMineViewContrller: UITableViewController {
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
+  
+  override func scrollViewDidScroll(scrollView: UIScrollView) {
+    let offsetY = scrollView.contentOffset.y
+    let percent = (offsetY + 64) / 75
+    print(percent)
+    
+  }
+  
   
   
   
