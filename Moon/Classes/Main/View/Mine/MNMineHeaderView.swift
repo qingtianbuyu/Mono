@@ -8,8 +8,20 @@
 
 import UIKit
 
-class MNMineHeaderView: UIView {
+protocol MineHeaderViewDelegate {
+  
+  func editClick()
+  func favoriteClick()
+  func messageClick()
+  func tipClick()
+  func saySthClick()
+  
+}
 
+
+class MNMineHeaderView: UIView {
+  //点击事件代理
+  var delegate: MineHeaderViewDelegate?
   
   @IBOutlet weak var iconView: UIImageView!
   
@@ -19,6 +31,26 @@ class MNMineHeaderView: UIView {
   @IBOutlet weak var contentLabel: UILabel!
   
   @IBOutlet weak var lineView: UIView!
+  
+  @IBAction func editClick(sender: AnyObject) {
+    delegate?.editClick()
+  }
+  
+  @IBAction func saySthClick(sender: AnyObject) {
+    delegate?.saySthClick()
+  }
+  
+  @IBAction func tipClick(sender: AnyObject) {
+    delegate?.tipClick()
+  }
+  
+  @IBAction func messageClick(sender: AnyObject) {
+    delegate?.messageClick()
+  }
+  
+  @IBAction func favClick(sender: AnyObject) {
+    delegate?.favoriteClick()
+  }
   
   override func awakeFromNib() {
     super.awakeFromNib()

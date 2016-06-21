@@ -98,6 +98,8 @@
 		9FABC5EA1D0C53260071F2DA /* MNDiscoverSquareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FABC5E91D0C53260071F2DA /* MNDiscoverSquareView.xib */; };
 		9FABC5ED1D0C53850071F2DA /* MNDiscoverSquareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABC5EB1D0C53850071F2DA /* MNDiscoverSquareCell.swift */; };
 		9FABC5EE1D0C53850071F2DA /* MNDiscoverSquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FABC5EC1D0C53850071F2DA /* MNDiscoverSquareCell.xib */; };
+		9FAF93741D198E6C007CF224 /* MNUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAF93731D198E6C007CF224 /* MNUserInfoViewController.swift */; };
+		9FAF93761D198FDA007CF224 /* MNUserInfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FAF93751D198FDA007CF224 /* MNUserInfoViewController.storyboard */; };
 		9FB438CA1D0A544900E6603A /* MNDiscoverHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB438C91D0A544900E6603A /* MNDiscoverHeaderView.swift */; };
 		9FB438CC1D0A552C00E6603A /* MNDiscoverHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB438CB1D0A552C00E6603A /* MNDiscoverHeaderView.xib */; };
 		9FB438D01D0A717C00E6603A /* MNToolButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB438CF1D0A717C00E6603A /* MNToolButton.swift */; };
@@ -232,6 +234,8 @@
 		9FABC5E91D0C53260071F2DA /* MNDiscoverSquareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNDiscoverSquareView.xib; sourceTree = "<group>"; };
 		9FABC5EB1D0C53850071F2DA /* MNDiscoverSquareCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNDiscoverSquareCell.swift; sourceTree = "<group>"; };
 		9FABC5EC1D0C53850071F2DA /* MNDiscoverSquareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNDiscoverSquareCell.xib; sourceTree = "<group>"; };
+		9FAF93731D198E6C007CF224 /* MNUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNUserInfoViewController.swift; sourceTree = "<group>"; };
+		9FAF93751D198FDA007CF224 /* MNUserInfoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MNUserInfoViewController.storyboard; sourceTree = "<group>"; };
 		9FB438C91D0A544900E6603A /* MNDiscoverHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MNDiscoverHeaderView.swift; path = ../MNDiscoverHeaderView.swift; sourceTree = "<group>"; };
 		9FB438CB1D0A552C00E6603A /* MNDiscoverHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MNDiscoverHeaderView.xib; path = ../MNDiscoverHeaderView.xib; sourceTree = "<group>"; };
 		9FB438CF1D0A717C00E6603A /* MNToolButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNToolButton.swift; sourceTree = "<group>"; };
@@ -401,6 +405,7 @@
 		9F29D65A1CEB6BE8009AC42F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9FAF936F1D198E20007CF224 /* Mine */,
 				9FC8046B1D02BF6C00E8F2FC /* Discover */,
 				9F336E451CF0851D00779067 /* Explore */,
 				9F1D0DE01CEDD8EC00D4E951 /* Main */,
@@ -542,6 +547,39 @@
 				9FA9B7131CF497CE009933A3 /* MNHttpTool.swift */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		9FAF936F1D198E20007CF224 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				9FAF93701D198E20007CF224 /* Controller */,
+				9FAF93711D198E20007CF224 /* Model */,
+				9FAF93721D198E20007CF224 /* View */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		9FAF93701D198E20007CF224 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9FAF93731D198E6C007CF224 /* MNUserInfoViewController.swift */,
+				9FAF93751D198FDA007CF224 /* MNUserInfoViewController.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9FAF93711D198E20007CF224 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9FAF93721D198E20007CF224 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9FBC613C1D105362009C0813 /* Trends */ = {
@@ -700,6 +738,7 @@
 				9FBC613B1D102F9B009C0813 /* status.plist in Resources */,
 				9F58ADAC1D155AE60019586E /* MNMineHeaderView.xib in Resources */,
 				9F5934851CE9ECAD00E69FC8 /* LaunchScreen.storyboard in Resources */,
+				9FAF93761D198FDA007CF224 /* MNUserInfoViewController.storyboard in Resources */,
 				9F4B2B721D0EFF0D00BD3BFF /* new-explore3.plist in Resources */,
 				9F886E5A1CF9F46A001CDE13 /* MNMeowTypeNineView.xib in Resources */,
 				9F67E63F1D0088D5004E230F /* explore-gallery.plist in Resources */,
@@ -827,6 +866,7 @@
 				9F7E7C741CF9937400F9FBEF /* MNThumbView.swift in Sources */,
 				9F58AD9C1D1507C30019586E /* MNGroupMember.swift in Sources */,
 				9F336E4E1CF085EA00779067 /* MNVideoViewController.swift in Sources */,
+				9FAF93741D198E6C007CF224 /* MNUserInfoViewController.swift in Sources */,
 				9F336E541CF0868400779067 /* MNTeaViewController.swift in Sources */,
 				9F1D0DF71CEDE78C00D4E951 /* MNTabBarItem.swift in Sources */,
 				9F67E63B1D0087E4004E230F /* MNMusicEntityList.swift in Sources */,

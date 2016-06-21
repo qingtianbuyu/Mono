@@ -11,6 +11,7 @@ import UIKit
 class MNMineViewContrller: UITableViewController {
   
   var followFeedEntity = MNFollowFeedEntity()
+  var iconViewCenterY: CGFloat  = 0
   
   lazy var iconView: UIImageView? = {
     let iconWH:CGFloat = 192 * 0.5
@@ -34,6 +35,7 @@ class MNMineViewContrller: UITableViewController {
   }
   
   func setupView() {
+    self.iconViewCenterY = self.iconView?.center.y ?? 0
     setupNav()
     setupTableView()
 //    setupIconView()
@@ -67,10 +69,12 @@ class MNMineViewContrller: UITableViewController {
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
+    self.iconView?.hidden = false
     let headerView                 = MNMineHeaderView.viewFromXib() as! MNMineHeaderView
     let headerHeight = headerView.calcHeight()
     headerView.bounds = CGRectMake(0, 0, ScreenWidth, headerHeight)
     self.tableView.tableHeaderView = headerView
+    headerView.delegate = self
   }
   
   func initData() {
@@ -110,28 +114,53 @@ class MNMineViewContrller: UITableViewController {
   }
   
   override func scrollViewDidScroll(scrollView: UIScrollView) {
-    let offsetY = scrollView.contentOffset.y
-    let realOffset: CGFloat = (offsetY + 64)
-//    let percent = realOffset / 75
+    var offsetY = scrollView.contentOffset.y
     
-    if realOffset < 0 {
-      self.iconView?.frame.origin.y = 32 +  realOffset * ( -1 )
-      //同时执行放大动画
-      
-    } else if realOffset == 0 {
-      let iconWH:CGFloat = 192 * 0.5
-      let iconF = CGRectMake(15, 32, iconWH, iconWH)
-      self.iconView?.frame = iconF
-    } else {
-      self.iconView?.frame.origin.y = 32 - realOffset
-      // 同时执行缩放动画
+    //缩放相关
+    offsetY *= (-1)
+    var iconViewBounds = self.iconView?.bounds
+    let iconWH:CGFloat = 192 * 0.5
+    let minIconWH:CGFloat = 64 * 0.5
+    // 随着滚动缩减的头像的尺寸
+    let dtR = offsetY * (iconWH * 0.5 - minIconWH * 0.5) / (self.iconViewCenterY - 42)
+    let wh = 2 * dtR
+    if wh  < 30 || wh > iconWH {
+        return
     }
     
-    print(self.iconView?.frame.origin.y)
+    self.iconView!.layer.cornerRadius = wh/2.0;
+    iconViewBounds!.size.height = wh;
+    iconViewBounds!.size.width  = wh;
+    self.iconView!.bounds = iconViewBounds!;
+  }
+  
+  override func viewWillDisappear(animated: Bool) {
+    super.viewWillDisappear(animated)
+    self.iconView?.hidden = true
+  }
+  
+}
+
+extension MNMineViewContrller: MineHeaderViewDelegate {
+  
+  func editClick() {
+    let st = UIStoryboard(name: String(MNUserInfoViewController), bundle: NSBundle.mainBundle())
+    let vc = st.instantiateViewControllerWithIdentifier(String(MNUserInfoViewController))
+    self.navigationController?.pushViewController(vc, animated: true)
+  }
+  func tipClick() {
     
   }
   
-  
-  
-  
+  func favoriteClick() {
+    
+  }
+  func messageClick() {
+    
+  }
+
+  func saySthClick() {
+    
+  }
 }
+
