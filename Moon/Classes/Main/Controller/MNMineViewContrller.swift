@@ -42,7 +42,7 @@ class MNMineViewContrller: UITableViewController {
   }
   
   func setupNav() {
-    self.title                                                   = "YKing"
+    self.navigationItem.title                                    = "YKing"
     self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
     self.navigationItem.rightBarButtonItem                       = UIBarButtonItem.buttonWithImage("icon-setting-white", target: self, action: #selector(MNMineViewContrller.settingClick))
     self.navigationController?.navigationBar.barTintColor        = UIColor.blackColor()
@@ -146,7 +146,8 @@ extension MNMineViewContrller: MineHeaderViewDelegate {
   func editClick() {
     let st = UIStoryboard(name: String(MNUserInfoViewController), bundle: NSBundle.mainBundle())
     let vc = st.instantiateViewControllerWithIdentifier(String(MNUserInfoViewController))
-    self.navigationController?.pushViewController(vc, animated: true)
+    let nav = UINavigationController(rootViewController: vc)
+    self.navigationController?.presentViewController(nav, animated: true, completion: nil)
   }
   func tipClick() {
     

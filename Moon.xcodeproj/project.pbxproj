@@ -94,6 +94,8 @@
 		9F8E3F6C1D02629B00ACE1BB /* MNRecentTeaEntityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8E3F6B1D02629B00ACE1BB /* MNRecentTeaEntityList.swift */; };
 		9F8E3F6E1D0262B900ACE1BB /* MNRecentTeaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8E3F6D1D0262B900ACE1BB /* MNRecentTeaEntity.swift */; };
 		9FA9B7141CF497CE009933A3 /* MNHttpTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA9B7131CF497CE009933A3 /* MNHttpTool.swift */; };
+		9FA9C2001D1AE2E400CFC6F2 /* MNUserInfoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA9C1FF1D1AE2E400CFC6F2 /* MNUserInfoHeaderView.swift */; };
+		9FA9C2021D1AE2F000CFC6F2 /* MNUserInfoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FA9C2011D1AE2F000CFC6F2 /* MNUserInfoHeaderView.xib */; };
 		9FABC5E81D0C53050071F2DA /* MNDiscoverSquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABC5E71D0C53050071F2DA /* MNDiscoverSquareView.swift */; };
 		9FABC5EA1D0C53260071F2DA /* MNDiscoverSquareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FABC5E91D0C53260071F2DA /* MNDiscoverSquareView.xib */; };
 		9FABC5ED1D0C53850071F2DA /* MNDiscoverSquareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FABC5EB1D0C53850071F2DA /* MNDiscoverSquareCell.swift */; };
@@ -230,6 +232,8 @@
 		9F8E3F6B1D02629B00ACE1BB /* MNRecentTeaEntityList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNRecentTeaEntityList.swift; sourceTree = "<group>"; };
 		9F8E3F6D1D0262B900ACE1BB /* MNRecentTeaEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNRecentTeaEntity.swift; sourceTree = "<group>"; };
 		9FA9B7131CF497CE009933A3 /* MNHttpTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNHttpTool.swift; sourceTree = "<group>"; };
+		9FA9C1FF1D1AE2E400CFC6F2 /* MNUserInfoHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNUserInfoHeaderView.swift; sourceTree = "<group>"; };
+		9FA9C2011D1AE2F000CFC6F2 /* MNUserInfoHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNUserInfoHeaderView.xib; sourceTree = "<group>"; };
 		9FABC5E71D0C53050071F2DA /* MNDiscoverSquareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNDiscoverSquareView.swift; sourceTree = "<group>"; };
 		9FABC5E91D0C53260071F2DA /* MNDiscoverSquareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNDiscoverSquareView.xib; sourceTree = "<group>"; };
 		9FABC5EB1D0C53850071F2DA /* MNDiscoverSquareCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNDiscoverSquareCell.swift; sourceTree = "<group>"; };
@@ -578,6 +582,8 @@
 		9FAF93721D198E20007CF224 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9FA9C1FF1D1AE2E400CFC6F2 /* MNUserInfoHeaderView.swift */,
+				9FA9C2011D1AE2F000CFC6F2 /* MNUserInfoHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -742,6 +748,7 @@
 				9F4B2B721D0EFF0D00BD3BFF /* new-explore3.plist in Resources */,
 				9F886E5A1CF9F46A001CDE13 /* MNMeowTypeNineView.xib in Resources */,
 				9F67E63F1D0088D5004E230F /* explore-gallery.plist in Resources */,
+				9FA9C2021D1AE2F000CFC6F2 /* MNUserInfoHeaderView.xib in Resources */,
 				9F58AD941D14FE9C0019586E /* mine.plist in Resources */,
 				9F47B9261CFC593D00E6D8A3 /* 05-30.plist in Resources */,
 				9F4B2B701D0EFF0D00BD3BFF /* new-explore5.plist in Resources */,
@@ -838,6 +845,7 @@
 			files = (
 				9F4E6CEA1CF317CD00655CB3 /* MNExploreCell.swift in Sources */,
 				9F7AA6B01D119DF90074CCA0 /* MNStatusEntity.swift in Sources */,
+				9FA9C2001D1AE2E400CFC6F2 /* MNUserInfoHeaderView.swift in Sources */,
 				9F58ADA81D1526B10019586E /* MNMineSevenView.swift in Sources */,
 				9F3CD3D61D12E635000A6C01 /* MNTrendBannerView.swift in Sources */,
 				9F4E6CFC1CF3577300655CB3 /* MNCoordinate.swift in Sources */,

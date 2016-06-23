@@ -16,13 +16,34 @@ class MNUserInfoViewController: UITableViewController {
   }
   
   func setupView() {
+    self.title = "请先稍微完善个人资料"
+    self.view.backgroundColor = commonBgColor
+    let leftButton = UIBarButtonItem()
+    leftButton.title = "关闭"
+    leftButton.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.lightGrayColor()], forState: UIControlState.Normal)
+    leftButton.target = self
+    leftButton.action = #selector(MNUserInfoViewController.leftClick)
+    self.navigationItem.leftBarButtonItem = leftButton
     
+    let rightButton = UIBarButtonItem()
+    rightButton.title = "保存"
+    rightButton.setTitleTextAttributes([NSForegroundColorAttributeName: commonCyRanColor], forState: UIControlState.Normal)
+    self.navigationItem.rightBarButtonItem = rightButton
   }
   
-  override func scrollViewDidScroll(scrollView: UIScrollView) {
-    // 滑动强制取消输入法
-    self.view.endEditing(true)
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    let headerView = MNUserInfoHeaderView.viewFromXib() as! MNUserInfoHeaderView
+    headerView.frame = CGRectMake(0, 0, ScreenWidth, headerView.calcHeight())
+    self.tableView.tableHeaderView = headerView
+    self.tableView.sectionHeaderHeight = 10
   }
+  
+  
+  func leftClick() -> Void {
+    self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+  }
+  
   
   
 }
