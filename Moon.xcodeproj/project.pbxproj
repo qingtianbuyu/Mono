@@ -10,6 +10,7 @@
 		9F00DEA41D09A4A1008FC4F0 /* MNBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00DEA31D09A4A1008FC4F0 /* MNBarButtonItem+Extension.swift */; };
 		9F00DEA81D0A39BF008FC4F0 /* MNExploreMeow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00DEA71D0A39BF008FC4F0 /* MNExploreMeow.swift */; };
 		9F00DEAA1D0A3A3B008FC4F0 /* MNRefCampaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00DEA91D0A3A3B008FC4F0 /* MNRefCampaign.swift */; };
+		9F01947C1D1D71D500FC158F /* MNHoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F01947B1D1D71D500FC158F /* MNHoroscopeViewController.swift */; };
 		9F1D0DEA1CEDE18B00D4E951 /* MNRecommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1D0DE91CEDE18B00D4E951 /* MNRecommandViewController.swift */; };
 		9F1D0DED1CEDE1CD00D4E951 /* MNNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1D0DEB1CEDE1CC00D4E951 /* MNNavgationController.swift */; };
 		9F1D0DEE1CEDE1CD00D4E951 /* MNTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1D0DEC1CEDE1CD00D4E951 /* MNTabBarController.swift */; };
@@ -93,6 +94,11 @@
 		9F8E3F6A1D02624400ACE1BB /* explore-recenttea.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F8E3F691D02624400ACE1BB /* explore-recenttea.plist */; };
 		9F8E3F6C1D02629B00ACE1BB /* MNRecentTeaEntityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8E3F6B1D02629B00ACE1BB /* MNRecentTeaEntityList.swift */; };
 		9F8E3F6E1D0262B900ACE1BB /* MNRecentTeaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8E3F6D1D0262B900ACE1BB /* MNRecentTeaEntity.swift */; };
+		9F9638351D1D73E500E36BA4 /* MNHoroscopeEntityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9638341D1D73E500E36BA4 /* MNHoroscopeEntityList.swift */; };
+		9F9638371D1D745700E36BA4 /* MNHoroscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9638361D1D745700E36BA4 /* MNHoroscope.swift */; };
+		9F96383A1D1D79F600E36BA4 /* MNHoroscopeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9638381D1D79F600E36BA4 /* MNHoroscopeCell.swift */; };
+		9F96383B1D1D79F600E36BA4 /* MNHoroscopeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F9638391D1D79F600E36BA4 /* MNHoroscopeCell.xib */; };
+		9F96383D1D1D7EE600E36BA4 /* MNBackNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F96383C1D1D7EE600E36BA4 /* MNBackNavgationController.swift */; };
 		9FA9B7141CF497CE009933A3 /* MNHttpTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA9B7131CF497CE009933A3 /* MNHttpTool.swift */; };
 		9FA9C2001D1AE2E400CFC6F2 /* MNUserInfoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA9C1FF1D1AE2E400CFC6F2 /* MNUserInfoHeaderView.swift */; };
 		9FA9C2021D1AE2F000CFC6F2 /* MNUserInfoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FA9C2011D1AE2F000CFC6F2 /* MNUserInfoHeaderView.xib */; };
@@ -146,6 +152,7 @@
 		9F00DEA31D09A4A1008FC4F0 /* MNBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MNBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		9F00DEA71D0A39BF008FC4F0 /* MNExploreMeow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNExploreMeow.swift; sourceTree = "<group>"; };
 		9F00DEA91D0A3A3B008FC4F0 /* MNRefCampaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNRefCampaign.swift; sourceTree = "<group>"; };
+		9F01947B1D1D71D500FC158F /* MNHoroscopeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNHoroscopeViewController.swift; sourceTree = "<group>"; };
 		9F1D0DE91CEDE18B00D4E951 /* MNRecommandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNRecommandViewController.swift; sourceTree = "<group>"; };
 		9F1D0DEB1CEDE1CC00D4E951 /* MNNavgationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNNavgationController.swift; sourceTree = "<group>"; };
 		9F1D0DEC1CEDE1CD00D4E951 /* MNTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNTabBarController.swift; sourceTree = "<group>"; };
@@ -231,6 +238,11 @@
 		9F8E3F691D02624400ACE1BB /* explore-recenttea.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "explore-recenttea.plist"; sourceTree = "<group>"; };
 		9F8E3F6B1D02629B00ACE1BB /* MNRecentTeaEntityList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNRecentTeaEntityList.swift; sourceTree = "<group>"; };
 		9F8E3F6D1D0262B900ACE1BB /* MNRecentTeaEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNRecentTeaEntity.swift; sourceTree = "<group>"; };
+		9F9638341D1D73E500E36BA4 /* MNHoroscopeEntityList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNHoroscopeEntityList.swift; sourceTree = "<group>"; };
+		9F9638361D1D745700E36BA4 /* MNHoroscope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNHoroscope.swift; sourceTree = "<group>"; };
+		9F9638381D1D79F600E36BA4 /* MNHoroscopeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNHoroscopeCell.swift; sourceTree = "<group>"; };
+		9F9638391D1D79F600E36BA4 /* MNHoroscopeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNHoroscopeCell.xib; sourceTree = "<group>"; };
+		9F96383C1D1D7EE600E36BA4 /* MNBackNavgationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNBackNavgationController.swift; sourceTree = "<group>"; };
 		9FA9B7131CF497CE009933A3 /* MNHttpTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNHttpTool.swift; sourceTree = "<group>"; };
 		9FA9C1FF1D1AE2E400CFC6F2 /* MNUserInfoHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNUserInfoHeaderView.swift; sourceTree = "<group>"; };
 		9FA9C2011D1AE2F000CFC6F2 /* MNUserInfoHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNUserInfoHeaderView.xib; sourceTree = "<group>"; };
@@ -377,6 +389,7 @@
 				9F1D0DEB1CEDE1CC00D4E951 /* MNNavgationController.swift */,
 				9F1D0DEC1CEDE1CD00D4E951 /* MNTabBarController.swift */,
 				9F1D0DF61CEDE78C00D4E951 /* MNTabBarItem.swift */,
+				9F96383C1D1D7EE600E36BA4 /* MNBackNavgationController.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -568,6 +581,7 @@
 			children = (
 				9FAF93731D198E6C007CF224 /* MNUserInfoViewController.swift */,
 				9FAF93751D198FDA007CF224 /* MNUserInfoViewController.storyboard */,
+				9F01947B1D1D71D500FC158F /* MNHoroscopeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -575,6 +589,8 @@
 		9FAF93711D198E20007CF224 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F9638341D1D73E500E36BA4 /* MNHoroscopeEntityList.swift */,
+				9F9638361D1D745700E36BA4 /* MNHoroscope.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -584,6 +600,8 @@
 			children = (
 				9FA9C1FF1D1AE2E400CFC6F2 /* MNUserInfoHeaderView.swift */,
 				9FA9C2011D1AE2F000CFC6F2 /* MNUserInfoHeaderView.xib */,
+				9F9638381D1D79F600E36BA4 /* MNHoroscopeCell.swift */,
+				9F9638391D1D79F600E36BA4 /* MNHoroscopeCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -749,6 +767,7 @@
 				9F886E5A1CF9F46A001CDE13 /* MNMeowTypeNineView.xib in Resources */,
 				9F67E63F1D0088D5004E230F /* explore-gallery.plist in Resources */,
 				9FA9C2021D1AE2F000CFC6F2 /* MNUserInfoHeaderView.xib in Resources */,
+				9F96383B1D1D79F600E36BA4 /* MNHoroscopeCell.xib in Resources */,
 				9F58AD941D14FE9C0019586E /* mine.plist in Resources */,
 				9F47B9261CFC593D00E6D8A3 /* 05-30.plist in Resources */,
 				9F4B2B701D0EFF0D00BD3BFF /* new-explore5.plist in Resources */,
@@ -846,6 +865,7 @@
 				9F4E6CEA1CF317CD00655CB3 /* MNExploreCell.swift in Sources */,
 				9F7AA6B01D119DF90074CCA0 /* MNStatusEntity.swift in Sources */,
 				9FA9C2001D1AE2E400CFC6F2 /* MNUserInfoHeaderView.swift in Sources */,
+				9F9638351D1D73E500E36BA4 /* MNHoroscopeEntityList.swift in Sources */,
 				9F58ADA81D1526B10019586E /* MNMineSevenView.swift in Sources */,
 				9F3CD3D61D12E635000A6C01 /* MNTrendBannerView.swift in Sources */,
 				9F4E6CFC1CF3577300655CB3 /* MNCoordinate.swift in Sources */,
@@ -857,6 +877,7 @@
 				9F00DEA41D09A4A1008FC4F0 /* MNBarButtonItem+Extension.swift in Sources */,
 				9F1D0DF21CEDE25B00D4E951 /* MNTrendsViewContrller.swift in Sources */,
 				9F58AD981D1500820019586E /* MNFollowFeed.swift in Sources */,
+				9F96383D1D1D7EE600E36BA4 /* MNBackNavgationController.swift in Sources */,
 				9FC804721D02C0B300E8F2FC /* MNBanner.swift in Sources */,
 				9F1D0DEA1CEDE18B00D4E951 /* MNRecommandViewController.swift in Sources */,
 				9F336E4C1CF085B500779067 /* MNFollowingViewController.swift in Sources */,
@@ -867,15 +888,18 @@
 				9F1D0DED1CEDE1CD00D4E951 /* MNNavgationController.swift in Sources */,
 				9FB438D01D0A717C00E6603A /* MNToolButton.swift in Sources */,
 				9F67E6371D005F22004E230F /* MNVideoEntityList.swift in Sources */,
+				9F9638371D1D745700E36BA4 /* MNHoroscope.swift in Sources */,
 				9F7AA6AA1D1194F80074CCA0 /* MNTrendHeaderView.swift in Sources */,
 				9F4E6CF41CF3523100655CB3 /* MNMeow.swift in Sources */,
 				9FEE03D21CF5C5C300521663 /* MNCert.swift in Sources */,
 				9F1D0DEE1CEDE1CD00D4E951 /* MNTabBarController.swift in Sources */,
+				9F01947C1D1D71D500FC158F /* MNHoroscopeViewController.swift in Sources */,
 				9F7E7C741CF9937400F9FBEF /* MNThumbView.swift in Sources */,
 				9F58AD9C1D1507C30019586E /* MNGroupMember.swift in Sources */,
 				9F336E4E1CF085EA00779067 /* MNVideoViewController.swift in Sources */,
 				9FAF93741D198E6C007CF224 /* MNUserInfoViewController.swift in Sources */,
 				9F336E541CF0868400779067 /* MNTeaViewController.swift in Sources */,
+				9F96383A1D1D79F600E36BA4 /* MNHoroscopeCell.swift in Sources */,
 				9F1D0DF71CEDE78C00D4E951 /* MNTabBarItem.swift in Sources */,
 				9F67E63B1D0087E4004E230F /* MNMusicEntityList.swift in Sources */,
 				9F59347B1CE9ECAD00E69FC8 /* AppDelegate.swift in Sources */,

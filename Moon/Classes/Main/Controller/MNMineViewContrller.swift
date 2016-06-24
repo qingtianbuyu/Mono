@@ -146,7 +146,7 @@ extension MNMineViewContrller: MineHeaderViewDelegate {
   func editClick() {
     let st = UIStoryboard(name: String(MNUserInfoViewController), bundle: NSBundle.mainBundle())
     let vc = st.instantiateViewControllerWithIdentifier(String(MNUserInfoViewController))
-    let nav = UINavigationController(rootViewController: vc)
+    let nav = MNBackNavgationController(rootViewController: vc)
     self.navigationController?.presentViewController(nav, animated: true, completion: nil)
   }
   func tipClick() {

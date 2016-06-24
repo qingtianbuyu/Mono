@@ -10,9 +10,12 @@ import UIKit
 
 class MNUserInfoViewController: UITableViewController {
 
+  var user: MNMasterInfo?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
+    
   }
   
   func setupView() {
@@ -27,6 +30,9 @@ class MNUserInfoViewController: UITableViewController {
     
     let rightButton = UIBarButtonItem()
     rightButton.title = "保存"
+    rightButton.target = self
+    rightButton.action = #selector(MNUserInfoViewController.saveClick)
+    
     rightButton.setTitleTextAttributes([NSForegroundColorAttributeName: commonCyRanColor], forState: UIControlState.Normal)
     self.navigationItem.rightBarButtonItem = rightButton
   }
@@ -44,6 +50,16 @@ class MNUserInfoViewController: UITableViewController {
     self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
   }
   
+  func saveClick() -> Void {
+    print("------save-----")
+  }
+  
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    if indexPath.row == 1 {
+      let vc = MNHoroscopeViewController()
+      self.navigationController?.pushViewController(vc, animated: true)
+    }
+  }
   
   
 }
