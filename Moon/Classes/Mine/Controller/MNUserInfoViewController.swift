@@ -15,26 +15,23 @@ class MNUserInfoViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
-    
   }
   
   func setupView() {
     self.title = "请先稍微完善个人资料"
     self.view.backgroundColor = commonBgColor
-    let leftButton = UIBarButtonItem()
-    leftButton.title = "关闭"
-    leftButton.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.lightGrayColor()], forState: UIControlState.Normal)
-    leftButton.target = self
-    leftButton.action = #selector(MNUserInfoViewController.leftClick)
+    
+    let leftButton = UIBarButtonItem.buttonWithText("关闭", color: UIColor.lightGrayColor(),
+                                                     target: self,
+                                                     action: #selector(MNUserInfoViewController.leftClick))
     self.navigationItem.leftBarButtonItem = leftButton
     
-    let rightButton = UIBarButtonItem()
-    rightButton.title = "保存"
-    rightButton.target = self
-    rightButton.action = #selector(MNUserInfoViewController.saveClick)
+    let rightButton = UIBarButtonItem.buttonWithText("保存", color: commonCyRanColor,
+                                                     target: self,
+                                                     action: #selector(MNUserInfoViewController.saveClick))
     
-    rightButton.setTitleTextAttributes([NSForegroundColorAttributeName: commonCyRanColor], forState: UIControlState.Normal)
     self.navigationItem.rightBarButtonItem = rightButton
+    
   }
   
   override func viewWillAppear(animated: Bool) {
