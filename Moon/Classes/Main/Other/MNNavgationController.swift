@@ -15,7 +15,7 @@ class MNNavgationController: UINavigationController {
     interactivePopGestureRecognizer?.delegate = nil
   }
   
-  override func pushViewController(viewController: UIViewController, animated: Bool) {
+  override func pushViewController(_ viewController: UIViewController, animated: Bool) {
     viewController.navigationItem.hidesBackButton = true
     if childViewControllers.count > 0 {
       viewController.hidesBottomBarWhenPushed = true
@@ -23,8 +23,8 @@ class MNNavgationController: UINavigationController {
     super.pushViewController(viewController, animated: animated)
   }
   
-  override func preferredStatusBarStyle() -> UIStatusBarStyle {
-    return UIStatusBarStyle.LightContent
+  override var preferredStatusBarStyle : UIStatusBarStyle {
+    return UIStatusBarStyle.lightContent
   }
   
   

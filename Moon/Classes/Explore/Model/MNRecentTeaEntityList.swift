@@ -17,7 +17,7 @@ class MNRecentTeaEntityList {
    *加载往期茶
    */
   func loadRecentTeaData() -> Void {
-    let path                = NSBundle.mainBundle().pathForResource("explore-recenttea.plist", ofType: nil)
+    let path                = Bundle.main.path(forResource: "explore-recenttea.plist", ofType: nil)
     let recentTeaDict       = NSDictionary(contentsOfFile: path!) as! [String: AnyObject]
     let  recentTeaDictArray = recentTeaDict["recent_tea"] as! NSArray
     

@@ -25,15 +25,15 @@ class MNDiscoverCell: UITableViewCell {
   
   var mod: MNModEntity? {
     didSet {
-      self.squareView.hidden = true
-      self.barView.hidden = true
+      self.squareView.isHidden = true
+      self.barView.isHidden = true
       
       if mod?.type == "mashup_square" {
         self.squareView.mod = mod
-        self.squareView.hidden = false
+        self.squareView.isHidden = false
       } else if mod?.type == "mashup_bar" {
         self.barView.mod = mod
-        self.barView.hidden = false
+        self.barView.isHidden = false
       }
     }
   }
@@ -47,7 +47,7 @@ class MNDiscoverCell: UITableViewCell {
   override func layoutSubviews() {
     super.layoutSubviews()
     self.barView.frame = self.bounds
-    self.squareView.frame = CGRectMake(0, 0, self.width, 455)
+    self.squareView.frame = CGRect(x: 0, y: 0, width: self.width, height: 455)
   }
     
 }

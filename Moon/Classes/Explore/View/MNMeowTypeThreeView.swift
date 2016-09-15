@@ -7,6 +7,26 @@
 //
 
 import UIKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class MNMeowTypeThreeView: UIView {
 
@@ -19,14 +39,14 @@ class MNMeowTypeThreeView: UIView {
   override func awakeFromNib() {
     super.awakeFromNib()
     let layout                          = UICollectionViewFlowLayout()
-    layout.itemSize                     = CGSizeMake(122, 122)
+    layout.itemSize                     = CGSize(width: 122, height: 122)
     layout.minimumInteritemSpacing      = 2
     layout.minimumLineSpacing           = 2
     collectionView.collectionViewLayout = layout
     collectionView.delegate             = self
     collectionView.dataSource           = self
-    let nib                             = UINib(nibName: String(MNPicCell), bundle: nil)
-        collectionView.registerNib(nib, forCellWithReuseIdentifier: "pic")
+    let nib                             = UINib(nibName: String(describing: MNPicCell.self), bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: "pic")
   }
 
   var  meow: MNMeow?{
@@ -46,19 +66,19 @@ class MNMeowTypeThreeView: UIView {
 
 extension MNMeowTypeThreeView: UICollectionViewDelegate , UICollectionViewDataSource {
   
-  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return meow?.pics?.count ?? 0
   }
   
-  func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-      let cell = collectionView.dequeueReusableCellWithReuseIdentifier("pic", forIndexPath: indexPath) as! MNPicCell
-      cell.pic = meow?.pics![indexPath.row]
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pic", for: indexPath) as! MNPicCell
+      cell.pic = meow?.pics![(indexPath as NSIndexPath).row]
     return cell
   }
   
   
-  func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-    collectionView.deselectItemAtIndexPath(indexPath, animated: true)
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    collectionView.deselectItem(at: indexPath, animated: true)
   }
 
 

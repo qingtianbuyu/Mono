@@ -32,7 +32,7 @@ class MNTeaCell: UICollectionViewCell {
   }
   
   override func awakeFromNib() {
-    self.backgroundColor = UIColor.whiteColor()
+    self.backgroundColor = UIColor.white
   }
   
   

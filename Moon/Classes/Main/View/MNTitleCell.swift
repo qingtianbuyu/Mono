@@ -15,8 +15,8 @@ class MNTitleCell: UICollectionViewCell {
   
   var title:MNTitle?{
     didSet{
-      titleButton?.setTitle(title?.title, forState: UIControlState.Normal)
-      titleButton?.enabled = title?.enable ?? false
+      titleButton?.setTitle(title?.title, for: UIControlState())
+      titleButton?.isEnabled = title?.enable ?? false
     }
   }
   
@@ -35,10 +35,10 @@ class MNTitleCell: UICollectionViewCell {
   }
   
   func setupSubViews() -> Void {
-    titleButton                   = UIButton(type: UIButtonType.Custom)
-    titleButton?.titleLabel?.font = UIFont.systemFontOfSize(13)
-    titleButton!.setTitleColor(UIColor.whiteColor(),forState: UIControlState.Disabled)
-    titleButton!.setTitleColor(commonLightColor,  forState: UIControlState.Normal)
+    titleButton                   = UIButton(type: UIButtonType.custom)
+    titleButton?.titleLabel?.font = UIFont.systemFont(ofSize: 13)
+    titleButton!.setTitleColor(UIColor.white,for: UIControlState.disabled)
+    titleButton!.setTitleColor(commonLightColor,  for: UIControlState())
     addSubview(titleButton!)
   }
   

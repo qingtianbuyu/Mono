@@ -16,7 +16,7 @@ class MNToolButton: UIButton {
     let paddingH: CGFloat = 23
     let imageWidth:CGFloat = self.width - 2 * paddingW
     let imageH:CGFloat = self.height - 2 * paddingH    
-    self.imageView?.frame = CGRectMake(paddingW, paddingH, imageWidth, imageH)
+    self.imageView?.frame = CGRect(x: paddingW, y: paddingH, width: imageWidth, height: imageH)
   }
 
 }

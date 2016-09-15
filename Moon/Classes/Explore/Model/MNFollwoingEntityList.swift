@@ -13,7 +13,7 @@ class MNFollwoingEntityList {
   var data: [MNFollowingEntity]?
   
   func loadFollowingData() -> Void {
-    let path = NSBundle.mainBundle().pathForResource("0601-following.plist", ofType: nil)
+    let path = Bundle.main.path(forResource: "0601-following.plist", ofType: nil)
     let  dict = NSDictionary(contentsOfFile: path!) as! [String : AnyObject]
     let  datas =   dict["data"] as! NSArray
     var tmpFollwoingData = [MNFollowingEntity]()

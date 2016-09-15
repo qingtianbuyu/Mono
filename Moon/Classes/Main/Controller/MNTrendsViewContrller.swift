@@ -15,7 +15,7 @@ class MNTrendsViewContrller: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = UIColor.redColor()
+    view.backgroundColor = UIColor.red
     setupNavBar()
     setupTableView()
     initData()
@@ -28,22 +28,22 @@ class MNTrendsViewContrller: UITableViewController {
   
   func setupNavBar() {
     self.title = "动态"
-    self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
-    self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()
+    self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+    self.navigationController?.navigationBar.barTintColor = UIColor.black
     self.navigationItem.rightBarButtonItem = UIBarButtonItem.buttonWithImage("icon-plus-white-send-button", heightedImageName: "", target: self, action: #selector(MNTrendsViewContrller.plusClick))
   }
   
   func setupTableView() {
-    let mtableView  = UITableView(frame: self.tableView.frame, style: UITableViewStyle.Grouped)
+    let mtableView  = UITableView(frame: self.tableView.frame, style: UITableViewStyle.grouped)
     self.tableView = mtableView
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
     let nib = MNTrendCell.nib() as! UINib
-    self.tableView.registerNib(nib , forCellReuseIdentifier: MNTrendCell.viewIdentify)
+    self.tableView.register(nib , forCellReuseIdentifier: MNTrendCell.viewIdentify)
     let headerNib = MNTrendHeaderView.nib() as! UINib
-    self.tableView.registerNib(headerNib, forHeaderFooterViewReuseIdentifier: MNTrendHeaderView.viewIdentify)
-    self.tableView.registerClass(MNTrendFooterView.self, forHeaderFooterViewReuseIdentifier: MNTrendFooterView.viewIdentify)
+    self.tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: MNTrendHeaderView.viewIdentify)
+    self.tableView.register(MNTrendFooterView.self, forHeaderFooterViewReuseIdentifier: MNTrendFooterView.viewIdentify)
     
-    let headerF = CGRectMake(0, 0, self.view.width, 45)
+    let headerF = CGRect(x: 0, y: 0, width: self.view.width, height: 45)
     let headerView = UIView(frame: headerF)
     let searchF = headerView.bounds
     let searchView = UISearchBar(frame: searchF)
@@ -57,11 +57,11 @@ class MNTrendsViewContrller: UITableViewController {
   }
   
   
-  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+  override func numberOfSections(in tableView: UITableView) -> Int {
     return 2
   }
   
-  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
     if section == 1 {
       return statusEntity.group_list?.count ?? 0
@@ -69,25 +69,27 @@ class MNTrendsViewContrller: UITableViewController {
     return statusEntity.group_list?.count ?? 0
   }
   
-
-  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier(MNTrendCell.viewIdentify) as! MNTrendCell
+  
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    let cell = tableView.dequeueReusableCell(withIdentifier: MNTrendCell.viewIdentify) as! MNTrendCell
 //    if indexPath.section == 1 {
         cell.group  = statusEntity.group_list![indexPath.row]
 //    }
       return cell
   }
   
-  override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+  
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 73
   }
   
-  override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+  override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
     return 35
   }
   
-  override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    let  headerView  = tableView.dequeueReusableHeaderFooterViewWithIdentifier(MNTrendHeaderView.viewIdentify) as! MNTrendHeaderView
+  override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let  headerView  = tableView.dequeueReusableHeaderFooterView(withIdentifier: MNTrendHeaderView.viewIdentify) as! MNTrendHeaderView
     if section == 0 {
     headerView.title = "置顶"
     } else {
@@ -96,28 +98,27 @@ class MNTrendsViewContrller: UITableViewController {
     return headerView
   }
   
-  override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+  override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
     if section == 0 {
       return 190
     }
     return 0.1
   }
   
-  
-  override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+  override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
     if section == 1 {
       return nil
     }
-     let  footer =  tableView.dequeueReusableHeaderFooterViewWithIdentifier(MNTrendFooterView.viewIdentify) as! MNTrendFooterView
+     let  footer =  tableView.dequeueReusableHeaderFooterView(withIdentifier: MNTrendFooterView.viewIdentify) as! MNTrendFooterView
       footer.banner =  statusEntity.banner
     return footer
   }
   
-  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
   }
   
-  override func scrollViewDidScroll(scrollView: UIScrollView) {
+  override func scrollViewDidScroll(_ scrollView: UIScrollView) {
     self.view.endEditing(true)
   }
   

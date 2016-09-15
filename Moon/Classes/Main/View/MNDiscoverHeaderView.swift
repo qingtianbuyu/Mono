@@ -31,7 +31,7 @@ class MNDiscoverHeaderView: UIView {
   
   var top_banner: MNBannerEntity? {
     didSet {
-      self.bannerView.frame = CGRectMake(0, 0, self.width, 190)
+      self.bannerView.frame = CGRect(x: 0, y: 0, width: self.width, height: 190)
       self.bannerView.banners = top_banner?.entity_list
     }
   }
@@ -47,8 +47,8 @@ class MNDiscoverHeaderView: UIView {
   
   func addToolButtons() {
     for index in 0...4 {
-      let imageView = MNToolButton(type: UIButtonType.Custom)
-      imageView.setImage(UIImage(named: toolImages[index]), forState: UIControlState.Normal)
+      let imageView = MNToolButton(type: UIButtonType.custom)
+      imageView.setImage(UIImage(named: toolImages[index]), for: UIControlState())
       self.toolView.addSubview(imageView)
     }
   }
@@ -62,7 +62,7 @@ class MNDiscoverHeaderView: UIView {
     for index in 0..<toolButtonCount {
       let toolbutton =   self.toolView.subviews[index]
       let buttonX = CGFloat(index) * buttonW
-      toolbutton.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH)
+      toolbutton.frame = CGRect(x: buttonX, y: buttonY, width: buttonW, height: buttonH)
     }
   }
 

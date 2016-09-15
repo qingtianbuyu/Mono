@@ -11,6 +11,8 @@
 		9F00DEA81D0A39BF008FC4F0 /* MNExploreMeow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00DEA71D0A39BF008FC4F0 /* MNExploreMeow.swift */; };
 		9F00DEAA1D0A3A3B008FC4F0 /* MNRefCampaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00DEA91D0A3A3B008FC4F0 /* MNRefCampaign.swift */; };
 		9F01947C1D1D71D500FC158F /* MNHoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F01947B1D1D71D500FC158F /* MNHoroscopeViewController.swift */; };
+		9F077B2E1D241A3800B6C077 /* MNSearchTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F077B2D1D241A3800B6C077 /* MNSearchTitleView.swift */; };
+		9F077B301D241A6E00B6C077 /* MNSearchTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F077B2F1D241A6E00B6C077 /* MNSearchTitleView.xib */; };
 		9F1D0DEA1CEDE18B00D4E951 /* MNRecommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1D0DE91CEDE18B00D4E951 /* MNRecommandViewController.swift */; };
 		9F1D0DED1CEDE1CD00D4E951 /* MNNavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1D0DEB1CEDE1CC00D4E951 /* MNNavgationController.swift */; };
 		9F1D0DEE1CEDE1CD00D4E951 /* MNTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1D0DEC1CEDE1CD00D4E951 /* MNTabBarController.swift */; };
@@ -156,6 +158,8 @@
 		9F00DEA71D0A39BF008FC4F0 /* MNExploreMeow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNExploreMeow.swift; sourceTree = "<group>"; };
 		9F00DEA91D0A3A3B008FC4F0 /* MNRefCampaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNRefCampaign.swift; sourceTree = "<group>"; };
 		9F01947B1D1D71D500FC158F /* MNHoroscopeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNHoroscopeViewController.swift; sourceTree = "<group>"; };
+		9F077B2D1D241A3800B6C077 /* MNSearchTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNSearchTitleView.swift; sourceTree = "<group>"; };
+		9F077B2F1D241A6E00B6C077 /* MNSearchTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MNSearchTitleView.xib; sourceTree = "<group>"; };
 		9F1D0DE91CEDE18B00D4E951 /* MNRecommandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNRecommandViewController.swift; sourceTree = "<group>"; };
 		9F1D0DEB1CEDE1CC00D4E951 /* MNNavgationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNNavgationController.swift; sourceTree = "<group>"; };
 		9F1D0DEC1CEDE1CD00D4E951 /* MNTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNTabBarController.swift; sourceTree = "<group>"; };
@@ -322,6 +326,15 @@
 				0B5392A0B847D0886FB2CCF8 /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F077B2C1D241A1900B6C077 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9F077B2D1D241A3800B6C077 /* MNSearchTitleView.swift */,
+				9F077B2F1D241A6E00B6C077 /* MNSearchTitleView.xib */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		9F1D0DE01CEDD8EC00D4E951 /* Main */ = {
@@ -499,6 +512,7 @@
 		9F336E481CF0851D00779067 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9F077B2C1D241A1900B6C077 /* Search */,
 				9FC05AF81CFACD5900F39407 /* ExploreCellView */,
 				9F4E6CE91CF317CD00655CB3 /* MNExploreCell.swift */,
 				9F4E6CEB1CF3180500655CB3 /* MNExploreCell.xib */,
@@ -742,6 +756,7 @@
 					9F5934761CE9ECAC00E69FC8 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = Q6FY8KD4PB;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -776,6 +791,7 @@
 				9F886E5A1CF9F46A001CDE13 /* MNMeowTypeNineView.xib in Resources */,
 				9F67E63F1D0088D5004E230F /* explore-gallery.plist in Resources */,
 				9FA9C2021D1AE2F000CFC6F2 /* MNUserInfoHeaderView.xib in Resources */,
+				9F077B301D241A6E00B6C077 /* MNSearchTitleView.xib in Resources */,
 				9F96383B1D1D79F600E36BA4 /* MNHoroscopeCell.xib in Resources */,
 				9F58AD941D14FE9C0019586E /* mine.plist in Resources */,
 				9F47B9261CFC593D00E6D8A3 /* 05-30.plist in Resources */,
@@ -901,6 +917,7 @@
 				9F67E6371D005F22004E230F /* MNVideoEntityList.swift in Sources */,
 				9F9638371D1D745700E36BA4 /* MNHoroscope.swift in Sources */,
 				9F7AA6AA1D1194F80074CCA0 /* MNTrendHeaderView.swift in Sources */,
+				9F077B2E1D241A3800B6C077 /* MNSearchTitleView.swift in Sources */,
 				9F4E6CF41CF3523100655CB3 /* MNMeow.swift in Sources */,
 				9FEE03D21CF5C5C300521663 /* MNCert.swift in Sources */,
 				9F1D0DEE1CEDE1CD00D4E951 /* MNTabBarController.swift in Sources */,
@@ -1076,6 +1093,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yk.mono.Moon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/YKing/Desktop/repo/Mono/Moon/Moon-bridge-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1090,6 +1108,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yk.mono.Moon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/YKing/Desktop/repo/Mono/Moon/Moon-bridge-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

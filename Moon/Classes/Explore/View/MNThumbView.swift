@@ -19,7 +19,7 @@ class MNThumbView: UIImageView {
         self.meowTextLabel?.text = meow?.text
         let author =  meow?.author  ?? ""
         
-        self.meowAuthorLabel?.hidden = false
+        self.meowAuthorLabel?.isHidden = false
         self.meowAuthorLabel?.text = "-- " + author
       m_setImageWithUrl(meow?.thumb?.raw, placeHolderName: "place_holder.png")
     }

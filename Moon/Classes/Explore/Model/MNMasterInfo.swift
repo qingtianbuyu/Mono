@@ -22,10 +22,10 @@ class MNMasterInfo: NSObject {
   
   init(dict: [String: AnyObject]) {
     super.init()
-    setValuesForKeysWithDictionary(dict)
+    setValuesForKeys(dict)
   }
   
-  override func setValue(value: AnyObject?, forKey key: String) {
+  override func setValue(_ value: Any?, forKey key: String) {
     if key == "coordinate" {
       coordinate = MNCoordinate(dict: value as! [String: AnyObject])
       return

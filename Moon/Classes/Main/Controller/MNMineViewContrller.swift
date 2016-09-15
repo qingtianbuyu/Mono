@@ -15,10 +15,10 @@ class MNMineViewContrller: UITableViewController {
   
   lazy var iconView: UIImageView? = {
     let iconWH:CGFloat = 192 * 0.5
-    let iconF = CGRectMake(15, 32, iconWH, iconWH)
+    let iconF = CGRect(x: 15, y: 32, width: iconWH, height: iconWH)
     let iconView = UIImageView(frame:iconF)
     self.navigationController?.view.addSubview(iconView)
-    iconView.layer.borderColor = UIColor.whiteColor().CGColor
+    iconView.layer.borderColor = UIColor.white.cgColor
     iconView.layer.borderWidth = 1
     iconView.clipsToBounds = true
     iconView.layer.cornerRadius = iconView.width * 0.5
@@ -29,7 +29,7 @@ class MNMineViewContrller: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = UIColor.purpleColor()
+    view.backgroundColor = UIColor.purple
     setupView()
     initData()
   }
@@ -43,23 +43,23 @@ class MNMineViewContrller: UITableViewController {
   
   func setupNav() {
     self.navigationItem.title                                    = "YKing"
-    self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+    self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
     self.navigationItem.rightBarButtonItem                       = UIBarButtonItem.buttonWithImage("icon-setting-white", target: self, action: #selector(MNMineViewContrller.settingClick))
-    self.navigationController?.navigationBar.barTintColor        = UIColor.blackColor()
+    self.navigationController?.navigationBar.barTintColor        = UIColor.black
   }
   
   func setupTableView(){
-    self.tableView.separatorStyle  = UITableViewCellSeparatorStyle.None
+    self.tableView.separatorStyle  = UITableViewCellSeparatorStyle.none
     let nib                        = MNFollowFeedCell.nib() as! UINib
-    self.tableView.registerNib(nib, forCellReuseIdentifier: MNFollowFeedCell.viewIdentify)
+    self.tableView.register(nib, forCellReuseIdentifier: MNFollowFeedCell.viewIdentify)
   }
   
   func setupIconView() {
     let iconWH:CGFloat = 192 * 0.5
-    let iconF = CGRectMake(15, 32, iconWH, iconWH)
+    let iconF = CGRect(x: 15, y: 32, width: iconWH, height: iconWH)
     let iconView = UIImageView(frame:iconF)
     self.navigationController?.view.addSubview(iconView)
-    iconView.layer.borderColor = UIColor.whiteColor().CGColor
+    iconView.layer.borderColor = UIColor.white.cgColor
     iconView.layer.borderWidth = 1
     iconView.clipsToBounds = true
     iconView.layer.cornerRadius = iconView.width * 0.5
@@ -67,12 +67,12 @@ class MNMineViewContrller: UITableViewController {
   }
   
   
-  override func viewWillAppear(animated: Bool) {
+  override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    self.iconView?.hidden = false
+    self.iconView?.isHidden = false
     let headerView                 = MNMineHeaderView.viewFromXib() as! MNMineHeaderView
     let headerHeight = headerView.calcHeight()
-    headerView.bounds = CGRectMake(0, 0, ScreenWidth, headerHeight)
+    headerView.bounds = CGRect(x: 0, y: 0, width: ScreenWidth, height: headerHeight)
     self.tableView.tableHeaderView = headerView
     headerView.delegate = self
   }
@@ -88,17 +88,18 @@ class MNMineViewContrller: UITableViewController {
     
   }
   
-  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return followFeedEntity.data?.count ?? 0
   }
   
-  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier(MNFollowFeedCell.viewIdentify) as! MNFollowFeedCell
-      cell.followFeed = followFeedEntity.data![indexPath.row]
+  
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: MNFollowFeedCell.viewIdentify) as! MNFollowFeedCell
+    cell.followFeed = followFeedEntity.data![indexPath.row]
     return cell
   }
   
-  override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     let followFeed = followFeedEntity.data![indexPath.row]
     if followFeed.action == 7 {
       return 160
@@ -109,11 +110,13 @@ class MNMineViewContrller: UITableViewController {
     return 0
   }
   
-  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
   }
   
-  override func scrollViewDidScroll(scrollView: UIScrollView) {
+  
+  override func scrollViewDidScroll(_ scrollView: UIScrollView) {
     var offsetY = scrollView.contentOffset.y
     
     //缩放相关
@@ -134,9 +137,9 @@ class MNMineViewContrller: UITableViewController {
     self.iconView!.bounds = iconViewBounds!;
   }
   
-  override func viewWillDisappear(animated: Bool) {
+  override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
-    self.iconView?.hidden = true
+    self.iconView?.isHidden = true
   }
   
 }
@@ -144,10 +147,10 @@ class MNMineViewContrller: UITableViewController {
 extension MNMineViewContrller: MineHeaderViewDelegate {
   
   func editClick() {
-    let st = UIStoryboard(name: String(MNUserInfoViewController), bundle: NSBundle.mainBundle())
-    let vc = st.instantiateViewControllerWithIdentifier(String(MNUserInfoViewController))
+    let st = UIStoryboard(name: String(describing: MNUserInfoViewController.self), bundle: Bundle.main)
+    let vc = st.instantiateViewController(withIdentifier: String(describing: MNUserInfoViewController.self))
     let nav = MNBackNavgationController(rootViewController: vc)
-    self.navigationController?.presentViewController(nav, animated: true, completion: nil)
+    self.navigationController?.present(nav, animated: true, completion: nil)
   }
   func tipClick() {
     

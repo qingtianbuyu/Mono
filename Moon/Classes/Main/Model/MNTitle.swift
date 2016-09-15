@@ -13,7 +13,7 @@ class MNTitle: NSObject {
   var title:String?
   var enable:Bool = false
   
-  class func initWithTitle(title:String) -> MNTitle {
+  class func initWithTitle(_ title:String) -> MNTitle {
       let mntitle = MNTitle()
       mntitle.title = title
       return mntitle

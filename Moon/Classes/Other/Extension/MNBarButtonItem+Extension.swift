@@ -20,16 +20,16 @@ extension UIBarButtonItem {
    
    - returns: barButton
    */
-   class func buttonWithImage(let imageName: String,let heightedImageName: String,target: AnyObject?, action: Selector) -> UIBarButtonItem {
-    let button   = UIButton(type: UIButtonType.Custom)
-    button.setImage(UIImage(named: imageName), forState: UIControlState.Normal)
+   class func buttonWithImage( _ imageName: String, heightedImageName: String,target: AnyObject?, action: Selector) -> UIBarButtonItem {
+    let button   = UIButton(type: UIButtonType.custom)
+    button.setImage(UIImage(named: imageName), for: UIControlState.normal)
     if heightedImageName.characters.count > 0 {
-      button.setImage(UIImage(named: heightedImageName), forState: UIControlState.Highlighted)
+      button.setImage(UIImage(named: heightedImageName), for: UIControlState.highlighted)
     }
 
     let size     = button.currentImage!.size
-    button.addTarget(target, action: action, forControlEvents: UIControlEvents.TouchUpInside)
-    button.frame = CGRectMake(0, 0, size.width, size.height)
+    button.addTarget(target, action: action, for: UIControlEvents.touchUpInside)
+    button.frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
     return UIBarButtonItem(customView: button)
   }
 
@@ -42,7 +42,7 @@ extension UIBarButtonItem {
    
    - returns: barButton
    */
-  class func buttonWithImage(let imageName: String, target: AnyObject?, action: Selector) -> UIBarButtonItem {
+  class func buttonWithImage( _ imageName: String, target: AnyObject?, action: Selector) -> UIBarButtonItem {
       return self.buttonWithImage(imageName, heightedImageName: "", target: target, action: action)
   }
   
@@ -58,13 +58,13 @@ extension UIBarButtonItem {
    
    - returns: return value description
    */
-  class func buttonWithText(title: String?, color: UIColor, highlightColor: UIColor, target: AnyObject?, action:Selector) -> UIBarButtonItem {
+  class func buttonWithText(_ title: String?, color: UIColor, highlightColor: UIColor, target: AnyObject?, action:Selector) -> UIBarButtonItem {
     let rightButton = UIBarButtonItem()
     rightButton.title = title
     rightButton.target = target
     rightButton.action = action
-    rightButton.setTitleTextAttributes([NSForegroundColorAttributeName: color], forState: UIControlState.Normal)
-    rightButton.setTitleTextAttributes([NSForegroundColorAttributeName: highlightColor], forState: UIControlState.Highlighted)
+    rightButton.setTitleTextAttributes([NSForegroundColorAttributeName: color], for: UIControlState.normal)
+    rightButton.setTitleTextAttributes([NSForegroundColorAttributeName: highlightColor], for: UIControlState.highlighted)
     return rightButton
   }
   
@@ -78,7 +78,7 @@ extension UIBarButtonItem {
    
    - returns: BarButtonItem
    */
-  class func buttonWithText(title: String?, color: UIColor, target: AnyObject?, action:Selector) -> UIBarButtonItem {
+  class func buttonWithText(_ title: String?, color: UIColor, target: AnyObject?, action:Selector) -> UIBarButtonItem {
     return self.buttonWithText(title, color:color, highlightColor: color, target: target, action: action)
   }
 

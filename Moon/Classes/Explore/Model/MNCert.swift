@@ -23,7 +23,7 @@ class MNCert: NSObject {
   
   init(dict: [String: AnyObject]) {
     super.init()
-    setValuesForKeysWithDictionary(dict)
+    setValuesForKeys(dict)
   }
   
   

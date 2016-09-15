@@ -37,7 +37,7 @@ class MNDiscoverSquareCell: UICollectionViewCell {
   
     override func awakeFromNib() {
         super.awakeFromNib()
-      self.backgroundColor = UIColor.whiteColor()
+      self.backgroundColor = UIColor.white
     }
 
 }

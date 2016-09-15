@@ -7,6 +7,26 @@
 //
 
 import UIKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class MNMeow: NSObject {
   
@@ -47,13 +67,13 @@ class MNMeow: NSObject {
   var music_url: String?
   
   //topF
-  var topF:   CGRect = CGRectZero
-  var thumbF: CGRect = CGRectZero;
-  var meowTypeThreeF: CGRect = CGRectZero
-  var meowTypeFourF:  CGRect = CGRectZero
-  var meowTypeSevenF: CGRect = CGRectZero
-  var meowTypeEightF: CGRect = CGRectZero
-  var meowTypeNineF:  CGRect = CGRectZero
+  var topF:   CGRect = CGRect.zero
+  var thumbF: CGRect = CGRect.zero
+  var meowTypeThreeF: CGRect = CGRect.zero
+  var meowTypeFourF:  CGRect = CGRect.zero
+  var meowTypeSevenF: CGRect = CGRect.zero
+  var meowTypeEightF: CGRect = CGRect.zero
+  var meowTypeNineF:  CGRect = CGRect.zero
   
   //计算cell高度
   var cellHeight:CGFloat {
@@ -65,10 +85,10 @@ class MNMeow: NSObject {
   
   init(dict: [String: AnyObject]) {
     super.init()
-    setValuesForKeysWithDictionary(dict)
+    setValuesForKeys(dict)
   }
   
-  override func setValue(value: AnyObject?, forKey key: String) {
+  override func setValue(_ value: Any?, forKey key: String) {
     if key == "group" {
       group = MNGroup(dict: value as! [String: AnyObject])
       return
@@ -148,26 +168,26 @@ class MNMeow: NSObject {
     let width = ScreenWidth
     
     var height:CGFloat = 0
-    topF = CGRectMake(0, 0, width, exploreTopBarH)
-    let topFMaxY = CGRectGetMaxY(topF)
+    topF = CGRect(x:0, y:0, width:width, height:exploreTopBarH)
+    let topFMaxY = topF.maxY
     height += topFMaxY
     
     //计算cell高度
     if meow_type == 2 {
       let thumbH:CGFloat = 375
-      thumbF = CGRectMake(0, topFMaxY, width, thumbH)
+      thumbF = CGRect(x:0, y:topFMaxY, width:width, height:thumbH)
       height += thumbH
     }
     else if meow_type == 3 {
       var tmpHeight: CGFloat = 0
-      if title?.characters.count > 0 {
-        let titleSize = CGSizeMake(ScreenWidth - CGFloat(2 * 20), CGFloat(MAXFLOAT))
+      if (title?.characters.count ?? 0) > 0 {
+        let titleSize = CGSize(width:ScreenWidth - CGFloat(2 * 20), height:CGFloat(MAXFLOAT))
         let  titleH = title?.height(titleSize, systemFontOfSize: 20) ?? 0
         tmpHeight += (titleH + 10)
       }
       
       if text?.characters.count > 0 {
-        let descriptionSize = CGSizeMake(ScreenWidth - CGFloat(2 * 20), CGFloat(30))
+        let descriptionSize = CGSize(width: ScreenWidth - CGFloat(2 * 20), height: CGFloat(30))
         let  textH = text?.height(descriptionSize, systemFontOfSize: 12) ?? 0
         tmpHeight += (textH + 15) + 20
         
@@ -176,33 +196,33 @@ class MNMeow: NSObject {
       let fromtop2collectionViewH =  tmpHeight
       
       let thumbH:CGFloat = 375
-      meowTypeThreeF = CGRectMake(0, topFMaxY, width, fromtop2collectionViewH + thumbH)
+      meowTypeThreeF = CGRect(x: 0, y: topFMaxY, width: width, height: fromtop2collectionViewH + thumbH)
       height += (thumbH + exploreToolBarH + fromtop2collectionViewH)
     }
     else if meow_type == 4 {
 
-      let titleSize = CGSizeMake(ScreenWidth - CGFloat(2 * 20), CGFloat(MAXFLOAT))
+      let titleSize = CGSize(width: ScreenWidth - CGFloat(2 * 20), height: CGFloat(MAXFLOAT))
       let  titleH = title?.height(titleSize, systemFontOfSize: 20) ?? 0
-      let descriptionSize = CGSizeMake(ScreenWidth - CGFloat(2 * 20), CGFloat(30))
+      let descriptionSize = CGSize(width: ScreenWidth - CGFloat(2 * 20), height: CGFloat(30))
       let  descriptionH = desc?.height(descriptionSize, systemFontOfSize: 12) ?? 0
       
       //计算行高
       let thumbH:CGFloat = 200 + 20 + 20 + 20 + exploreTopBarH + titleH + descriptionH - topFMaxY
       
-      meowTypeFourF = CGRectMake(0, 0, width, thumbH)
+      meowTypeFourF = CGRect(x: 0, y: 0, width: width, height: thumbH)
       height += thumbH
     } else if meow_type == 7 {
       let thumbH:CGFloat = 415 - topFMaxY
-      meowTypeSevenF = CGRectMake(0, 0, width, thumbH + topFMaxY)
+      meowTypeSevenF = CGRect(x: 0, y: 0, width: width, height: thumbH + topFMaxY)
       height += thumbH
     } else if meow_type == 8 {
       let thumbH:CGFloat = 445
-      meowTypeEightF = CGRectMake(0, 0, width, thumbH)
+      meowTypeEightF = CGRect(x: 0, y: 0, width: width, height: thumbH)
       height += thumbH
     }
     else if meow_type == 9 {
       let thumbH:CGFloat = 350
-      meowTypeNineF = CGRectMake(0, 0, width, thumbH)
+      meowTypeNineF = CGRect(x: 0, y: 0, width: width, height: thumbH)
       height += (thumbH - topFMaxY)
     }
     else {

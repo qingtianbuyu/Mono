@@ -7,6 +7,26 @@
 //
 
 import UIKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 class MNDiscoverBarView: UIView {
 
@@ -14,7 +34,7 @@ class MNDiscoverBarView: UIView {
   
   lazy var centerImageView: UIImageView = {
     let imageView = UIImageView()
-    imageView.bounds = CGRectMake(0, 0, 105, 105)
+    imageView.bounds = CGRect(x: 0, y: 0, width: 105, height: 105)
     self.addSubview(imageView)
     return imageView
   }()
@@ -26,21 +46,21 @@ class MNDiscoverBarView: UIView {
         self.barView.m_setImageWithUrl(mode?.collection?.thumb?.raw)
         let centerUrl = mode?.collection?.logo_url_thumb?.raw
         guard centerUrl?.characters.count > 0  else {
-          self.centerImageView.hidden = true
+          self.centerImageView.isHidden = true
           self.centerImageView.m_setImageWithUrl(mode?.collection?.logo_url_thumb?.raw)
           return
         }
         
-        self.centerImageView.hidden = false
+        self.centerImageView.isHidden = false
         self.centerImageView.m_setImageWithUrl(centerUrl)
         
       } else if mode?.campaign != nil {
         self.barView.m_setImageWithUrl(mode?.campaign?.thumb?.raw)
-        self.centerImageView.hidden = true
+        self.centerImageView.isHidden = true
       }
       else {
         self.barView.m_setImageWithUrl(mode?.meow?.ref_campaign?.thumb?.raw)
-        self.centerImageView.hidden = true
+        self.centerImageView.isHidden = true
       }
     }
   }

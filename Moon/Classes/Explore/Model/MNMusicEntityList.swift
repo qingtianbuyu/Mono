@@ -13,7 +13,7 @@ class MNMusicEntityList: NSObject {
   var meows: [MNMeow]?
   
   func loadMusicData() {
-    let path = NSBundle.mainBundle().pathForResource("explore-music.plist", ofType: nil)
+    let path = Bundle.main.path(forResource: "explore-music.plist", ofType: nil)
     let   videoEntityDict =  NSDictionary(contentsOfFile: path!) as! [String: AnyObject]
     let  videoDictArray =   videoEntityDict["meows"] as! NSArray
     

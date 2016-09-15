@@ -7,20 +7,21 @@
 //
 
 import UIKit
+import SDWebImage
 
 extension UIImageView {
   
-  func m_setImageWithUrl(urlString: String?,placeHolderName: String) -> Void {
+  func m_setImageWithUrl(_ urlString: String?,placeHolderName: String) -> Void {
     let placeHolderImage = UIImage(named: placeHolderName)
     guard let urlStr = urlString else{
       image = placeHolderImage
       return
     }
-    let url = NSURL.init(string: urlStr)
-    sd_setImageWithURL(url , placeholderImage: placeHolderImage)
+    let url = URL.init(string: urlStr)
+    sd_setImage(with: url , placeholderImage: placeHolderImage)
   }
   
-  func m_setImageWithUrl(urlString: String?) -> Void {
+  func m_setImageWithUrl(_ urlString: String?) -> Void {
       m_setImageWithUrl(urlString, placeHolderName: "place_holder")
   }
   

@@ -21,7 +21,7 @@ class MNUserInfoViewController: UITableViewController {
     self.title = "请先稍微完善个人资料"
     self.view.backgroundColor = commonBgColor
     
-    let leftButton = UIBarButtonItem.buttonWithText("关闭", color: UIColor.lightGrayColor(),
+    let leftButton = UIBarButtonItem.buttonWithText("关闭", color: UIColor.lightGray,
                                                      target: self,
                                                      action: #selector(MNUserInfoViewController.leftClick))
     self.navigationItem.leftBarButtonItem = leftButton
@@ -34,25 +34,25 @@ class MNUserInfoViewController: UITableViewController {
     
   }
   
-  override func viewWillAppear(animated: Bool) {
+  override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     let headerView = MNUserInfoHeaderView.viewFromXib() as! MNUserInfoHeaderView
-    headerView.frame = CGRectMake(0, 0, ScreenWidth, headerView.calcHeight())
+    headerView.frame = CGRect(x: 0, y: 0, width: ScreenWidth, height: headerView.calcHeight())
     self.tableView.tableHeaderView = headerView
     self.tableView.sectionHeaderHeight = 10
   }
   
   
   func leftClick() -> Void {
-    self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
+    self.navigationController?.dismiss(animated: true, completion: nil)
   }
   
   func saveClick() -> Void {
     print("------save-----")
   }
   
-  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    if indexPath.row == 1 {
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if (indexPath as NSIndexPath).row == 1 {
       let vc = MNHoroscopeViewController()
       self.navigationController?.pushViewController(vc, animated: true)
     }

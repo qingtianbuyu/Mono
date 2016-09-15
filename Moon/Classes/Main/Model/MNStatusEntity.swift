@@ -15,7 +15,7 @@ class MNStatusEntity: NSObject {
   var group_list: [MNStatusGroup]?
   
   func loadStatus() {
-    let path       = NSBundle.mainBundle().pathForResource("status.plist", ofType: nil)
+    let path       = Bundle.main.path(forResource: "status.plist", ofType: nil)
     let statusDict = NSDictionary(contentsOfFile: path!)
     let groupListDictArray = statusDict!["group_list"] as! NSArray
     var tmpgroupArray = [MNStatusGroup]()

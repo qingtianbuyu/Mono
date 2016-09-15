@@ -10,9 +10,9 @@ import UIKit
 
 extension String {
 
-  func height(size: CGSize, systemFontOfSize: CGFloat) -> CGFloat {
+  func height(_ size: CGSize, systemFontOfSize: CGFloat) -> CGFloat {
     // 计算文字的高度
-    let textH = self.boundingRectWithSize(size, options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName:UIFont.systemFontOfSize(systemFontOfSize)], context: nil).size.height
+    let textH = self.boundingRect(with: size, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: systemFontOfSize)], context: nil).size.height
     return textH
   }
 

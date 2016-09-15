@@ -13,7 +13,7 @@ class MNCategoryEntityList {
   var category_list: [MNCategory]?
   
   func loadCategory() {
-    let path =   NSBundle.mainBundle().pathForResource("category.plist", ofType: nil)
+    let path =   Bundle.main.path(forResource: "category.plist", ofType: nil)
     let dict =   NSDictionary(contentsOfFile: path!)
     let categoryListDictArray = dict!["category_list"] as! NSArray
     

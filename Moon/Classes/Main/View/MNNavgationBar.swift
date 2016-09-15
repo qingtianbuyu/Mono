@@ -9,7 +9,7 @@
 import UIKit
 
 protocol titleViewDelegate{
-  func didSelectTitleViewAtIndex(let index:Int)
+  func didSelectTitleViewAtIndex( _ index:Int)
 }
 
 class MNNavgationBar: UIView {
@@ -28,9 +28,9 @@ class MNNavgationBar: UIView {
   
   
   override init(frame: CGRect) {
-    let nFrame = CGRectMake(0, 0, ScreenBounds.width, 64)
+    let nFrame = CGRect(x: 0, y: 0, width: ScreenBounds.width, height: 64)
     super.init(frame: nFrame)
-    self.backgroundColor = UIColor.blackColor()
+    self.backgroundColor = UIColor.black
     setupCollectionView()
   }
   
@@ -40,14 +40,14 @@ class MNNavgationBar: UIView {
   
   func setupCollectionView() -> Void {
     let flowLayout                             = UICollectionViewFlowLayout()
-    flowLayout.scrollDirection                 = UICollectionViewScrollDirection.Horizontal
-    flowLayout.itemSize                        = CGSizeMake(100, 44)
+    flowLayout.scrollDirection                 = UICollectionViewScrollDirection.horizontal
+    flowLayout.itemSize                        = CGSize(width:100, height:44)
     flowLayout.minimumInteritemSpacing         = 1
     flowLayout.minimumLineSpacing              = 1
-    collection                                 = UICollectionView(frame: CGRectZero, collectionViewLayout: flowLayout)
+    collection                                 = UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout)
     collection!.showsHorizontalScrollIndicator = false
     collection!.showsVerticalScrollIndicator   = false
-    collection!.registerClass(MNTitleCell.self, forCellWithReuseIdentifier: "MNTitleCell")
+    collection!.register(MNTitleCell.self, forCellWithReuseIdentifier: "MNTitleCell")
     collection?.delegate                       = self
     collection?.dataSource                     = self
     addSubview(collection!)
@@ -55,7 +55,7 @@ class MNNavgationBar: UIView {
   
   override func layoutSubviews() {
     super.layoutSubviews()
-    collection?.frame = CGRectMake(0, 20, self.width, 44)
+    collection?.frame = CGRect(x: 0, y: 20, width: self.width, height: 44)
   }
   
   
@@ -63,12 +63,12 @@ class MNNavgationBar: UIView {
 
   extension MNNavgationBar:UICollectionViewDataSource , UICollectionViewDelegate {
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
       return titles?.count ?? 0
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-      let collectionCell = collectionView.dequeueReusableCellWithReuseIdentifier("MNTitleCell", forIndexPath: indexPath) as! MNTitleCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+      let collectionCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MNTitleCell", for: indexPath) as! MNTitleCell
       let title = titles?[indexPath.row]
       title!.enable = (indexPath.row == curPosition)
       collectionCell.title = title
@@ -76,9 +76,9 @@ class MNNavgationBar: UIView {
     }
     
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-      collectionView.deselectItemAtIndexPath(indexPath, animated: true)
-      collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: UICollectionViewScrollPosition.CenteredHorizontally, animated: true)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+      collectionView.deselectItem(at: indexPath, animated: true)
+      collectionView.scrollToItem(at: indexPath, at: UICollectionViewScrollPosition.centeredHorizontally, animated: true)
       delegate?.didSelectTitleViewAtIndex(indexPath.row)
       curPosition = indexPath.row
       

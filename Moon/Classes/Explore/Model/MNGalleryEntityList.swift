@@ -13,7 +13,7 @@ class MNGalleryEntityList: NSObject {
   var meows: [MNMeow]?
   
   func loadGalleryData() {
-    let path = NSBundle.mainBundle().pathForResource("explore-gallery.plist", ofType: nil)
+    let path = Bundle.main.path(forResource: "explore-gallery.plist", ofType: nil)
     let   videoEntityDict =  NSDictionary(contentsOfFile: path!) as! [String: AnyObject]
     let  videoDictArray =   videoEntityDict["meows"] as! NSArray
     var videoArray = [MNMeow]()

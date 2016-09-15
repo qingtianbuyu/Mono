@@ -24,10 +24,10 @@ class MNFollowFeed: NSObject {
   
   init(dict: [String: AnyObject]) {
     super.init()
-    setValuesForKeysWithDictionary(dict)
+    setValuesForKeys(dict)
   }
   
-  override func setValue(value: AnyObject?, forKey key: String) {
+  override func setValue(_ value: Any?, forKey key: String) {
     if key == "action_user" {
       action_user = MNMasterInfo(dict: (value as! [String: AnyObject]))
       return

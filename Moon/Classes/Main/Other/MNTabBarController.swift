@@ -18,7 +18,7 @@ class MNTabBarController: UITabBarController {
   
   func setupTabBar() -> Void {
         tabBar.alpha = 0.6
-        tabBar.barTintColor = UIColor.blackColor()
+        tabBar.barTintColor = UIColor.black
   }
   
   
@@ -30,7 +30,7 @@ class MNTabBarController: UITabBarController {
   }
   
   
-  func setupChildViewCoontroller(childVc:UIViewController ,title:String, imageName:String, selectedImageName:String) ->Void {
+  func setupChildViewCoontroller(_ childVc:UIViewController ,title:String, imageName:String, selectedImageName:String) ->Void {
     let image         = UIImage(named: imageName);
     let selectedImage = UIImage(named: selectedImageName);
     let item = UITabBarItem()

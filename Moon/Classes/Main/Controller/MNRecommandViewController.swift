@@ -31,8 +31,8 @@ class MNRecommandViewController: UIViewController {
   
    func setupBasicView() {
     view.backgroundColor                            = commonBgColor
-    self.navigationController?.navigationBar.hidden = true
-    self.edgesForExtendedLayout                     = UIRectEdge.None
+    self.navigationController?.navigationBar.isHidden = true
+    self.edgesForExtendedLayout                     = UIRectEdge()
     titleView                                       = MNNavgationBar(frame: CGRect.zero)
     titleView!.titles                               = titles
     titleView!.delegate                              = self
@@ -42,13 +42,13 @@ class MNRecommandViewController: UIViewController {
   func setupScrollView() {
     self.automaticallyAdjustsScrollViewInsets = false
     let scrollView                            = UIScrollView(frame: self.view.bounds)
-    scrollView.pagingEnabled                  = true
+    scrollView.isPagingEnabled                  = true
     scrollView.delegate                       = self
     scrollView.showsVerticalScrollIndicator   = false
     scrollView.showsHorizontalScrollIndicator = false
     let width                                 = CGFloat(self.childViewControllers.count) * scrollView.width
-    scrollView.contentSize                    = CGSizeMake(width, 0)
-    view.insertSubview(scrollView, atIndex: 0)
+    scrollView.contentSize                    = CGSize(width: width, height: 0)
+    view.insertSubview(scrollView, at: 0)
     self.scrollView                           = scrollView
     scrollViewDidEndScrollingAnimation(scrollView)
   }
@@ -65,7 +65,7 @@ class MNRecommandViewController: UIViewController {
 
 extension MNRecommandViewController:UIScrollViewDelegate, titleViewDelegate {
   
-  func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
+  func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
     //获取当前位置的索引
     let index          = Int(scrollView.contentOffset.x / scrollView.width)
     let   childVc      = self.childViewControllers[index]
@@ -77,14 +77,14 @@ extension MNRecommandViewController:UIScrollViewDelegate, titleViewDelegate {
     scrollView.addSubview(childVc.view)
   }
   
-  func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+  func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
     scrollViewDidEndScrollingAnimation(scrollView)
     let index  = Int(scrollView.contentOffset.x / scrollView.width)
-    let indexPath  = NSIndexPath(forItem: index, inSection: 0)
-    titleView?.collection?.delegate?.collectionView!((titleView?.collection)!, didSelectItemAtIndexPath: indexPath)
+    let indexPath  = IndexPath(item: index, section: 0)
+    titleView?.collection?.delegate?.collectionView!((titleView?.collection)!, didSelectItemAt: indexPath)
   }
   
-  func didSelectTitleViewAtIndex(index: Int) {
+  func didSelectTitleViewAtIndex(_ index: Int) {
     var offset = self.scrollView!.contentOffset
     offset.x   = (CGFloat(index) * self.scrollView!.width)
     self.scrollView!.setContentOffset(offset, animated: true);

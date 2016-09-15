@@ -47,17 +47,17 @@ extension UIView {
   }
   
   class func viewFromXib() -> AnyObject {
-    return NSBundle.mainBundle().loadNibNamed(String(self), owner: nil, options: nil).last!
+    return Bundle.main.loadNibNamed(String(describing: self), owner: nil, options: nil)!.last! as AnyObject
   }
   
   class func nib() -> AnyObject {
-    return UINib(nibName: String(self), bundle: nil)
+    return UINib(nibName: String(describing: self), bundle: nil)
   }
   
   
   class var viewIdentify:String {
     get {
-      return String(self)
+      return String(describing: self)
     }
   }
   

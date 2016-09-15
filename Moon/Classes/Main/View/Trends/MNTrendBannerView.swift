@@ -12,7 +12,7 @@ class MNTrendBannerView: UIView {
 
   @IBOutlet weak var bannerView: UICollectionView!
   
-  var timer: NSTimer?
+  var timer: Timer?
   
   var meows: [MNMeow]? {
     didSet {
@@ -24,23 +24,23 @@ class MNTrendBannerView: UIView {
   override func awakeFromNib() {
     super.awakeFromNib()
     let layout = UICollectionViewFlowLayout()
-    layout.itemSize = CGSizeMake(ScreenWidth, 190)
-    layout.scrollDirection = UICollectionViewScrollDirection.Horizontal
+    layout.itemSize = CGSize(width: ScreenWidth, height:190)
+    layout.scrollDirection = UICollectionViewScrollDirection.horizontal
     
     layout.minimumLineSpacing = 0
     layout.minimumInteritemSpacing = 0
     self.bannerView.showsHorizontalScrollIndicator =  false
     self.bannerView.setCollectionViewLayout(layout, animated: true)
-    self.bannerView.pagingEnabled = true
+    self.bannerView.isPagingEnabled = true
     self.bannerView.delegate = self
     self.bannerView.dataSource = self
     let nib = MNTrendBannerViewCell.nib() as! UINib
-    self.bannerView.registerNib(nib, forCellWithReuseIdentifier: MNTrendBannerViewCell.viewIdentify)
+    self.bannerView.register(nib, forCellWithReuseIdentifier: MNTrendBannerViewCell.viewIdentify)
   }
   
   func startTask(){
-    self.timer = NSTimer(timeInterval: 2.0, target: self, selector: #selector(MNTrendBannerView.scrollToNext), userInfo: nil, repeats: true)
-  NSRunLoop.mainRunLoop().addTimer(self.timer!, forMode: NSRunLoopCommonModes)
+    self.timer = Timer(timeInterval: 2.0, target: self, selector: #selector(MNTrendBannerView.scrollToNext), userInfo: nil, repeats: true)
+    RunLoop.main.add(self.timer!, forMode: RunLoopMode.commonModes)
   }
   
   func stopTask() {
@@ -50,7 +50,7 @@ class MNTrendBannerView: UIView {
   
   func scrollToNext() {
     // 1. 获取当前正在展示的cell的索引
-    let curIndexPath  =   self.bannerView.indexPathsForVisibleItems().last
+    let curIndexPath  =   self.bannerView.indexPathsForVisibleItems.last
     // 2. 获取下一页的索引
     var nextIndexItem = (curIndexPath?.item ?? 0) + 1
     let memowsCount = self.meows?.count ?? 0
@@ -58,34 +58,34 @@ class MNTrendBannerView: UIView {
         nextIndexItem = 0
     }
     
-    let nextIndexPath = NSIndexPath(forItem: nextIndexItem, inSection: 0)
-    self.bannerView.scrollToItemAtIndexPath(nextIndexPath, atScrollPosition: UICollectionViewScrollPosition.Left, animated: true)
+    let nextIndexPath = IndexPath(item: nextIndexItem, section: 0)
+    self.bannerView.scrollToItem(at: nextIndexPath, at: UICollectionViewScrollPosition.left, animated: true)
     
   }
   
 }
 
 extension MNTrendBannerView: UICollectionViewDelegate, UICollectionViewDataSource {
-  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return self.meows?.count ?? 0
   }
   
-  func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCellWithReuseIdentifier(MNTrendBannerViewCell.viewIdentify, forIndexPath: indexPath) as! MNTrendBannerViewCell
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MNTrendBannerViewCell.viewIdentify, for: indexPath as IndexPath) as! MNTrendBannerViewCell
     let meow = self.meows![indexPath.row]
     cell.meow = meow
     return cell
   }
   
-  func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-    collectionView.deselectItemAtIndexPath(indexPath, animated: true)
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    collectionView.deselectItem(at: indexPath as IndexPath, animated: true)
   }
   
-  func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+  func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
     self.stopTask()
   }
   
-  func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+  func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
     self.startTask()
   }
 

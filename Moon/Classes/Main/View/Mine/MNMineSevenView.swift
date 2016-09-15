@@ -43,11 +43,11 @@ class MNMineSevenView: UIView {
     super.layoutSubviews()
     let lp:CGFloat = 10
     let tp:CGFloat = (self.height - 35) * 0.5
-    self.iconView.frame = CGRectMake(lp, tp, 35, 35)
+    self.iconView.frame = CGRect(x: lp, y: tp, width: 35, height: 35)
     
-    let titleLabelX = CGRectGetMaxX(self.iconView.frame) + lp
-    let titleLabelY = CGRectGetMinY(self.iconView.frame)
-    self.titleLabel.frame = CGRectMake(titleLabelX, titleLabelY, ScreenWidth, 35)
+    let titleLabelX = self.iconView.frame.maxX + lp
+    let titleLabelY = self.iconView.frame.minY
+    self.titleLabel.frame = CGRect(x: titleLabelX, y: titleLabelY, width: ScreenWidth, height: 35)
     
   }
   

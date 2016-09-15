@@ -9,7 +9,7 @@
 import UIKit
 
 
-public let ScreenBounds = UIScreen.mainScreen().bounds
+public let ScreenBounds = UIScreen.main.bounds
 public let ScreenWidth  = ScreenBounds.width
 public let exploreTopBarH:CGFloat  = 60
 public let exploreToolBarH:CGFloat  = 50

@@ -18,7 +18,7 @@ class MNTea: NSObject {
   var title: String?
   var sub_title: String?
   var bg_img_url: String?
-  var release_date: NSDate?
+  var release_date: Date?
   var intro: String?
   var read_time: String?
   var share_time: String?
@@ -27,10 +27,10 @@ class MNTea: NSObject {
   
   init(dict: [String: AnyObject]) {
     super.init()
-    setValuesForKeysWithDictionary(dict)
+    setValuesForKeys(dict)
   }
   
-  override func setValue(value: AnyObject?, forKey key: String) {
+  override func setValue(_ value: Any?, forKey key: String) {
     
     if key ==  "entity_list" {
       guard let array = (value  as?[[String : AnyObject]])  else {

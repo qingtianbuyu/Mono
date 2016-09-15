@@ -15,16 +15,16 @@ class MNBackNavgationController: UINavigationController {
     interactivePopGestureRecognizer?.delegate = nil
   }
   
-  override func pushViewController(viewController: UIViewController, animated: Bool) {
+  override func pushViewController(_ viewController: UIViewController, animated: Bool) {
     viewController.navigationItem.hidesBackButton = true
     if childViewControllers.count > 0 {
       viewController.hidesBottomBarWhenPushed = true
       
-      let button = UIButton(type:UIButtonType.Custom);
-      button.setBackgroundImage(UIImage(named: "icon-update-arrow-left-black"), forState: UIControlState.Normal)
-      button.setBackgroundImage(UIImage(named: "icon-update-arrow-left-black"), forState: UIControlState.Highlighted)
-      button.frame = CGRectMake(0, 0, button.currentBackgroundImage!.size.width, button.currentBackgroundImage!.size.height)
-      button.addTarget(self, action: #selector(MNBackNavgationController.back), forControlEvents: UIControlEvents.TouchUpInside)
+      let button = UIButton(type:UIButtonType.custom);
+      button.setBackgroundImage(UIImage(named: "icon-update-arrow-left-black"), for: UIControlState.normal)
+      button.setBackgroundImage(UIImage(named: "icon-update-arrow-left-black"), for: UIControlState.highlighted)
+      button.frame = CGRect(x:0, y:0, width:button.currentBackgroundImage!.size.width, height:button.currentBackgroundImage!.size.height)
+      button.addTarget(self, action: #selector(MNBackNavgationController.back), for: UIControlEvents.touchUpInside)
       viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
     }
     super.pushViewController(viewController, animated: animated)
@@ -32,7 +32,7 @@ class MNBackNavgationController: UINavigationController {
   
   
   func back() {
-    self.popViewControllerAnimated(true)
+    self.popViewController(animated: true)
   }
 
 

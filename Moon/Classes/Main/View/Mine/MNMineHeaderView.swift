@@ -32,23 +32,23 @@ class MNMineHeaderView: UIView {
   
   @IBOutlet weak var lineView: UIView!
   
-  @IBAction func editClick(sender: AnyObject) {
+  @IBAction func editClick(_ sender: AnyObject) {
     delegate?.editClick()
   }
   
-  @IBAction func saySthClick(sender: AnyObject) {
+  @IBAction func saySthClick(_ sender: AnyObject) {
     delegate?.saySthClick()
   }
   
-  @IBAction func tipClick(sender: AnyObject) {
+  @IBAction func tipClick(_ sender: AnyObject) {
     delegate?.tipClick()
   }
   
-  @IBAction func messageClick(sender: AnyObject) {
+  @IBAction func messageClick(_ sender: AnyObject) {
     delegate?.messageClick()
   }
   
-  @IBAction func favClick(sender: AnyObject) {
+  @IBAction func favClick(_ sender: AnyObject) {
     delegate?.favoriteClick()
   }
   
@@ -64,7 +64,7 @@ class MNMineHeaderView: UIView {
     // 刷新布局
     layoutIfNeeded()
     // 获取高度
-    return CGRectGetMaxY(self.lineView.frame)
+    return self.lineView.frame.maxY
   }
   
 }

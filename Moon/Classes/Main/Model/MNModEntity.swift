@@ -18,10 +18,10 @@ class MNModEntity: NSObject {
   
   init(dict: [String: AnyObject]) {
     super.init()
-    setValuesForKeysWithDictionary(dict)
+    setValuesForKeys(dict)
   }
   
-  override func setValue(value: AnyObject?, forKey key: String) {
+  override func setValue(_ value: Any?, forKey key: String) {
     if key == "entity_list" {
       guard let array = (value as? [[String : AnyObject]])  else {
         return

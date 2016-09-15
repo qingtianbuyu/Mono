@@ -34,10 +34,11 @@ class MNGroup: NSObject {
   
   init(dict: [String:AnyObject]) {
     super.init()
-    setValuesForKeysWithDictionary(dict)
+    setValuesForKeys(dict)
   }
   
-  override func setValue(value: AnyObject?, forKey key: String) {
+  
+  override func setValue(_ value: Any?, forKey key: String) {
     if key == "thumb" {
       thumb = MNThumb(dict: value as! [String: AnyObject])
       return

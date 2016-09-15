@@ -23,9 +23,9 @@ class MNModEntityList {
     
   }
   
-  func loadWithPlist(let path: String) {
+  func loadWithPlist(_ path: String) {
     var modArray = [MNModEntity]()
-    let path              = NSBundle.mainBundle().pathForResource(path, ofType: nil)
+    let path              = Bundle.main.path(forResource: path, ofType: nil)
     let modEntityListDict = NSDictionary(contentsOfFile:path!) as! [String: AnyObject]
     let modDictArray      = modEntityListDict["mod_list"] as! NSArray
     
@@ -33,7 +33,7 @@ class MNModEntityList {
       let mod               = (modEntityDict as! [String: AnyObject])
       modArray.append(MNModEntity(dict:mod))
     }
-    mod_list?.appendContentsOf(modArray)
+    mod_list?.append(contentsOf: modArray)
     guard   let bannerDict  = (modEntityListDict["top_banner"] as? [String: AnyObject]) else {
       return
     }

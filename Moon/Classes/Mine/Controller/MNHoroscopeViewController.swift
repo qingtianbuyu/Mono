@@ -25,21 +25,21 @@ class MNHoroscopeViewController: UITableViewController {
   
   func setupTableView() {
     let nib = MNHoroscopeCell.nib() as! UINib
-      self.tableView.registerNib(nib , forCellReuseIdentifier: MNHoroscopeCell.viewIdentify)
+      self.tableView.register(nib , forCellReuseIdentifier: MNHoroscopeCell.viewIdentify)
   }
   
-  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return horoscopeEntity.horoscopes?.count ?? 0
   }
   
-  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier(MNHoroscopeCell.viewIdentify) as! MNHoroscopeCell
-    cell.horoscope = horoscopeEntity.horoscopes![indexPath.row]
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: MNHoroscopeCell.viewIdentify) as! MNHoroscopeCell
+    cell.horoscope = horoscopeEntity.horoscopes![(indexPath as NSIndexPath).row]
     return cell
   }
   
 
-  override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 48
   }
 

@@ -13,7 +13,7 @@ class MNVideoEntityList: NSObject {
   var meows: [MNMeow]?
   
   func loadVideoData() {
-    let path = NSBundle.mainBundle().pathForResource("explorer-video.plist", ofType: nil)
+    let path = Bundle.main.path(forResource: "explorer-video.plist", ofType: nil)
     let   videoEntityDict =  NSDictionary(contentsOfFile: path!) as! [String: AnyObject]
     let  videoDictArray =   videoEntityDict["meows"] as! NSArray
     var videoArray = [MNMeow]()

@@ -15,7 +15,7 @@ class MNDiscoverViewController: UITableViewController {
   
   lazy var headerView:MNDiscoverHeaderView = {
     let headerView = MNDiscoverHeaderView.viewFromXib() as! MNDiscoverHeaderView
-    headerView.frame = CGRectMake(0, 0, self.view.width, 380)
+    headerView.frame = CGRect(x: 0, y: 0, width: self.view.width, height: 380)
     return headerView
   }()
   
@@ -26,17 +26,17 @@ class MNDiscoverViewController: UITableViewController {
   }
   
   func setupView() {
-    self.view.backgroundColor = UIColor.greenColor()
+    self.view.backgroundColor = UIColor.green
     self.title                                                   = "发现"
-    self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
-    self.navigationController?.navigationBar.barTintColor        = UIColor.blackColor()
+    self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+    self.navigationController?.navigationBar.barTintColor        = UIColor.black
     self.navigationItem.leftBarButtonItem                        = UIBarButtonItem.buttonWithImage("icon-search-white", heightedImageName: "", target: self, action: #selector(MNDiscoverViewController.leftClick))
-    self.tableView.separatorStyle                                = UITableViewCellSeparatorStyle.None
-    let nib = UINib(nibName: String(MNDiscoverCell), bundle: nil)
-    self.tableView.registerNib(nib, forCellReuseIdentifier: MNDiscoverCell.viewIdentify)
+    self.tableView.separatorStyle                                = UITableViewCellSeparatorStyle.none
+    let nib = UINib(nibName: String(describing: MNDiscoverCell.self), bundle: nil)
+    self.tableView.register(nib, forCellReuseIdentifier: MNDiscoverCell.viewIdentify)
   }
   
-  override func viewWillAppear(animated: Bool) {
+  override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     self.tableView.tableHeaderView                               = headerView
     headerView.top_banner  = modEntityList.top_banner
@@ -50,20 +50,20 @@ class MNDiscoverViewController: UITableViewController {
     
   }
   
-  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return modEntityList.mod_list?.count ?? 0
   }
   
-  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let  cell = tableView.dequeueReusableCellWithIdentifier(MNDiscoverCell.viewIdentify) as! MNDiscoverCell
-    let mod   = modEntityList.mod_list![indexPath.row]
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let  cell = tableView.dequeueReusableCell(withIdentifier: MNDiscoverCell.viewIdentify) as! MNDiscoverCell
+    let mod   = modEntityList.mod_list![(indexPath as NSIndexPath).row]
     cell.mod = mod
     return cell
   }
   
-  override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     
-    let mod   = modEntityList.mod_list![indexPath.row]
+    let mod   = modEntityList.mod_list![(indexPath as NSIndexPath).row]
     if mod.type == "mashup_square" {
       return 455
     } else if mod.type == "mashup_bar" {

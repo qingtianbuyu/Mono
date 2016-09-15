@@ -14,7 +14,7 @@ class MNFollowFeedEntity: NSObject {
   var data: [MNFollowFeed]?
 
   func loadFollowFeed() {
-    let path             = NSBundle.loadPlist("mine.plist")
+    let path             = Bundle.loadPlist("mine.plist")
     let followEntityDict = NSDictionary(contentsOfFile: path!)
     let dataDictArray    = followEntityDict!["data"] as! NSArray
     var dataArray        = [MNFollowFeed]()

@@ -8,19 +8,19 @@
 
 import UIKit
 
-extension NSBundle {
+extension Bundle {
   
-  class func loadPlist(let name: String?) -> String? {
+  class func loadPlist( _ name: String?) -> String? {
     
     guard let plistName = name else {
       fatalError("can not find plist")
     }
     
     if plistName.hasSuffix("plist") {
-      return self.mainBundle().pathForResource(name, ofType: nil)
+      return self.main.path(forResource: name, ofType: nil)
     }
     
-    return self.mainBundle().pathForResource(name, ofType: "plist")
+    return self.main.path(forResource: name, ofType: "plist")
   }
 
 }

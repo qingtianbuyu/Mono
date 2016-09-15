@@ -20,12 +20,24 @@ class MNExploreSearchViewController: UIViewController {
     }
   
   func setupView() {
-    
-  
+    self.edgesForExtendedLayout = UIRectEdge()
+    self.view.backgroundColor = commonBgColor
   }
+  
+  override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      self.navigationController?.navigationBar.barStyle = UIBarStyle.default
+    
+    
+//      self.navigationController?.navigationBar.hidden = true
+      let titleView = MNSearchTitleView.viewFromXib() as! MNSearchTitleView
+      self.view.addSubview(titleView)
+  }
+  
   
   func initData() {
     categoryEntityList.loadCategory()
   }
+  
   
 }

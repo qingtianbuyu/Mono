@@ -18,17 +18,14 @@ class MNExploreEntity: NSObject {
   
   init(dict: [String: AnyObject]) {
     super.init()
-    setValuesForKeysWithDictionary(dict)
+    setValuesForKeys(dict)
   }
   
   init(meow: MNMeow) {
     self.meow = meow
   }
   
-  
-  
-  
-  override func setValue(value: AnyObject?, forKey key: String) {
+  override func setValue(_ value: Any?, forKey key: String) {
     if key == "meow" {
       meow = MNMeow(dict:value as! [String: AnyObject])
       return

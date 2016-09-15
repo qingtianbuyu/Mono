@@ -45,13 +45,13 @@ class MNFollowFeedCell: UITableViewCell {
   
   var followFeed: MNFollowFeed? {
     didSet {
-      musicView.hidden = true
-      sevenView.hidden = true
+      musicView.isHidden = true
+      sevenView.isHidden = true
       
-     let date =  NSDate(timeIntervalSince1970: Double(followFeed?.created_at ?? 0))
-     let formatter = NSDateFormatter()
+     let date =  Date(timeIntervalSince1970: Double(followFeed?.created_at ?? 0))
+     let formatter = DateFormatter()
       formatter.dateFormat = "yyyy.MM.dd HH:mm"
-      let dateStr =  formatter.stringFromDate(date)
+      let dateStr =  formatter.string(from: date)
       
       let avatar_url =   followFeed?.action_user?.avatar_url
       self.iconView.m_setImageWithUrl(avatar_url)
@@ -65,12 +65,12 @@ class MNFollowFeedCell: UITableViewCell {
       // music
       if followFeed?.action == 5 {
         musicView.meow = followFeed?.meow
-        musicContainerView.frame = CGRectMake(musicViewX, musicViewY, musicViewWith, 87)
-        musicView.hidden = false
+        musicContainerView.frame = CGRect(x: musicViewX, y: musicViewY, width: musicViewWith, height: 87)
+        musicView.isHidden = false
       } else if followFeed?.action == 7 {
         sevenView.group_member = followFeed?.group_member
-        sevenView.frame = CGRectMake(musicViewX, musicViewY, musicViewWith, 60)
-        sevenView.hidden = false
+        sevenView.frame = CGRect(x: musicViewX, y: musicViewY, width: musicViewWith, height: 60)
+        sevenView.isHidden = false
       }
     }
   }

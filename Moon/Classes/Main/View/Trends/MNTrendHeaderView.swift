@@ -24,7 +24,7 @@ class MNTrendHeaderView: UITableViewHeaderFooterView {
   override func awakeFromNib() {
     super.awakeFromNib()
     let backView = UIView()
-    backView.backgroundColor = UIColor.greenColor()
+    backView.backgroundColor = UIColor.green
     self.backgroundView = backView
   }
 
